@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -13,40 +12,38 @@ import {
   PopoverContent,
   useColorModeValue,
   useDisclosure,
+  Show,
+  Hide,
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
-  ArrowForwardIcon,
 } from '@chakra-ui/icons'
 
 import { css } from '@emotion/react'
 import Image from 'next/image'
 
-import { PrimaryButton } from '../uikit'
-import logo from '../../public/next.svg'
 import { useTranslation } from 'next-i18next'
-import { useActions } from '../../store'
+
+import logoImg from '../../public/images/logo/Logo.png'
+
 const NavigationBar = () => {
   const { isOpen, onToggle } = useDisclosure()
-  const { t } = useTranslation()
-  const actions = useActions()
 
   const boxStyle = css`
     width: 100%;
     z-index: 2;
     padding: 0.5rem;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+    background-color: black;
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
 
     @media screen and (min-width: 1248px) {
       position: absolute;
 
-      width: 75%;
-      top: 6%;
+      width: 100%;
+      top: 4%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -54,65 +51,47 @@ const NavigationBar = () => {
 
   return (
     <Box css={boxStyle}>
-      <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'30px'}
-        align={'center'}
-      >
-        <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
-        >
+      <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
+        <Hide below="md">
+          <Image
+            src={logoImg}
+            style={{
+              maxWidth: 60,
+              maxHeight: 60,
+              marginLeft: '50px',
+              marginTop: '5px',
+            }}
+            alt="Logo"
+          />
+        </Hide>
+        <Show below="md">
+          <Image
+            src={logoImg}
+            style={{ maxWidth: 40, maxHeight: 40, marginLeft: '0px' }}
+            alt="Logo"
+          />
           <IconButton
             onClick={onToggle}
+            color="white"
             icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              isOpen ? (
+                <CloseIcon w={3} h={3} color="white" />
+              ) : (
+                <HamburgerIcon w={5} h={5} />
+              )
             }
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
           />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image
-            src={logo}
-            style={{ maxWidth: 200, maxHeight: 80 }}
-            alt="Logo"
-          />
-
-          <Flex
-            display={{ base: 'none', md: 'flex' }}
-            alignItems="center"
-            ml={2}
-          >
-            <DesktopNav />
-          </Flex>
-        </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
+        </Show>
+        <Flex
+          display={{ base: 'none', md: 'flex' }}
+          justify={'flex-start'}
           alignItems="center"
-          direction={'row'}
-          spacing={2}
+          mr={4}
         >
-          <PrimaryButton
-            fontFamily="kanit"
-            onClick={() => actions.activeSignInModal(true)}
-            rightIcon={<ArrowForwardIcon />}
-          >
-            {t('login')}
-          </PrimaryButton>
-          <Button
-            colorScheme="red"
-            onClick={() => actions.activeSignUpModal(true)}
-            fontFamily="kanit"
-            variant="outline"
-          >
-            {t('createAnAccount')}
-          </Button>
-        </Stack>
+          <DesktopNav />
+        </Flex>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -123,22 +102,25 @@ const NavigationBar = () => {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('black', 'black')
-  const linkHoverColor = useColorModeValue('red', 'white')
+  const gradientColor =
+    'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)'
 
   const { t } = useTranslation()
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Flex direction={'row'} justify={'flex-end'} alignItems="center">
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={'hover'} placement={'bottom-start'}>
+        <Box key={navItem.label} mr={14}>
+          <Popover trigger="hover" placement="bottom-start">
             <PopoverTrigger>
               <Link
                 href={navItem.href ?? '#'}
-                fontSize={{ base: 'xs', sm: 'xs', md: 'xs', xl: 'sm' }}
-                fontFamily="kanit"
+                fontSize={{ base: 'xs', sm: 'xs', md: 'xs', xl: 'md' }}
+                fontFamily="roboto"
                 fontWeight={500}
-                color={linkColor}
+                color={navItem.isSelected ? 'transparent' : 'white'}
+                backgroundImage={navItem.isSelected ? gradientColor : 'none'}
+                backgroundClip={navItem.isSelected ? 'text' : 'none'}
+                textDecoration="none"
                 outline="none"
                 position="relative"
                 transition="all 0.3s ease-in-out"
@@ -150,13 +132,15 @@ const DesktopNav = () => {
                   left: 0,
                   position: 'absolute',
                   width: 0,
-                  backgroundColor: linkHoverColor,
+                  backgroundColor: 'white',
                   transition: 'width 0.3s ease-in-out',
                 }}
                 _hover={{
                   textDecoration: 'none',
                   transform: 'scale(0.95)',
-                  color: linkHoverColor,
+                  backgroundImage: gradientColor,
+                  backgroundClip: 'text',
+                  color: 'transparent',
                   '&::after': {
                     width: '100%',
                   },
@@ -184,7 +168,7 @@ const DesktopNav = () => {
           </Popover>
         </Box>
       ))}
-    </Stack>
+    </Flex>
   )
 }
 
@@ -208,7 +192,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           <Text
             transition={'all .3s ease'}
             _groupHover={{ color: 'red.400' }}
-            fontFamily="kanit"
+            fontFamily="roboto"
             fontSize="xs"
             fontWeight={600}
           >
@@ -264,6 +248,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         <Text
           fontWeight={600}
           color={useColorModeValue('gray.600', 'gray.200')}
+          fontFamily="roboto"
         >
           {label}
         </Text>
@@ -304,67 +289,44 @@ interface NavItem {
   subLabel?: string
   children?: Array<NavItem>
   href?: string
+  isSelected: boolean
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'home',
+    label: 'Home',
+    isSelected: true,
+  },
+  {
+    label: 'About',
+    isSelected: false,
+  },
+  {
+    label: 'Web',
+    isSelected: false,
+  },
+  {
+    label: 'Games',
+    isSelected: false,
+  },
+  {
+    label: 'Service',
+    isSelected: false,
+  },
+  {
+    label: 'Contact us',
+    isSelected: false,
   },
 
-  {
-    label: 'membership',
-    children: [
-      { label: 'groupMembership', href: '#' },
-      { label: 'individualMembership', href: '#' },
-      { label: 'danRecognisationForm', href: '#' },
-      { label: 'umpireQuizes', href: '#' },
-    ],
-  },
-  {
-    label: 'certificates',
-    children: [
-      { label: 'blackBeltCertificate', href: '#' },
-      { label: 'blackBeltRecognition', href: '#' },
-      { label: 'colorBeltCertificate', href: '#' },
-      { label: 'additionalCertification', href: '#' },
-    ],
-  },
-  {
-    label: 'inMemoriam',
-    href: '#',
-  },
-  {
-    label: 'about',
-    children: [
-      {
-        label: 'organisationalStructure',
-        href: '#',
-      },
-      {
-        label: 'ourProgram',
-        href: '#',
-      },
-      {
-        label: 'ourTeam',
-        href: '#',
-      },
-      {
-        label: 'governance',
-        children: [
-          { label: 'trademark', href: '#' },
-          { label: 'administrativeFunctions', href: '#' },
-        ],
-      },
-      {
-        label: 'documents',
-        href: '#',
-      },
-      {
-        label: 'umpireAndCompetition',
-        href: '#',
-      },
-    ],
-  },
+  // {
+  //   label: 'membership',
+  //   children: [
+  //     { label: 'groupMembership', href: '#' },
+  //     { label: 'individualMembership', href: '#' },
+  //     { label: 'danRecognisationForm', href: '#' },
+  //     { label: 'umpireQuizes', href: '#' },
+  //   ],
+  // },
 ]
 
 export { NavigationBar }
