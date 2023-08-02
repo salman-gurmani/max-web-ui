@@ -1,44 +1,162 @@
-import { Box, Flex, Link, useColorMode } from '@chakra-ui/react'
-import { css } from '@emotion/react'
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  HStack,
+  Text,
+  IconButton,
+  GridItem,
+  VStack,
+  Image,
+} from '@chakra-ui/react'
+import { SocialMedia } from '@components/SocialMedia'
+import { BsTelephone } from 'react-icons/bs'
+import { FiMail } from 'react-icons/fi'
+import { IoLocationOutline } from 'react-icons/io5'
+
+import logoImg from '../../public/images/logo/Logo.png'
 
 const Footer = () => {
-  const { colorMode } = useColorMode()
-
   return (
-    <Box
-      as="footer"
-      bg={colorMode === 'light' ? 'gray.50' : 'gray.900'}
-      color={colorMode === 'light' ? 'gray.900' : 'gray.50'}
-      marginTop="4rem"
-      padding="1.5rem"
-      textAlign="center"
-    >
-      <Flex justifyContent="center">
-        <Link
-          href="https://example.com"
-          css={css`
-            &:hover {
-              text-decoration: underline;
-            }
-          `}
+    <Box justifyContent="center" padding="50px" bg=" #111215" width="100%">
+      <Flex>
+        <Grid
+          templateColumns={{ base: '1fr', lg: '1fr 1fr 1fr' }}
+          gap={20}
+          justifyContent="space-between"
+          alignItems="space-between"
+          marginTop={{ base: '40px', lg: '0px' }}
         >
-          My App
-        </Link>
-        {' - '}
-        <Link
-          href="https://example.com/about"
-          css={css`
-            &:hover {
-              text-decoration: underline;
-            }
-          `}
-        >
-          About
-        </Link>
+          <GridItem alignItems="flex-start">
+            <HStack>
+              <IconButton
+                icon={<BsTelephone />}
+                aria-label="phone"
+                isRound
+                background="#2A2C39"
+                color="white"
+              />
+
+              <Box>
+                <Heading
+                  color="white"
+                  fontFamily="roboto"
+                  fontSize={['lg', 'lg', '22px']}
+                  marginLeft={{ base: '15px', md: '15px', lg: '30px' }}
+                >
+                  Phone Number{' '}
+                </Heading>
+                <Text
+                  fontFamily="roboto"
+                  marginLeft={{ base: '15px', md: '15px', lg: '30px' }}
+                  width={{ base: '90%', md: '90%', lg: '350px' }}
+                  marginTop="10px"
+                  color="white"
+                  fontSize={['sm', 'sm', '13px']}
+                >
+                  +4917634649431{' '}
+                </Text>
+              </Box>
+            </HStack>
+          </GridItem>
+
+          <GridItem alignItems="flex-start">
+            <HStack>
+              <IconButton
+                icon={<IoLocationOutline />}
+                aria-label="location"
+                isRound
+                background="#2A2C39"
+                color="white"
+              />
+
+              <Box>
+                <Heading
+                  color="white"
+                  fontFamily="roboto"
+                  fontSize={['lg', 'lg', '22px']}
+                  marginLeft={{ base: '15px', md: '15px', lg: '30px' }}
+                >
+                  Head Office Address{' '}
+                </Heading>
+                <Text
+                  fontFamily="roboto"
+                  marginLeft={{ base: '15px', md: '15px', lg: '30px' }}
+                  width={{ base: '90%', md: '90%', lg: '350px' }}
+                  marginTop="10px"
+                  color="white"
+                  fontSize={['sm', 'sm', '13px']}
+                >
+                  Versailleslaan 12 5627LW Eindhoven The Netherlands, Eindhoven,
+                  NL{' '}
+                </Text>
+              </Box>
+            </HStack>
+          </GridItem>
+
+          <GridItem alignItems="flex-start">
+            <HStack>
+              <IconButton
+                icon={<FiMail />}
+                aria-label="Email"
+                isRound
+                background="#2A2C39"
+                color="white"
+              />
+
+              <Box>
+                <Heading
+                  color="white"
+                  fontFamily="roboto"
+                  fontSize={['lg', 'lg', '22px']}
+                  marginLeft={{ base: '15px', md: '15px', lg: '30px' }}
+                >
+                  Email Address{' '}
+                </Heading>
+                <Text
+                  fontFamily="roboto"
+                  marginLeft={{ base: '15px', md: '15px', lg: '30px' }}
+                  width={{ base: '90%', md: '90%', lg: '350px' }}
+                  marginTop="10px"
+                  color="white"
+                  fontSize={['sm', 'sm', '13px']}
+                >
+                  maxovation@gmail.com{' '}
+                </Text>
+              </Box>
+            </HStack>
+          </GridItem>
+        </Grid>
       </Flex>
-      <Box marginTop="1rem" fontSize="sm">
-        © {new Date().getFullYear()} My App. All rights reserved.
-      </Box>
+      <Box
+        marginLeft="auto"
+        marginRight="auto"
+        bg="gray"
+        height="1px"
+        width="1000px"
+        marginTop="30px"
+      ></Box>
+      <Flex alignItems="center" justify="center">
+        {' '}
+        <VStack alignItems="center" gap={5}>
+          <Image
+            src={logoImg.src}
+            style={{
+              maxWidth: 60,
+              maxHeight: 60,
+              marginTop: '25px',
+            }}
+            alt="Logo"
+          />
+          <Box alignItems="center" justifyContent="center" zIndex={2}>
+            <SocialMedia />
+          </Box>
+          <Text fontSize={14} color="white" fontFamily="roboto">
+            Maxovation © 2023 All Right Reserved
+          </Text>
+        </VStack>
+      </Flex>
     </Box>
   )
 }
