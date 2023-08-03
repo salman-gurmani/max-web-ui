@@ -49,7 +49,7 @@ const Banner = () => {
                 zIndex="5"
                 alignSelf="flex-start"
                 _hover={{
-                  backgroundImage:
+                  bgGradient:
                     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
                   backgroundClip: 'text',
                   borderColor: 'white',
@@ -104,7 +104,7 @@ const Banner = () => {
                   borderWidth: '1px',
                 }}
                 _hover={{
-                  background:
+                  bgGradient:
                     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
                   textColor: 'white',
                 }}
