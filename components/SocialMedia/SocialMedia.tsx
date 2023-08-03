@@ -3,7 +3,7 @@ import {
   FaFacebookF,
   FaTwitter,
   FaYoutube,
-  FaInstagram,
+  //FaInstagram,
   FaLinkedinIn,
   FaGithub,
 } from 'react-icons/fa'
@@ -48,7 +48,7 @@ const SocialMedia = ({ ...rest }) => {
         _hover={{ bg: '#c30000' }}
         marginRight="10px"
       />
-      <IconButton
+      {/* <IconButton
         aria-label="Instagram"
         icon={<FaInstagram />}
         color="white"
@@ -62,7 +62,7 @@ const SocialMedia = ({ ...rest }) => {
             'linear(to-br, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75)',
         }}
         marginRight="10px"
-      />
+      /> */}
       <IconButton
         aria-label="LinkedIn"
         icon={<FaLinkedinIn />}
@@ -87,7 +87,7 @@ const SocialMedia = ({ ...rest }) => {
         borderRadius="12px"
         borderWidth="1px"
         _hover={{
-          bg: 'rgba(42, 44, 57, 1)',
+          bg: 'black',
         }}
         marginRight="10px"
       />

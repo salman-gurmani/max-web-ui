@@ -118,7 +118,7 @@ const DesktopNav = () => {
                 fontFamily="roboto"
                 fontWeight={500}
                 color={navItem.isSelected ? 'transparent' : 'white'}
-                backgroundImage={navItem.isSelected ? gradientColor : 'none'}
+                bgGradient={navItem.isSelected ? gradientColor : 'none'}
                 backgroundClip={navItem.isSelected ? 'text' : 'none'}
                 textDecoration="none"
                 outline="none"
