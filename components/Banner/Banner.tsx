@@ -43,8 +43,13 @@ const Banner = () => {
                 color="white"
                 fontFamily="roboto"
                 fontWeight="17px"
+                w={{ base: '100px', md: '105px', lg: '145px' }}
+                height={{ base: '30px', md: '35px', lg: '40px' }}
+                flex-shrink="0"
                 fontSize={{ base: '16px', md: '20px' }}
-                background="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
+                border-radius="6px"
+                background="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
+                // background="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
                 paddingX={{ base: '3', md: '5', lg: '5' }}
                 zIndex="5"
                 alignSelf="flex-start"
@@ -64,6 +69,9 @@ const Banner = () => {
                 fontSize={{ base: '20px', md: '40px', lg: '55px' }}
                 zIndex={1}
                 fontFamily="roboto"
+                fontStyle="normal"
+                fontWeight="600"
+                //lineHeight="60px"
                 alignSelf="flex-start"
               >
                 WEB & MOBILE SOLUTIONS
@@ -80,7 +88,7 @@ const Banner = () => {
                 color="white"
                 fontFamily="roboto"
                 maxWidth="100%"
-                fontSize={{ base: '15px', md: '18px', lg: '20px' }}
+                fontSize={{ base: '14px', md: '18px', lg: '20px' }}
                 overflowWrap="break-word"
                 alignSelf="flex-start"
               >
@@ -90,22 +98,24 @@ const Banner = () => {
               <Button
                 color="white"
                 fontFamily="roboto"
-                fontWeight="17px"
+                fontWeight="400"
                 alignSelf="flex-start"
                 backgroundColor="transparent"
                 size="md"
                 zIndex="5"
                 variant="outline"
-                fontSize={{ base: '14px', md: '20px' }}
-                paddingX={{ base: '5', md: '8', lg: '10' }}
+                fontSize={{ base: '10px', md: '12px', lg: '15px' }}
+                paddingX={{ base: '3', md: '8', lg: '10' }}
+                backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
+                backgroundClip="text"
                 sx={{
                   borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
                   borderStyle: 'solid',
                   borderWidth: '1px',
                 }}
                 _hover={{
-                  bgGradient:
-                    'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
+                  background:
+                    'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
                   textColor: 'white',
                 }}
               >
