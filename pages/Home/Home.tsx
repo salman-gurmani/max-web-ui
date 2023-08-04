@@ -8,10 +8,6 @@ const Home = () => {
   return (
     <PrimaryLayout>
       <Banner />
-      {/* <ModalLayout />
-      <Box position="absolute" top={240} right={2} zIndex={2}>
-        <SocialMedia flexDirection="column" />
-      </Box> */}
     </PrimaryLayout>
   )
 }
