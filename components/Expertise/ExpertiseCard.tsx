@@ -1,50 +1,58 @@
-import {
-    Box,
-    Card,
-    CardBody,
-    CardHeader,
-    Grid,
-    GridItem,
-    Image,
-    Text
-  } from '@chakra-ui/react'
+import { Card, CardBody, CardHeader, Text, IconButton } from '@chakra-ui/react'
 
-import { BoxLine } from '@components/BoxLine';
-  
-import { HiArchive } from "react-icons/hi/";
+import { BoxLine } from '@components/BoxLine'
 
-  const ExpertiseCard = (props) =>{
+import { HiArchive } from 'react-icons/hi/'
 
-    return(
-        <Card w="300px" h="400px" borderRadius="10px" bg="#18191D">
-            
-            <CardHeader >
-              <center>
-                <circle ra={20}>
-                    
-                    <HiArchive size={40} color="white" />
-                    <Text color="white">{props.title}</Text>
-                    <BoxLine
-                        width="15px"
-                        height="3px"
-                        bg="#FF0084"
-                     />
-                </circle>
-              </center>
-            </CardHeader>
+const ExpertiseCard = (props) => {
+  return (
+    <Card
+      w="auto"
+      h="450px"
+      borderRadius="10px"
+      bg="#18191D"
+      display="flex" // Added display flex
+      flexDirection="column" // Added column flex direction
+      justifyContent="center" // Center content vertically
+      alignItems="center" // Center content horizontally
+    >
+      <CardHeader>
+        <IconButton
+          icon={<HiArchive size={30} />}
+          aria-label="web"
+          isRound
+          background="#2A2C39"
+          color="white"
+          width="50px"
+          height="50px"
+          marginLeft="auto"
+          marginRight="auto"
+          marginTop="0" // Reset any default margin
+          marginBottom="0" // Reset any default margin
+        />
+      </CardHeader>
+      <Text fontSize={25} color="white">
+        {props.title}
+      </Text>
+      <BoxLine
+        width="25px"
+        height="3px"
+        bg="#FF0084"
+        marginLeft="auto"
+        marginRight="auto"
+      />
 
-            <CardBody>
-              <center >
-                <Text fontSize={10} color="white">
-                    {props.desc}
-                </Text>
+      <CardBody>
+        <Text
+          textAlign="center" // Center align the text horizontally
+          fontSize={13}
+          color="white"
+        >
+          {props.desc}
+        </Text>
+      </CardBody>
+    </Card>
+  )
+}
 
-              </center>              
-            </CardBody>
-          </Card>
-
-    )
-
-  } 
-
-  export { ExpertiseCard }
+export { ExpertiseCard }
