@@ -43,7 +43,7 @@ const NavigationBar = () => {
       position: absolute;
 
       width: 100%;
-      top: 4%;
+      top: 3%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
