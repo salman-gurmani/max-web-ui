@@ -32,6 +32,7 @@ const ExpertiseCard = (props) => {
           marginBottom="0" // Reset any default margin
         />
       </CardHeader>
+
       <Text
         fontSize={{ base: '20px', md: '25px', lg: '25' }}
         color="white"
@@ -40,7 +41,7 @@ const ExpertiseCard = (props) => {
         {props.title}
       </Text>
       <BoxLine
-        width="25px"
+        width={props.boxLineWidth}
         height="3px"
         bg="#FF0084"
         marginLeft="auto"
