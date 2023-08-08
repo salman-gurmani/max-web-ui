@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Heading } from '@chakra-ui/react'
+import { Flex, Grid, Heading } from '@chakra-ui/react'
 
 import { ExpertiseCard } from './ExpertiseCard'
 
@@ -22,14 +22,14 @@ const expertiseData = [
 
 const Expertise = () => {
   return (
-    <Box w="100%" h="712px" bg="#111215">
+    <Flex direction="column" gap={4} bg="#111215">
       <Heading
         backgroundImage="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
         backgroundClip="text"
         color="transparent"
         fontFamily="roboto"
-        fontSize={{ base: '20px', md: '40px', lg: '55px' }}
-        paddingY={10}
+        fontSize={{ base: '30px', md: '40px', lg: '55px' }}
+        paddingTop={10}
         textAlign="center"
       >
         Our Expertise / What we do
@@ -38,6 +38,7 @@ const Expertise = () => {
         <Grid
           templateColumns={{ base: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }}
           marginX={20}
+          marginY={10}
           gap={20}
         >
           <ExpertiseCard
@@ -54,7 +55,7 @@ const Expertise = () => {
           />
         </Grid>
       </Flex>
-    </Box>
+    </Flex>
   )
 }
 

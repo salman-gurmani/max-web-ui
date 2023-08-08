@@ -8,13 +8,14 @@ const ExpertiseCard = (props) => {
   return (
     <Card
       w="auto"
-      h="450px"
+      h="auto"
       borderRadius="10px"
       bg="#18191D"
       display="flex" // Added display flex
       flexDirection="column" // Added column flex direction
       justifyContent="center" // Center content vertically
       alignItems="center" // Center content horizontally
+      p={4} // Add padding for better spacing on mobile
     >
       <CardHeader>
         <IconButton
@@ -31,7 +32,11 @@ const ExpertiseCard = (props) => {
           marginBottom="0" // Reset any default margin
         />
       </CardHeader>
-      <Text fontSize={25} color="white">
+      <Text
+        fontSize={{ base: '20px', md: '25px', lg: '25' }}
+        color="white"
+        fontFamily="roboto"
+      >
         {props.title}
       </Text>
       <BoxLine
@@ -45,7 +50,8 @@ const ExpertiseCard = (props) => {
       <CardBody>
         <Text
           textAlign="center" // Center align the text horizontally
-          fontSize={13}
+          fontSize={{ base: '12px', md: '13px', lg: '15px' }}
+          fontFamily="roboto"
           color="white"
         >
           {props.desc}
