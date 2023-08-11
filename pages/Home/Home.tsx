@@ -1,7 +1,7 @@
-import { PrimaryLayout } from '@components/Layout'
-import { Banner } from '@components/Banner'
+import { PrimaryLayout } from '../../components/Layout'
+import { Banner } from '../../components/Banner'
 import React from 'react'
-import { OurWebProjects } from '@components/OurWebProjects'
+import { OurWebProjects } from '../../components/OurWebProjects'
 
 const Home = () => {
   return (

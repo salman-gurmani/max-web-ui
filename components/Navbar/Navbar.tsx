@@ -28,6 +28,7 @@ import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 
 import logoImg from '../../public/images/logo/Logo.png'
+import React from 'react'
 
 const NavigationBar = () => {
   const { isOpen, onToggle } = useDisclosure()
