@@ -29,6 +29,7 @@ import { useTranslation } from 'next-i18next'
 
 import logoImg from '../../public/images/logo/Logo.png'
 import React from 'react'
+import React from 'react'
 
 const NavigationBar = () => {
   const { isOpen, onToggle } = useDisclosure()
@@ -44,8 +45,7 @@ const NavigationBar = () => {
       position: absolute;
 
       width: 100%;
-      top: 1.5%;
-
+      top: 1.2%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
