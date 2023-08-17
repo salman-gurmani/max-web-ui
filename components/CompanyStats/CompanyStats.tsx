@@ -19,8 +19,8 @@ const CompanyStats = () => {
           return (
             <StatsView
               title={data.title}
-              desc={data.subTitle}
-              imgIndex={data.imgIndex}
+              subTitle={data.subTitle}
+              icon={data.icon}
             />
           )
         })}
