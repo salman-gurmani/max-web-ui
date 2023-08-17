@@ -1,4 +1,4 @@
-import { Flex, Grid, Heading } from '@chakra-ui/react'
+import { Flex, Grid } from '@chakra-ui/react'
 
 import {StatsData} from "./StatsData"
 import StatsView from "./StatsView"
