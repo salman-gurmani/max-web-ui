@@ -11,9 +11,10 @@ const CompanyStats = () => {
 
       <Grid
         templateColumns={{ base: '1fr 1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr 1fr' }}
-        marginX={20}
-        marginY={10}
-        gap={20}
+        marginLeft={100}
+        marginRight={100}
+        marginY={30}
+        gap={10}
       >
         {map(StatsData, (data) => {
           return (

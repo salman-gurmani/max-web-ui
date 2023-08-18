@@ -4,12 +4,12 @@ const StatsView = (props) => {
   return (
     <Grid
       templateColumns="repeat(2, 1fr)"
-      gap={3}
+      gap={2}
       height="75px"
       marginLeft={"30px"}
       marginRight={"30px"}
     >
-      <GridItem  colSpan={1} > 
+      <GridItem  colSpan={1} w="80px"> 
 
         <center>
         <IconButton
@@ -29,7 +29,7 @@ const StatsView = (props) => {
 
       </GridItem>
 
-      <GridItem  colSpan={1} > 
+      <GridItem  colSpan={1} width="100%" w="150px"> 
       <VStack
         alignItems={"left"}
       >
