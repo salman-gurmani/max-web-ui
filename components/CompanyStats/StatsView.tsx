@@ -3,60 +3,58 @@ import { Text, IconButton, Grid, GridItem, VStack } from '@chakra-ui/react'
 const StatsView = (props) => {
   return (
     <Grid
-      templateColumns="repeat(2, 1fr)"
-      gap={2}
-      height="75px"
-      marginLeft={"30px"}
-      marginRight={"30px"}
+      templateColumns="25% 75%" //25% for icon and 75% for text
+      alignContent="flex-start" //horzontally align content on left
+      justifyContent="flex-start" // vertically align content on left
+      marginTop={{ base: 5 }} // marginTop only for small screen for better view
     >
-      <GridItem  colSpan={1} w="80px"> 
-
-        <center>
+      <GridItem
+        display={'flex'} //gridItem should behave like flex instead of adding flex componenet
+        justifyContent="center" // justify icon in center
+      >
         <IconButton
-            icon={props.icon}
-            aria-label={props.title}
-            isRound={false}
-            background="#18191D"
-            borderWidth={1.5}
-            borderColor="#3D3F4C"
-            borderRadius={"20px"}
-            color="white"
-            width="75px"
-            height="75px"
-          />
-        </center>
-
-
+          icon={props.icon}
+          aria-label={props.title}
+          isRound={false}
+          background="#18191D"
+          borderWidth={1.5}
+          borderColor="#3D3F4C"
+          borderRadius={'20px'}
+          color="white"
+          width={{ base: '60px', md: '70px', lg: '80px' }} //responsive breakpoints
+          height={{ base: '40px', md: '60px', lg: '60px' }} //responsive
+          pointerEvents="none" // button behaviour cancel
+        />
       </GridItem>
 
-      <GridItem  colSpan={1} width="100%" w="150px"> 
-      <VStack
-        alignItems={"left"}
+      <GridItem
+        justifyContent="flex-start" //   text align
+        alignContent="flex-start" // text align
+        marginLeft={5} // margin from icon
       >
-      <Text
-          fontSize="30px"
-          color="white"
-          fontFamily="roboto"
-          fontStyle={"normal"}
-          lineHeight={'normal'}
-          fontWeight="500"
+        <VStack
+          align="flex-start" //VStack for vertically stack the title and subtitle
         >
-          {props.title}
-        </Text>
+          <Text
+            fontSize={{ base: '20px', md: '25px', lg: '30px' }} //font sizes for screens
+            color="white"
+            fontFamily="roboto"
+            fontStyle={'normal'}
+            lineHeight={'normal'}
+            fontWeight="100"
+          >
+            {props.title}
+          </Text>
 
-        <Text
-          fontSize="15px"
-          color="white"
-          fontFamily="roboto"
-          textAlign={'left'}
-          textOverflow={'false'}
-          fontWeight="400"
-
-        >
-          {props.subTitle}
-        </Text>
-      </VStack>
-      
+          <Text
+            fontSize={{ base: '12px', md: '13px', lg: '15px' }} // font sizes for different screens
+            color="white"
+            fontFamily="roboto"
+            textOverflow={'false'}
+          >
+            {props.subTitle}
+          </Text>
+        </VStack>
       </GridItem>
     </Grid>
   )
