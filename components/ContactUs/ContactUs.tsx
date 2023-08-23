@@ -55,7 +55,7 @@ const ContactUs = () => {
                   <FormControl id="name" isRequired>
                     <Input
                       placeholder="Enter your name"
-                      //textColor="white"
+                      textColor="white"
                       backgroundColor="#171926"
                       type="text"
                       name="name"
