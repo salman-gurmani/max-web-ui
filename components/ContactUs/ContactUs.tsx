@@ -9,9 +9,20 @@ import {
   Input,
   AspectRatio,
   Textarea,
+  Text,
 } from '@chakra-ui/react'
 import { useFormik } from 'formik'
 import React from 'react'
+import { BsSend } from 'react-icons/bs'
+import * as Yup from 'yup'
+
+const ContactUsSchema = Yup.object({
+  name: Yup.mixed().required(' * Name is required'),
+  phoneNumber: Yup.string().required(' * phoneNumber is required'),
+  email: Yup.string().required(' * Email is required'),
+  subject: Yup.string().required(' * Subject is required'),
+  message: Yup.string().required(' * Message is required'),
+})
 
 const ContactUs = () => {
   const formik = useFormik({
@@ -22,10 +33,12 @@ const ContactUs = () => {
       subject: '',
       message: '',
     },
+    validationSchema: ContactUsSchema,
+
     onSubmit: () => {},
   })
 
-  const { handleChange, handleSubmit, values } = formik
+  const { handleChange, handleSubmit, values, errors, touched } = formik
 
   return (
     <Flex bg="#18191D" direction="column">
@@ -57,30 +70,42 @@ const ContactUs = () => {
                 gap={5}
               >
                 <GridItem mb={5}>
-                  <FormControl id="name" isRequired>
+                  <FormControl
+                    isRequired
+                    isInvalid={errors.name && touched.name}
+                  >
                     <Input
                       placeholder="Enter your name"
                       backgroundColor="#171926"
                       type="text"
                       name="name"
-                      as={Input}
                       height={50}
                       border="none"
                       color="white"
                       _placeholder={{ color: '#CFCFCF' }}
                       fontFamily="roboto"
                       size="sm"
+                      onChange={handleChange}
+                      value={values.name}
                     />
+                    <Text fontFamily="roboto" color="red" fontSize="xs">
+                      {errors.name}
+                    </Text>
                   </FormControl>
                 </GridItem>
+
                 <GridItem mb={5}>
-                  <FormControl id="phoneNumber" isRequired>
+                  <FormControl
+                    isInvalid={errors.phoneNumber && touched.phoneNumber}
+                    isRequired
+                  >
                     <Input
                       placeholder="Enter your phone"
                       backgroundColor="#171926"
-                      type="text"
+                      type="number"
                       name="phoneNumber"
-                      as={Input}
+                      onChange={handleChange}
+                      value={values.phoneNumber}
                       height={50}
                       border="none"
                       color="white"
@@ -88,13 +113,20 @@ const ContactUs = () => {
                       fontFamily="roboto"
                       size="sm"
                     />
+                    <Text fontFamily="roboto" color="red" fontSize="xs">
+                      {errors.phoneNumber}
+                    </Text>
                   </FormControl>
                 </GridItem>
                 <GridItem mb={5}>
-                  <FormControl id="email" isRequired>
+                  <FormControl
+                    isInvalid={errors.email && touched.email}
+                    isRequired
+                  >
                     <Input
                       placeholder="Enter your Email"
                       backgroundColor="#171926"
+                      name="email"
                       type="email"
                       height={50}
                       border="none"
@@ -102,18 +134,27 @@ const ContactUs = () => {
                       _placeholder={{ color: '#CFCFCF' }}
                       fontFamily="roboto"
                       size="sm"
+                      onChange={handleChange}
+                      value={values.email}
                     />
+                    <Text fontFamily="roboto" color="red" fontSize="xs">
+                      {errors.email}
+                    </Text>
                   </FormControl>
                 </GridItem>
 
                 <GridItem mb={5}>
-                  <FormControl id="subject" isRequired>
+                  <FormControl
+                    isInvalid={errors.subject && touched.subject}
+                    isRequired
+                  >
                     <Input
                       placeholder="Enter your subject"
                       backgroundColor="#171926"
                       type="text"
                       name="subject"
-                      as={Input}
+                      onChange={handleChange}
+                      value={values.subject}
                       height={50}
                       border="none"
                       color="white"
@@ -121,11 +162,17 @@ const ContactUs = () => {
                       fontFamily="roboto"
                       size="sm"
                     />
+                    <Text fontFamily="roboto" color="red" fontSize="xs">
+                      {errors.subject}
+                    </Text>
                   </FormControl>
                 </GridItem>
               </Grid>
               <Flex mt={5}>
-                <FormControl id="message" isRequired>
+                <FormControl
+                  inValid={errors.message && touched.message}
+                  isRequired
+                >
                   <Textarea
                     name="message"
                     value={values.message}
@@ -140,11 +187,15 @@ const ContactUs = () => {
                     minHeight={340}
                     maxHeight={400}
                   />
+                  <Text fontFamily="roboto" color="red" fontSize="xs">
+                    {errors.message}
+                  </Text>
                 </FormControl>
               </Flex>
               <Flex justifyContent="center" mt={5}>
                 <Button
                   color="white"
+                  type="submit"
                   fontFamily="roboto"
                   fontWeight="17px"
                   w={{ base: '100px', md: '105px', lg: '330px' }}
@@ -165,7 +216,11 @@ const ContactUs = () => {
                     borderWidth: '2px',
                   }}
                 >
-                  Send Message
+                  Send Message{' '}
+                  <Box display="inline-block" marginLeft="8px">
+                    {' '}
+                    <BsSend />
+                  </Box>
                 </Button>
               </Flex>
             </Box>
