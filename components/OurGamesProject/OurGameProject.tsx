@@ -10,7 +10,7 @@ import {
   HStack,
   Link,
 } from '@chakra-ui/react'
-import { map } from 'lodash'
+import { map, slice } from 'lodash'
 import { v4 as uuidv4 } from 'uuid'
 import { GamesData } from '../OurGamesProject/GameData'
 import {
@@ -60,7 +60,7 @@ const OurGameProject = () => {
     md: 4,
     lg: 6,
   }
-  const gamesToShow = GamesData.slice(offset, offset + gamesPerPage)
+  const gamesToShow = slice(GamesData, offset, offset + gamesPerPage)
 
   return (
     <Flex
