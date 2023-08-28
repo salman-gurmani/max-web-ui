@@ -1,11 +1,5 @@
-import { Flex, IconButton } from '@chakra-ui/react'
-import {
-  facebookIcon,
-  twitterIcon,
-  linkedinIcon,
-  youtubeIcon,
-  gitHubIcon,
-} from './SocialMediaIconData'
+import { Flex, IconButton, Image } from '@chakra-ui/react'
+import { SocialMediaImages } from '@components/Images'
 
 const SocialMedia = ({ ...rest }) => {
   return (
@@ -18,7 +12,12 @@ const SocialMedia = ({ ...rest }) => {
     >
       <IconButton
         aria-label="Facebook"
-        icon={facebookIcon}
+        icon={
+          <Image
+            src={SocialMediaImages.facebookIcon.src.src}
+            alt={SocialMediaImages.facebookIcon.alt}
+          />
+        }
         fill="white"
         height="45px"
         width={60}
@@ -32,7 +31,12 @@ const SocialMedia = ({ ...rest }) => {
       <IconButton
         aria-label="YouTube"
         marginX={{ base: '5px', md: '10px', lg: '15px' }}
-        icon={youtubeIcon}
+        icon={
+          <Image
+            src={SocialMediaImages.youtubeIcon.src.src}
+            alt={SocialMediaImages.youtubeIcon.alt}
+          />
+        }
         color="white"
         height="45px"
         width={60}
@@ -45,7 +49,12 @@ const SocialMedia = ({ ...rest }) => {
       <IconButton
         aria-label="LinkedIn"
         marginX={{ base: '5px', md: '10px', lg: '15px' }}
-        icon={linkedinIcon}
+        icon={
+          <Image
+            src={SocialMediaImages.linkedin.src.src}
+            alt={SocialMediaImages.linkedin.alt}
+          />
+        }
         color="white"
         height="45px"
         width={60}
@@ -59,7 +68,12 @@ const SocialMedia = ({ ...rest }) => {
       <IconButton
         aria-label="GitHub"
         marginX={{ base: '5px', md: '10px', lg: '15px' }}
-        icon={gitHubIcon}
+        icon={
+          <Image
+            src={SocialMediaImages.githubIcon.src.src}
+            alt={SocialMediaImages.githubIcon.alt}
+          />
+        }
         color="white"
         height="45px"
         width={60}
@@ -73,7 +87,12 @@ const SocialMedia = ({ ...rest }) => {
       <IconButton
         aria-label="Twitter"
         marginX={{ base: '5px', md: '10px', lg: '15px' }}
-        icon={twitterIcon}
+        icon={
+          <Image
+            src={SocialMediaImages.twitterIcon.src.src}
+            alt={SocialMediaImages.twitterIcon.alt}
+          />
+        }
         color="white"
         height="45px"
         width={60}

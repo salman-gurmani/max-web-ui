@@ -5,14 +5,14 @@ import {
   Heading,
   HStack,
   Text,
-  IconButton,
   GridItem,
   VStack,
   Image,
 } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
 import { SocialMedia } from '@components/SocialMedia'
-import { phoneIcon, emailIcon, locationIcon } from './iconData'
+
+import { FooterImages } from '@components/Images'
 import logoImg from '../../public/images/logo/Logo.png'
 
 const Footer = () => {
@@ -35,30 +35,27 @@ const Footer = () => {
             md: '1fr 1fr',
             lg: '1fr 1fr 1fr',
           }}
-          gap={{ base: 10, md: 10, lg: 20 }}
-          justifyContent="center"
+          gap={{ base: 10, md: 10, lg: 35 }}
+          justifyContent="space-between"
           alignItems="center"
           marginTop={{ base: '20px', md: '20px', lg: '0px' }}
           maxWidth="100%"
           padding="10px"
-          marginLeft={20}
+          marginLeft={10}
         >
           <GridItem>
             <HStack alignItems="flex-start">
-              <IconButton
-                icon={phoneIcon}
+              <Image
+                src={FooterImages.phoneIcon.src.src}
+                alt={FooterImages.phoneIcon.alt}
                 aria-label="phone"
-                isRound
-                background="#2A2C39"
+                boxSize="50px" // Adjust the size as needed
+                objectFit="contain" // Adjust the object fit mode as needed
+                backgroundColor="#1B1C1F"
                 color="white"
-                size="lg"
-                _hover={{
-                  background: 'transparent',
-                  color: 'inherit',
-                  cursor: 'default',
-                }}
-                pointerEvents="none"
+                rounded="full"
               />
+
               <Box>
                 <Heading
                   color="white"
@@ -83,20 +80,16 @@ const Footer = () => {
           </GridItem>
 
           <GridItem>
-            <HStack alignItems="flex-start">
-              <IconButton
-                icon={locationIcon}
+            <HStack alignItems="center">
+              <Image
+                src={FooterImages.locationIcon.src.src}
+                alt={FooterImages.locationIcon.alt}
                 aria-label="location"
-                isRound
-                background="#2A2C39"
-                size="lg"
+                boxSize="50px" // Adjust the size as needed
+                objectFit="contain" // Adjust the object fit mode as needed
+                backgroundColor="#1B1C1F"
                 color="white"
-                _hover={{
-                  background: 'transparent',
-                  color: 'inherit',
-                  cursor: 'default',
-                }}
-                pointerEvents="none"
+                rounded="full"
               />
 
               <Box>
@@ -114,7 +107,7 @@ const Footer = () => {
                   width={{ base: '90%', md: '90%', lg: '350px' }}
                   marginTop="10px"
                   color="white"
-                  fontSize={['sm', 'sm', '13px']}
+                  fontSize={['sm', 'sm', '12px']}
                 >
                   Versailleslaan 12 5627LW Eindhoven The Netherlands, Eindhoven,
                   NL{' '}
@@ -125,19 +118,15 @@ const Footer = () => {
 
           <GridItem>
             <HStack alignItems="flex-start">
-              <IconButton
-                icon={emailIcon}
-                aria-label="Email"
-                isRound
-                background="#2A2C39"
+              <Image
+                src={FooterImages.emailIcon.src.src}
+                alt={FooterImages.emailIcon.alt}
+                aria-label="email"
+                boxSize="50px" // Adjust the size as needed
+                objectFit="contain" // Adjust the object fit mode as needed
+                backgroundColor="#1B1C1F"
                 color="white"
-                size="lg"
-                _hover={{
-                  background: 'transparent',
-                  color: 'inherit',
-                  cursor: 'default',
-                }}
-                pointerEvents="none"
+                rounded="full"
               />
 
               <Box>
