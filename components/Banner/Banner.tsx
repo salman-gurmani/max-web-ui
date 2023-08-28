@@ -81,6 +81,7 @@ const Banner = () => {
                   marginLeft="2px"
                   marginRight="auto"
                   bg="white"
+                  marginTop="0px"
                 ></BoxLine>
               </Heading>
 
