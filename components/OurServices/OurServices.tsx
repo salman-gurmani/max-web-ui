@@ -7,6 +7,7 @@ import {
   Grid,
   HStack,
   IconButton,
+  Image,
 } from '@chakra-ui/react'
 import { ServiceData } from './ServiceData'
 import { map } from 'lodash'
@@ -86,12 +87,12 @@ const OurServices = () => {
               >
                 <HStack alignItems="center" marginX={5} justifyContent="center">
                   <IconButton
-                    icon={data.icon}
+                    icon={<Image src={data.icon} alt="" />}
                     aria-label={data.title}
                     isRound
                     background="#2A2C39"
                     color="white"
-                    size="xl"
+                    size="lg"
                     justifySelf="center"
                   />
 

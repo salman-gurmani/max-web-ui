@@ -17,6 +17,12 @@ import railIcon from '../../public/Icons/WebTechnologies/rails.svg'
 import jsIcon from '../../public/Icons/WebTechnologies/js.svg'
 import unityIcon from '../../public/Icons/gameTechnologies/unity.svg'
 import unrealIcon from '../../public/Icons/gameTechnologies/unrealEngine.svg'
+import gameIcon from '../../public/Icons/ourServices/gameService.svg'
+import webIcon from '../../public/Icons/ourServices/web.svg'
+import amazonIcon from '../../public/Icons/ourServices/amazon.svg'
+import digitalMarketingIcon from '../../public/Icons/ourServices/digitalMarketing.svg'
+import nftIcon from '../../public/Icons/ourServices/nft.svg'
+import mobileDevelopment from '../../public/Icons/ourServices/mobileDevelopment.svg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -101,6 +107,32 @@ export const gameTechnologiesImages = {
   },
   unrealIcon: {
     src: unrealIcon,
+    alt: '',
+  },
+}
+export const ourServicesImages = {
+  amazonIcon: {
+    src: amazonIcon,
+    alt: 'fbIcon',
+  },
+  digitalMarketingIcon: {
+    src: digitalMarketingIcon,
+    alt: '',
+  },
+  gameIcon: {
+    src: gameIcon,
+    alt: '',
+  },
+  mobileDevelopment: {
+    src: mobileDevelopment,
+    alt: '',
+  },
+  nftIcon: {
+    src: nftIcon,
+    alt: '',
+  },
+  webIcon: {
+    src: webIcon,
     alt: '',
   },
 }
