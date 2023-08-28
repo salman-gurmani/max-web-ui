@@ -15,6 +15,8 @@ import nodeIcon from '../../public/Icons/WebTechnologies/nodeJs.svg'
 import phpIcon from '../../public/Icons/WebTechnologies/php.svg'
 import railIcon from '../../public/Icons/WebTechnologies/rails.svg'
 import jsIcon from '../../public/Icons/WebTechnologies/js.svg'
+import unityIcon from '../../public/Icons/gameTechnologies/unity.svg'
+import unrealIcon from '../../public/Icons/gameTechnologies/unrealEngine.svg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -89,6 +91,16 @@ export const WebTechnologiesImages = {
   },
   nodeIcon: {
     src: nodeIcon,
+    alt: '',
+  },
+}
+export const gameTechnologiesImages = {
+  unityIcon: {
+    src: unityIcon,
+    alt: 'unityicon',
+  },
+  unrealIcon: {
+    src: unrealIcon,
     alt: '',
   },
 }
