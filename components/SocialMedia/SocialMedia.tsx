@@ -1,50 +1,107 @@
-import { IconButton } from '@chakra-ui/react'
-import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
-import { Box } from '@chakra-ui/react'
+import { Flex, IconButton, Image } from '@chakra-ui/react'
+import { SocialMediaImages } from '@components/Images'
 
 const SocialMedia = ({ ...rest }) => {
   return (
-    <Box {...rest} display="flex" width="48px">
+    <Flex
+      {...rest}
+      display="flex"
+      width="15%"
+      justifyContent="center"
+      alignItems="center"
+    >
       <IconButton
         aria-label="Facebook"
-        icon={<FaFacebookF color="white" />}
+        icon={
+          <Image
+            src={SocialMediaImages.facebookIcon.src.src}
+            alt={SocialMediaImages.facebookIcon.alt}
+          />
+        }
         fill="white"
-        minH="48px"
-        background="rgba(0,0,0,0)"
-        borderRadius="50%"
+        height="45px"
+        width={60}
+        background="#1B1C1F"
+        borderRadius="12px"
+        border="1px solid #2A2C39"
         _hover={{ bg: 'facebook.600' }}
+        marginX={{ base: '5px', md: '10px', lg: '15px' }}
+      />
+
+      <IconButton
+        aria-label="YouTube"
+        marginX={{ base: '5px', md: '10px', lg: '15px' }}
+        icon={
+          <Image
+            src={SocialMediaImages.youtubeIcon.src.src}
+            alt={SocialMediaImages.youtubeIcon.alt}
+          />
+        }
+        color="white"
+        height="45px"
+        width={60}
+        background="#1B1C1F"
+        borderRadius="12px"
+        border="1px solid #2A2C39"
+        _hover={{ bg: '#c30000' }}
+      />
+
+      <IconButton
+        aria-label="LinkedIn"
+        marginX={{ base: '5px', md: '10px', lg: '15px' }}
+        icon={
+          <Image
+            src={SocialMediaImages.linkedin.src.src}
+            alt={SocialMediaImages.linkedin.alt}
+          />
+        }
+        color="white"
+        height="45px"
+        width={60}
+        background="#1B1C1F"
+        borderRadius="12px"
+        border="1px solid #2A2C39"
+        _hover={{
+          bg: 'linkedin.600',
+        }}
+      />
+      <IconButton
+        aria-label="GitHub"
+        marginX={{ base: '5px', md: '10px', lg: '15px' }}
+        icon={
+          <Image
+            src={SocialMediaImages.githubIcon.src.src}
+            alt={SocialMediaImages.githubIcon.alt}
+          />
+        }
+        color="white"
+        height="45px"
+        width={60}
+        background="#1B1C1F"
+        borderRadius="12px"
+        border="1px solid #2A2C39"
+        _hover={{
+          bg: 'black',
+        }}
       />
       <IconButton
         aria-label="Twitter"
-        icon={<FaTwitter />}
+        marginX={{ base: '5px', md: '10px', lg: '15px' }}
+        icon={
+          <Image
+            src={SocialMediaImages.twitterIcon.src.src}
+            alt={SocialMediaImages.twitterIcon.alt}
+          />
+        }
         color="white"
-        minH="48px"
-        background="rgba(0,0,0,0)"
-        borderRadius="50%"
+        height="45px"
+        width={60}
+        background="#1B1C1F"
+        borderRadius="12px"
+        border="1px solid #2A2C39"
         _hover={{ bg: 'twitter.600' }}
       />
-      <IconButton
-        aria-label="YouTube"
-        icon={<FaYoutube />}
-        color="white"
-        minH="48px"
-        background="rgba(0,0,0,0)"
-        borderRadius="50%"
-        _hover={{ bg: '#c30000' }}
-      />
-      <IconButton
-        aria-label="Instagram"
-        icon={<FaInstagram />}
-        color="white"
-        minH="48px"
-        background="rgba(0,0,0,0)"
-        borderRadius="50%"
-        _hover={{
-          bgGradient:
-            'linear(to-br, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75)',
-        }}
-      />
-    </Box>
+    </Flex>
   )
 }
 
