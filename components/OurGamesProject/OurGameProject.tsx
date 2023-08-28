@@ -25,6 +25,8 @@ import {
 } from '@ajna/pagination'
 import React from 'react'
 
+import { EllipseImage } from '@components/Images'
+
 const OurGameProject = () => {
   const gamesPerPage = 6
   const outerLimit = 2
@@ -124,34 +126,10 @@ const OurGameProject = () => {
               All
             </Button>
             <Box>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="8"
-                height="8"
-                viewBox="0 0 8 8"
-                fill="none"
-              >
-                <circle
-                  cx="4"
-                  cy="4"
-                  r="4"
-                  fill="url(#paint0_linear_100_155)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_100_155"
-                    x1="0"
-                    y1="0"
-                    x2="8.64461"
-                    y2="0.770828"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#2FBBFB" />
-                    <stop offset="0.526042" stopColor="#D442E0" />
-                    <stop offset="1" stopColor="#F15D3C" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <Image
+                src={EllipseImage.ellipseIcon.src.src}
+                alt={EllipseImage.ellipseIcon.alt}
+              />
             </Box>
             <Button
               fontStyle="normal"
@@ -168,34 +146,10 @@ const OurGameProject = () => {
               Unity
             </Button>
             <Box>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="8"
-                height="8"
-                viewBox="0 0 8 8"
-                fill="none"
-              >
-                <circle
-                  cx="4"
-                  cy="4"
-                  r="4"
-                  fill="url(#paint0_linear_100_155)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_100_155"
-                    x1="0"
-                    y1="0"
-                    x2="8.64461"
-                    y2="0.770828"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#2FBBFB" />
-                    <stop offset="0.526042" stopColor="#D442E0" />
-                    <stop offset="1" stopColor="#F15D3C" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <Image
+                src={EllipseImage.ellipseIcon.src.src}
+                alt={EllipseImage.ellipseIcon.alt}
+              />
             </Box>
             <Button
               fontStyle="normal"
