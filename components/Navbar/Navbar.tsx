@@ -44,14 +44,15 @@ const NavigationBar = () => {
       position: absolute;
 
       width: 100%;
-      top: 3%;
+      top: 1.5%;
+
       left: 50%;
       transform: translate(-50%, -50%);
     }
   `
 
   return (
-    <Box css={boxStyle}>
+    <Flex css={boxStyle}>
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
           <Image
@@ -98,7 +99,7 @@ const NavigationBar = () => {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </Box>
+    </Flex>
   )
 }
 

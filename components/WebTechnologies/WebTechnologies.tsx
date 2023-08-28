@@ -1,15 +1,15 @@
-import { Flex, Heading, VStack, Text, HStack, Box } from '@chakra-ui/react'
-import { BoxLine } from '@components/BoxLine'
 import {
-  HTMLIcon,
-  CSSIcon,
-  JSIcon,
-  ReactIcon,
-  AngularIcon,
-  PhpIcon,
-  RailsIcon,
-  NodeIcon,
-} from './imagesData'
+  Flex,
+  Heading,
+  VStack,
+  Text,
+  HStack,
+  Box,
+  Image,
+} from '@chakra-ui/react'
+import { BoxLine } from '@components/BoxLine'
+
+import { WebTechnologiesImages } from '@components/Images'
 
 const WebTechnologies = () => {
   return (
@@ -60,77 +60,53 @@ const WebTechnologies = () => {
           flexWrap="wrap"
           justifyContent="center"
         >
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {HTMLIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.htmlIcon.src.src}
+              alt={WebTechnologiesImages.htmlIcon.alt}
+            />
           </Box>
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {CSSIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.cssIcon.src.src}
+              alt={WebTechnologiesImages.cssIcon.alt}
+            />
           </Box>
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {JSIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.jsIcon.src.src}
+              alt={WebTechnologiesImages.jsIcon.alt}
+            />
           </Box>
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {ReactIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.reactIcon.src.src}
+              alt={WebTechnologiesImages.reactIcon.alt}
+            />
           </Box>
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {AngularIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.angularIcon.src.src}
+              alt={WebTechnologiesImages.angularIcon.alt}
+            />
           </Box>
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {NodeIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.nodeIcon.src.src}
+              alt={WebTechnologiesImages.nodeIcon.alt}
+            />
           </Box>
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {PhpIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.phpIcon.src.src}
+              alt={WebTechnologiesImages.phpIcon.alt}
+            />
           </Box>
-          <Box
-            as="svg"
-            width={{ base: '60px', md: '70px', lg: '90px' }}
-            height={{ base: '60px', md: '70px', lg: '90px' }}
-            viewBox="0 0 110 110"
-            fill="none"
-          >
-            {RailsIcon}
+          <Box>
+            <Image
+              src={WebTechnologiesImages.railIcon.src.src}
+              alt={WebTechnologiesImages.railIcon.alt}
+            />
           </Box>
         </HStack>
       </VStack>

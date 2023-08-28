@@ -6,6 +6,15 @@ import youtube from '../../public/icons/SoicalMedia/youtube.svg'
 import linkedin from '../../public/icons/SoicalMedia/linkedin.svg'
 import twitter from '../../public/icons/SoicalMedia/twitter.svg'
 import github from '../../public/icons/SoicalMedia/github.svg'
+import ellipse from '../../public/Icons/Ellipse.svg'
+import htmlIcon from '../../public/Icons/WebTechnologies/html.svg'
+import angularIcon from '../../public/Icons/WebTechnologies/angular.svg'
+import cssIcon from '../../public/Icons/WebTechnologies/css.svg'
+import reactIcon from '../../public/Icons/WebTechnologies/react.svg'
+import nodeIcon from '../../public/Icons/WebTechnologies/nodeJs.svg'
+import phpIcon from '../../public/Icons/WebTechnologies/php.svg'
+import railIcon from '../../public/Icons/WebTechnologies/rails.svg'
+import jsIcon from '../../public/Icons/WebTechnologies/js.svg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -40,6 +49,46 @@ export const SocialMediaImages = {
   },
   linkedin: {
     src: linkedin,
+    alt: '',
+  },
+}
+export const EllipseImage = {
+  ellipseIcon: {
+    src: ellipse,
+    alt: '',
+  },
+}
+export const WebTechnologiesImages = {
+  htmlIcon: {
+    src: htmlIcon,
+    alt: 'html',
+  },
+  angularIcon: {
+    src: angularIcon,
+    alt: '',
+  },
+  reactIcon: {
+    src: reactIcon,
+    alt: '',
+  },
+  cssIcon: {
+    src: cssIcon,
+    alt: '',
+  },
+  phpIcon: {
+    src: phpIcon,
+    alt: '',
+  },
+  jsIcon: {
+    src: jsIcon,
+    alt: '',
+  },
+  railIcon: {
+    src: railIcon,
+    alt: '',
+  },
+  nodeIcon: {
+    src: nodeIcon,
     alt: '',
   },
 }
