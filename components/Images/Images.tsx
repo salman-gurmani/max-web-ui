@@ -23,6 +23,9 @@ import amazonIcon from '../../public/Icons/ourServices/amazon.svg'
 import digitalMarketingIcon from '../../public/Icons/ourServices/digitalMarketing.svg'
 import nftIcon from '../../public/Icons/ourServices/nft.svg'
 import mobileDevelopment from '../../public/Icons/ourServices/mobileDevelopment.svg'
+import gameDev from '../../public/Icons/OurExpertise/gameDev.svg'
+import webDev from '../../public/Icons/OurExpertise/webDev.svg'
+import services from '../../public/Icons/OurExpertise/services.svg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -133,6 +136,20 @@ export const ourServicesImages = {
   },
   webIcon: {
     src: webIcon,
+    alt: '',
+  },
+}
+export const OurExpertiseImages = {
+  gameDev: {
+    src: gameDev,
+    alt: 'gameDevIcon',
+  },
+  webDev: {
+    src: webDev,
+    alt: '',
+  },
+  services: {
+    src: services,
     alt: '',
   },
 }
