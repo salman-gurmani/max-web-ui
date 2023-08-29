@@ -8,6 +8,7 @@ import { WebTechnologies } from '@components/WebTechnologies'
 import { OurWebProjects } from '@components/OurWebProjects'
 import { OurServices } from '@components/OurServices'
 
+import { CompanyStats } from '@components/CompanyStats'
 import React from 'react'
 import { OurGameProject } from '@components/OurGamesProject'
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <OurGameProject />
       <GameTechnologies />
       <OurServices />
+      <CompanyStats />
     </PrimaryLayout>
   )
 }
