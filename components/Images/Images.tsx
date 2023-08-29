@@ -26,6 +26,10 @@ import mobileDevelopment from '../../public/Icons/ourServices/mobileDevelopment.
 import gameDev from '../../public/Icons/OurExpertise/gameDev.svg'
 import webDev from '../../public/Icons/OurExpertise/webDev.svg'
 import services from '../../public/Icons/OurExpertise/services.svg'
+import clients from '../../public/Icons/stats/clients.svg'
+import experience from '../../public/Icons/stats/experience.svg'
+import products from '../../public/Icons/stats/products.svg'
+import team from '../../public/Icons/stats/team.svg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -150,6 +154,24 @@ export const OurExpertiseImages = {
   },
   services: {
     src: services,
+    alt: '',
+  },
+}
+export const statsImages = {
+  clients: {
+    src: clients,
+    alt: '',
+  },
+  team: {
+    src: team,
+    alt: '',
+  },
+  products: {
+    src: products,
+    alt: '',
+  },
+  experience: {
+    src: experience,
     alt: '',
   },
 }
