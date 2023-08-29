@@ -51,15 +51,18 @@ const OurWebProjects = () => {
         top="50%"
         transform="translateY(-50%)"
       />
-      <Box padding="40px">
-        <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={12}>
+      <Box padding={{ base: '20px', md: '15px', lg: '40px' }}>
+        <Grid
+          templateColumns={{ base: '1fr', md: '1fr 1fr' }}
+          gap={{ base: 7, md: 10, lg: 12 }}
+        >
           <VStack spacing={7} align="flex-start">
             <Heading
               backgroundImage="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
               backgroundClip="text"
               color="transparent"
               fontFamily="roboto"
-              fontSize={{ base: '20px', md: '40px', lg: '55px' }}
+              fontSize={{ base: '25px', md: '45px', lg: '55px' }}
             >
               Our Web Projects
             </Heading>
@@ -116,12 +119,16 @@ const OurWebProjects = () => {
           </VStack>
           <Grid templateColumns="1fr" gap={0}>
             <Flex overflow={overflowXValue} ref={projectContainerRef}>
-              <HStack margin={5} spacing={12} align="center">
+              <HStack
+                margin={{ base: 2, md: 3, lg: 5 }}
+                spacing={12}
+                align="center"
+              >
                 {map(WebData, (data) => {
                   return (
                     <Box
                       key={uuidv4()}
-                      width={{ base: '250px', md: '275px', lg: '300px' }}
+                      width={{ base: '230px', md: '275px', lg: '300px' }}
                       height="350px"
                       borderRadius="10px"
                       border="1px solid #2A2C39"

@@ -15,7 +15,7 @@ const CompanyStats = () => {
           lg: '1fr 1fr 1fr 1fr',
         }}
         marginX={{ base: 10, md: 50, lg: 100 }} // margin left and right have same value so insteaf og marginLeft and marginRight use marginX
-        marginY={30}
+        marginY={25}
         gap={{ base: 2, md: 10, lg: 20 }} // gap for different screen sizes
       >
         {map(StatsData, (data) => {

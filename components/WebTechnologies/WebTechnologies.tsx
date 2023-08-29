@@ -13,7 +13,11 @@ import { WebTechnologiesImages } from '@components/Images'
 
 const WebTechnologies = () => {
   return (
-    <Flex bg="#18191D" padding={30} justifyContent="center">
+    <Flex
+      bg="#18191D"
+      padding={{ base: '25px', md: '27px', lg: '30px' }}
+      justifyContent="center"
+    >
       <VStack gap={5} paddingX={{ base: 0, md: 35 }}>
         <Heading
           fontFamily="roboto"
