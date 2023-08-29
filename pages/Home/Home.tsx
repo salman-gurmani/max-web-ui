@@ -14,15 +14,12 @@ const Home = () => {
   return (
     <PrimaryLayout>
       <Banner />
-
       <Expertise />
-
       <OurWebProjects />
       <WebTechnologies />
       <OurGameProject />
       <GameTechnologies />
       <OurServices />
-
     </PrimaryLayout>
   )
 }

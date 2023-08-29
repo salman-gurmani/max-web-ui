@@ -34,7 +34,7 @@ const Expertise = () => {
               title={data.title}
               desc={data.desc}
               boxLineWidth={data.boxLineWidth}
-              iconIndex={data.iconIndex}
+              icon={data.icon}
             />
           )
         })}
