@@ -35,6 +35,7 @@ const ExpertiseCard = (props) => {
           marginRight="auto"
           marginTop="0" // Reset any default margin
           marginBottom="0" // Reset any default margin
+          pointerEvents="none"
         />
       </CardHeader>
       <Text

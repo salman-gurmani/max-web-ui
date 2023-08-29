@@ -37,6 +37,7 @@ import projectEmailIcon from '../../public/Icons/ProjectDetails/emailIcon.svg'
 import linkedinIcon from '../../public/Icons/ProjectDetails/linkedinIcon.svg'
 import projectLocationIcon from '../../public/Icons/ProjectDetails/locationIcon.svg'
 
+
 export const FooterImages = {
   phoneIcon: {
     src: phoneIcon,
