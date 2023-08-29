@@ -30,11 +30,17 @@ import clients from '../../public/Icons/stats/clients.svg'
 import experience from '../../public/Icons/stats/experience.svg'
 import products from '../../public/Icons/stats/products.svg'
 import team from '../../public/Icons/stats/team.svg'
+import logo from '../../public/Icons/Logo.svg'
+import callIcon from '../../public/Icons/ProjectDetails/callIcon.svg'
+import checkmark from '../../public/Icons/ProjectDetails/checkmark.svg'
+import projectEmailIcon from '../../public/Icons/ProjectDetails/emailIcon.svg'
+import linkedinIcon from '../../public/Icons/ProjectDetails/linkedinIcon.svg'
+import projectLocationIcon from '../../public/Icons/ProjectDetails/locationIcon.svg'
 
 export const FooterImages = {
   phoneIcon: {
     src: phoneIcon,
-    alt: 'callIcon',
+    alt: '',
   },
   locationIcon: {
     src: locationIcon,
@@ -70,6 +76,12 @@ export const SocialMediaImages = {
 export const EllipseImage = {
   ellipseIcon: {
     src: ellipse,
+    alt: '',
+  },
+}
+export const logoImage = {
+  logo: {
+    src: logo,
     alt: '',
   },
 }
@@ -172,6 +184,28 @@ export const statsImages = {
   },
   experience: {
     src: experience,
+    alt: '',
+  },
+}
+export const ProjectDetailsImages = {
+  callIcon: {
+    src: callIcon,
+    alt: '',
+  },
+  linkedinIcon: {
+    src: linkedinIcon,
+    alt: '',
+  },
+  projectEmailIcon: {
+    src: projectEmailIcon,
+    alt: '',
+  },
+  projectLocationIcon: {
+    src: projectLocationIcon,
+    alt: '',
+  },
+  checkmark: {
+    src: checkmark,
     alt: '',
   },
 }

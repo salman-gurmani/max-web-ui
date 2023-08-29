@@ -1,11 +1,7 @@
-import { Box, Heading, List, ListIcon, ListItem } from '@chakra-ui/react'
+import { Box, Heading, List, Image, ListItem } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
-import {
-  phoneIcon,
-  emailIcon,
-  linkedinIcon,
-  locationIcon,
-} from '@pages/ProjectDetails/iconData'
+
+import { ProjectDetailsImages } from '@components/Images'
 const BoxList = () => {
   return (
     <Box
@@ -31,6 +27,7 @@ const BoxList = () => {
         marginLeft="2px"
         marginRight="auto"
         bg="#2A2C39"
+        marginTop="1px"
       />
       <List spacing={5}>
         <ListItem
@@ -41,7 +38,7 @@ const BoxList = () => {
           alignItems="left"
           marginTop={5}
         >
-          <ListIcon as={phoneIcon} style={{ marginRight: '20px' }} />
+          <Image src={ProjectDetailsImages.callIcon.src.src} alt="" />
           <span style={{ marginLeft: '20px' }}>+4917634649431</span>
         </ListItem>
         <ListItem
@@ -51,7 +48,7 @@ const BoxList = () => {
           display="flex"
           alignItems="center"
         >
-          <ListIcon as={emailIcon} style={{ marginRight: '20px' }} />
+          <Image src={ProjectDetailsImages.projectEmailIcon.src.src} alt="" />
           <span style={{ marginLeft: '20px' }}>info@ideegames.com</span>
         </ListItem>
         <ListItem
@@ -61,7 +58,7 @@ const BoxList = () => {
           display="flex"
           alignItems="center"
         >
-          <ListIcon as={linkedinIcon} style={{ marginRight: '20px' }} />
+          <Image src={ProjectDetailsImages.linkedinIcon.src.src} alt="" />
           <span style={{ marginLeft: '20px' }}>@idee-games-core</span>
         </ListItem>
         <ListItem
@@ -71,7 +68,10 @@ const BoxList = () => {
           display="flex"
           alignItems="center"
         >
-          <ListIcon as={locationIcon} style={{ marginRight: '20px' }} />
+          <Image
+            src={ProjectDetailsImages.projectLocationIcon.src.src}
+            alt=""
+          />
           <span style={{ marginLeft: '20px' }}>Eindhoven, North Brabant</span>
         </ListItem>
       </List>

@@ -7,7 +7,6 @@ import {
   VStack,
   Image,
   List,
-  ListIcon,
   ListItem,
 } from '@chakra-ui/react'
 import { PrimaryLayout } from '../../components/Layout/Layout'
@@ -15,7 +14,7 @@ import React from 'react'
 import BannerImg from '../../public/images/header.png'
 import BGImg from '../../public/images/DetailImg.png'
 import { FaAngleRight } from 'react-icons/fa'
-import { TickIcon } from './iconData'
+import { ProjectDetailsImages } from '@components/Images'
 import { TextOnImagePanel } from '@components/TextOnImagePanel'
 import { BoxList } from '@components/BoxList'
 import { BoxTable } from '@components/BoxTable'
@@ -187,16 +186,7 @@ export default function ProjectDetails() {
                 display="flex"
                 alignItems="center"
               >
-                <ListIcon as={TickIcon} /> Lorem Ipsum is simply dummy text.{' '}
-              </ListItem>
-              <ListItem
-                color="white"
-                fontFamily="roboto"
-                fontSize={{ base: '13px', md: '15px', lg: '18px' }}
-                display="flex"
-                alignItems="center"
-              >
-                <ListIcon as={TickIcon} />
+                <Image src={ProjectDetailsImages.checkmark.src.src} alt="" />
                 Lorem Ipsum is simply dummy text.{' '}
               </ListItem>
               <ListItem
@@ -206,7 +196,7 @@ export default function ProjectDetails() {
                 display="flex"
                 alignItems="center"
               >
-                <ListIcon as={TickIcon} />
+                <Image src={ProjectDetailsImages.checkmark.src.src} alt="" />
                 Lorem Ipsum is simply dummy text.{' '}
               </ListItem>
               <ListItem
@@ -216,7 +206,17 @@ export default function ProjectDetails() {
                 display="flex"
                 alignItems="center"
               >
-                <ListIcon as={TickIcon} />
+                <Image src={ProjectDetailsImages.checkmark.src.src} alt="" />
+                Lorem Ipsum is simply dummy text.{' '}
+              </ListItem>
+              <ListItem
+                color="white"
+                fontFamily="roboto"
+                fontSize={{ base: '13px', md: '15px', lg: '18px' }}
+                display="flex"
+                alignItems="center"
+              >
+                <Image src={ProjectDetailsImages.checkmark.src.src} alt="" />
                 Lorem Ipsum is simply dummy text.{' '}
               </ListItem>
             </List>
