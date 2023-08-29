@@ -1,4 +1,11 @@
-import { Text, IconButton, Grid, GridItem, VStack } from '@chakra-ui/react'
+import {
+  Text,
+  IconButton,
+  Grid,
+  GridItem,
+  VStack,
+  Image,
+} from '@chakra-ui/react'
 
 const StatsView = (props) => {
   return (
@@ -13,7 +20,7 @@ const StatsView = (props) => {
         justifyContent="center" // justify icon in center
       >
         <IconButton
-          icon={props.icon}
+          icon={<Image src={props.icon} alt="" />}
           aria-label={props.title}
           isRound={false}
           background="#18191D"
