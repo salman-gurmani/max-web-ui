@@ -11,9 +11,8 @@ import {
 } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
 import { SocialMedia } from '@components/SocialMedia'
-
 import { FooterImages } from '@components/Images'
-import logoImg from '../../public/images/logo/Logo.png'
+import { logoImage } from '@components/Images'
 
 const Footer = () => {
   return (
@@ -165,7 +164,7 @@ const Footer = () => {
         {' '}
         <VStack alignItems="center" gap={5}>
           <Image
-            src={logoImg.src}
+            src={logoImage.logo.src.src}
             style={{
               maxWidth: 60,
               maxHeight: 60,

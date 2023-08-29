@@ -35,7 +35,7 @@ const OurWebProjects = () => {
     projectContainer.scrollLeft += scrollStep
   }
   return (
-    <Box bg="#111215" padding="30px" position="relative">
+    <Box bg="#111215" padding="40px" position="relative">
       <IconButton
         className="scroll-button scroll-prev"
         onClick={() => handleScroll('left')}
@@ -51,7 +51,7 @@ const OurWebProjects = () => {
         top="50%"
         transform="translateY(-50%)"
       />
-      <Box padding="20px">
+      <Box padding="40px">
         <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={12}>
           <VStack spacing={7} align="flex-start">
             <Heading
