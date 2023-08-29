@@ -1,0 +1,1 @@
+export { TextOnImagePanel } from './TextOnImagePanel'

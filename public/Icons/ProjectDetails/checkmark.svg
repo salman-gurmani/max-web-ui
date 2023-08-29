@@ -1,0 +1,16 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="fe:check">
+<g id="feCheck0">
+<g id="feCheck1">
+<path id="feCheck2" fill-rule="evenodd" clip-rule="evenodd" d="M7.50098 12.5L5.00098 15L12.501 22.5L25.001 10L22.501 7.5L12.501 17.5L7.50098 12.5Z" fill="url(#paint0_linear_113_20195)"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_113_20195" x1="5.00098" y1="7.5" x2="26.4807" y2="10.0538" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2FBBFB"/>
+<stop offset="0.526042" stop-color="#D442E0"/>
+<stop offset="1" stop-color="#F15D3C"/>
+</linearGradient>
+</defs>
+</svg>
