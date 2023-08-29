@@ -14,6 +14,7 @@ import {
   useDisclosure,
   Show,
   Hide,
+  Image,
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -23,11 +24,9 @@ import {
 } from '@chakra-ui/icons'
 
 import { css } from '@emotion/react'
-import Image from 'next/image'
 
 import { useTranslation } from 'next-i18next'
-
-import logoImg from '../../public/images/logo/Logo.png'
+import { logoImage } from '@components/Images'
 import React from 'react'
 
 const NavigationBar = () => {
@@ -38,13 +37,12 @@ const NavigationBar = () => {
     z-index: 2;
     padding: 0.5rem;
     background-color: black;
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
 
     @media screen and (min-width: 1248px) {
       position: absolute;
 
       width: 100%;
-      top: 1.5%;
+      top: 0.5%;
 
       left: 50%;
       transform: translate(-50%, -50%);
@@ -56,7 +54,7 @@ const NavigationBar = () => {
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
           <Image
-            src={logoImg}
+            src={logoImage.logo.src.src}
             style={{
               maxWidth: 60,
               maxHeight: 60,
@@ -68,7 +66,7 @@ const NavigationBar = () => {
         </Hide>
         <Show below="md">
           <Image
-            src={logoImg}
+            src={logoImage.logo.src.src}
             style={{ maxWidth: 40, maxHeight: 40, marginLeft: '0px' }}
             alt="Logo"
           />
@@ -319,16 +317,6 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'Contact us',
     isSelected: false,
   },
-
-  // {
-  //   label: 'membership',
-  //   children: [
-  //     { label: 'groupMembership', href: '#' },
-  //     { label: 'individualMembership', href: '#' },
-  //     { label: 'danRecognisationForm', href: '#' },
-  //     { label: 'umpireQuizes', href: '#' },
-  //   ],
-  // },
 ]
 
 export { NavigationBar }

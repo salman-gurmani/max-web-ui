@@ -94,6 +94,7 @@ const OurServices = () => {
                     color="white"
                     size="lg"
                     justifySelf="center"
+                    pointerEvents="none"
                   />
 
                   <Box>

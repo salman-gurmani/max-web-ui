@@ -49,10 +49,10 @@ const Banner = () => {
                 fontSize={{ base: '16px', md: '20px' }}
                 border-radius="6px"
                 background="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
-                // background="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
                 paddingX={{ base: '3', md: '5', lg: '5' }}
                 zIndex="5"
                 alignSelf="flex-start"
+                pointerEvents="none"
                 _hover={{
                   bgGradient:
                     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
@@ -71,7 +71,6 @@ const Banner = () => {
                 fontFamily="roboto"
                 fontStyle="normal"
                 fontWeight="600"
-                //lineHeight="60px"
                 alignSelf="flex-start"
               >
                 WEB & MOBILE SOLUTIONS

@@ -30,11 +30,12 @@ import clients from '../../public/Icons/stats/clients.svg'
 import experience from '../../public/Icons/stats/experience.svg'
 import products from '../../public/Icons/stats/products.svg'
 import team from '../../public/Icons/stats/team.svg'
+import logo from '../../public/Icons/Logo.svg'
 
 export const FooterImages = {
   phoneIcon: {
     src: phoneIcon,
-    alt: 'callIcon',
+    alt: '',
   },
   locationIcon: {
     src: locationIcon,
@@ -70,6 +71,12 @@ export const SocialMediaImages = {
 export const EllipseImage = {
   ellipseIcon: {
     src: ellipse,
+    alt: '',
+  },
+}
+export const logoImage = {
+  logo: {
+    src: logo,
     alt: '',
   },
 }

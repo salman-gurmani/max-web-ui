@@ -170,7 +170,7 @@ const ContactUs = () => {
               </Grid>
               <Flex mt={5}>
                 <FormControl
-                  inValid={errors.message && touched.message}
+                  isInvalid={errors.message && touched.message}
                   isRequired
                 >
                   <Textarea
