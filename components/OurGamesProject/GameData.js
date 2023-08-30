@@ -1,8 +1,10 @@
+import BusBG from './Bus Simulator.jpg'
+
 const GamesData = [
   {
-    image:
-      'https://play-lh.googleusercontent.com/Gi9K9vYUDa5FK32m0G_M1PuYUONdcxBNKlTF8jYiQJ5yqYFEFJJZyfV2Ggk0pj-6NQ=w240-h480-rw',
-
+    // image:
+    //   'https://play-lh.googleusercontent.com/Gi9K9vYUDa5FK32m0G_M1PuYUONdcxBNKlTF8jYiQJ5yqYFEFJJZyfV2Ggk0pj-6NQ=w240-h480-rw',
+    image: BusBG.src,
     name: 'Supercars Underground Racing',
     date: 'June 25, 2021',
     link: 'https://play.google.com/store/apps/details?id=com.rivalwheels.racing.car&pcampaignid=web_share',
