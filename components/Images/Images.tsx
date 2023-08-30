@@ -36,7 +36,18 @@ import checkmark from '../../public/Icons/ProjectDetails/checkmark.svg'
 import projectEmailIcon from '../../public/Icons/ProjectDetails/emailIcon.svg'
 import linkedinIcon from '../../public/Icons/ProjectDetails/linkedinIcon.svg'
 import projectLocationIcon from '../../public/Icons/ProjectDetails/locationIcon.svg'
-
+import BusSim from '../../public/Icons/Game Icons/BusSimulator.jpg'
+import ArrowFest from '../../public/Icons/Game Icons/ArrowFest.png'
+import GeniusSay from '../../public/Icons/Game Icons/GeniusSay.png'
+import HillDrive from '../../public/Icons/Game Icons/HillDrive.png'
+import Junkyard from '../../public/Icons/Game Icons/Junkyard.jpg'
+import LuckyEgg from '../../public/Icons/Game Icons/LuckyEgg.png'
+import MegaRamp from '../../public/Icons/Game Icons/MegaRamp.png'
+import Parking from '../../public/Icons/Game Icons/Parking.png'
+import PoliceSim from '../../public/Icons/Game Icons/PoliceSim.png'
+import RealEst from '../../public/Icons/Game Icons/RealEstate.png'
+import Sniper from '../../public/Icons/Game Icons/Sniper.png'
+import TaxiSim from '../../public/Icons/Game Icons/TaxiSim.png'
 
 export const FooterImages = {
   phoneIcon: {
@@ -207,6 +218,56 @@ export const ProjectDetailsImages = {
   },
   checkmark: {
     src: checkmark,
+    alt: '',
+  },
+}
+export const GamesIconImages = {
+  BusSim: {
+    src: BusSim,
+    alt: '',
+  },
+  ArrowFest: {
+    src: ArrowFest,
+    alt: '',
+  },
+  HillDrive: {
+    src: HillDrive,
+    alt: '',
+  },
+  Junkyard: {
+    src: Junkyard,
+    alt: '',
+  },
+  LuckyEgg: {
+    src: LuckyEgg,
+    alt: '',
+  },
+  MegaRamp: {
+    src: MegaRamp,
+    alt: '',
+  },
+  Parking: {
+    src: Parking,
+    alt: '',
+  },
+  PoliceSim: {
+    src: PoliceSim,
+    alt: '',
+  },
+  RealEst: {
+    src: RealEst,
+    alt: '',
+  },
+  Sniper: {
+    src: Sniper,
+    alt: '',
+  },
+  TaxiSim: {
+    src: TaxiSim,
+    alt: '',
+  },
+  GeniusSay: {
+    src: GeniusSay,
     alt: '',
   },
 }
