@@ -23,7 +23,7 @@ const GamesData = [
     platform: 'Unity',
   },
   {
-    image: '',
+    image: GamesIconImages.HillDrive.src.src,
     name: 'Truck Simulator: Offroad 4x4',
     date: 'Sep 9, 2021',
     link: 'https://play.google.com/store/apps/details?id=com.rivalwheels.hilldrive&pcampaignid=web_share',
@@ -43,13 +43,13 @@ const GamesData = [
     link: 'https://play.google.com/store/apps/details?id=com.rivalwheels.sniper.shooter&pcampaignid=web_share',
     platform: 'Unity',
   },
-  {
-    image: '',
-    name: 'Extreme Bike Stunt 2021: Crazy',
-    date: 'Sep 28, 2020',
-    link: 'https://play.google.com/store/apps/details?id=com.rivalwheels.bike.stunt&pcampaignid=web_share',
-    platform: 'Unity',
-  },
+  // {
+  //   image: '',
+  //   name: 'Extreme Bike Stunt 2021: Crazy',
+  //   date: 'Sep 28, 2020',
+  //   link: 'https://play.google.com/store/apps/details?id=com.rivalwheels.bike.stunt&pcampaignid=web_share',
+  //   platform: 'Unity',
+  // },
   {
     image: '',
     name: 'Modern Warfare: Gun Games',
@@ -106,13 +106,13 @@ const GamesData = [
     link: 'https://play.google.com/store/apps/details?id=com.FunGamesStudio.lucky.eggs&pcampaignid=web_share',
     platform: 'Unity',
   },
-  {
-    image: '',
-    name: 'Fidget Trading Toys - Pop It',
-    date: 'Sep 23, 2021',
-    link: 'https://play.google.com/store/apps/details?id=com.fungamesstudio.fidget.trading.master&pcampaignid=web_share',
-    platform: 'Unity',
-  },
+  // {
+  //   image: '',
+  //   name: 'Fidget Trading Toys - Pop It',
+  //   date: 'Sep 23, 2021',
+  //   link: 'https://play.google.com/store/apps/details?id=com.fungamesstudio.fidget.trading.master&pcampaignid=web_share',
+  //   platform: 'Unity',
+  // },
   {
     image: GamesIconImages.Junkyard.src.src,
     name: 'Junkyard Keeper: Garbage truck',
