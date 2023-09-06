@@ -4,18 +4,21 @@ const WebData = [
     name: 'Bestow',
     date: 'August 11, 2023',
     link: 'https://bestow.qodeinteractive.com/online-store/',
+    id: '1',
   },
   {
     image: '',
     name: 'ShopO',
     date: 'August 11, 2023',
     link: 'https://shopo.quomodothemes.website/',
+    id: '2',
   },
   {
     image: '',
     name: 'Nest Mart and Grocery',
     date: 'August 11, 2023',
     link: 'https://themepanthers.com/wp/nest/d2/home-5/',
+    id: '3',
   },
   {
     image: '',

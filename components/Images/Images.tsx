@@ -53,6 +53,7 @@ import FlagRunner from '../../public/Icons/Game Icons/Flag Runner.jpg'
 import ModernWarfare from '../../public/Icons/Game Icons/Modern Warfare.jpg'
 import PullThePin from '../../public/Icons/Game Icons/Pull the Pin.jpg'
 import RacingCar from '../../public/Icons/Game Icons/Racing Car.jpg'
+import Bestow from '../../public/Icons/WebsiteIcons/Bestow.jpg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -293,6 +294,12 @@ export const GamesIconImages = {
   },
   RacingCar: {
     src: RacingCar,
+    alt: '',
+  },
+}
+export const WebsiteIconsImages = {
+  Bestow: {
+    src: Bestow,
     alt: '',
   },
 }
