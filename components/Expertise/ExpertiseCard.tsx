@@ -6,12 +6,14 @@ import {
   IconButton,
   Image,
 } from '@chakra-ui/react'
+import { v4 as uuidv4 } from 'uuid'
 
 import { BoxLine } from '@components/BoxLine'
 
 const ExpertiseCard = (props) => {
   return (
     <Card
+      key={uuidv4()}
       w="auto"
       h="auto"
       borderRadius="10px"
