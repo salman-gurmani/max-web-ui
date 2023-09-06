@@ -48,6 +48,11 @@ import PoliceSim from '../../public/Icons/Game Icons/PoliceSim.png'
 import RealEst from '../../public/Icons/Game Icons/RealEstate.png'
 import Sniper from '../../public/Icons/Game Icons/Sniper.png'
 import TaxiSim from '../../public/Icons/Game Icons/TaxiSim.png'
+import AmazingParking from '../../public/Icons/Game Icons/Amazing Parking.jpg'
+import FlagRunner from '../../public/Icons/Game Icons/Flag Runner.jpg'
+import ModernWarfare from '../../public/Icons/Game Icons/Modern Warfare.jpg'
+import PullThePin from '../../public/Icons/Game Icons/Pull the Pin.jpg'
+import RacingCar from '../../public/Icons/Game Icons/Racing Car.jpg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -268,6 +273,26 @@ export const GamesIconImages = {
   },
   GeniusSay: {
     src: GeniusSay,
+    alt: '',
+  },
+  AmazingParking: {
+    src: AmazingParking,
+    alt: '',
+  },
+  FlagRunner: {
+    src: FlagRunner,
+    alt: '',
+  },
+  ModernWarfare: {
+    src: ModernWarfare,
+    alt: '',
+  },
+  PullThePin: {
+    src: PullThePin,
+    alt: '',
+  },
+  RacingCar: {
+    src: RacingCar,
     alt: '',
   },
 }
