@@ -15,42 +15,45 @@ import {
   Show,
   Hide,
   Image,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Grid,
+  VStack,
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
-  CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
-
+import { v4 as uuidv4 } from 'uuid'
 import { css } from '@emotion/react'
-
 import { useTranslation } from 'next-i18next'
 import { logoImage } from '@components/Images'
 import React from 'react'
 
 const NavigationBar = () => {
-  const { isOpen, onToggle } = useDisclosure()
+  const {
+    isOpen: isOpenDrawer,
+    onOpen: onOpenDrawer,
+    onClose: onCloseDrawer,
+  } = useDisclosure()
 
   const boxStyle = css`
     width: 100%;
     z-index: 2;
-    padding: 0.5rem;
-    background-color: black;
-
-    @media screen and (min-width: 1248px) {
-      position: absolute;
-
-      width: 100%;
-      top: 0.5%;
-
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    padding: 0px 15px;
+    height: 72px;
+    align-items: center;
+    display: inline-grid;
+    box-shadow: 0 2px 4px -1px rgba(57, 76, 96, 0.15);
   `
 
   return (
-    <Flex css={boxStyle}>
+    <Box css={boxStyle} backgroundColor="black">
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
           <Image
@@ -70,19 +73,17 @@ const NavigationBar = () => {
             style={{ maxWidth: 40, maxHeight: 40, marginLeft: '0px' }}
             alt="Logo"
           />
-          <IconButton
-            onClick={onToggle}
-            color="white"
-            icon={
-              isOpen ? (
-                <CloseIcon w={3} h={3} color="white" />
-              ) : (
-                <HamburgerIcon w={5} h={5} />
-              )
-            }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
+          <Flex mr={{ base: -4 }} justifyContent="flex-end">
+            <IconButton
+              onClick={onOpenDrawer}
+              icon={
+                <HamburgerIcon color="white" w={5} h={5} marginRight="20px" />
+              }
+              variant="ghost"
+              aria-label="Toggle Navigation"
+              size="sm"
+            />
+          </Flex>
         </Show>
         <Flex
           display={{ base: 'none', md: 'flex' }}
@@ -94,10 +95,10 @@ const NavigationBar = () => {
         </Flex>
       </Flex>
 
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+      <Collapse animateOpacity>
+        <MobileNav onClose={onCloseDrawer} isOpen={isOpenDrawer} />
       </Collapse>
-    </Flex>
+    </Box>
   )
 }
 
@@ -216,17 +217,44 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   )
 }
 
-const MobileNav = () => {
+const MobileNav = ({ isOpen, onClose }) => {
   return (
-    <Stack
-      bg={useColorModeValue('white', 'gray.800')}
-      p={4}
-      display={{ md: 'none' }}
+    <Drawer
+      isOpen={isOpen}
+      placement="right"
+      size="full"
+      onClose={onClose}
+      colorScheme="gray"
     >
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
-    </Stack>
+      <DrawerOverlay />
+      <DrawerContent>
+        <Box backgroundColor="black">
+          <DrawerHeader>
+            <Grid templateColumns={'1fr 1fr 1fr'} gap={10} paddingY="10px">
+              <Image
+                src={logoImage.logo.src.src}
+                style={{ maxWidth: 50, maxHeight: 70 }}
+                alt="Logo"
+              />
+              <Text color="white" textAlign="center">
+                Menu
+              </Text>
+              <DrawerCloseButton marginTop="15px" color="white" size="lg" />
+            </Grid>
+          </DrawerHeader>
+        </Box>
+
+        <DrawerBody backgroundColor="black">
+          <Flex justify="center" align="center" minHeight="65vh">
+            <VStack alignItems="start" spacing={4}>
+              {NAV_ITEMS.map((navItem) => (
+                <MobileNavItem key={uuidv4()} {...navItem} />
+              ))}
+            </VStack>
+          </Flex>
+        </DrawerBody>
+      </DrawerContent>
+    </Drawer>
   )
 }
 
@@ -235,11 +263,12 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
+      <Box
         py={2}
         as={Link}
         href={href ?? '#'}
-        justify={'space-between'}
+        justify="space-between"
+        width="200px"
         align={'center'}
         _hover={{
           textDecoration: 'none',
@@ -247,8 +276,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
+          color="white"
           fontFamily="roboto"
+          textAlign="center"
         >
           {label}
         </Text>
@@ -261,7 +291,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
             h={6}
           />
         )}
-      </Flex>
+      </Box>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
         <Stack
