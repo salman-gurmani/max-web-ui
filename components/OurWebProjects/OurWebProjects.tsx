@@ -80,8 +80,10 @@ const OurWebProjects = () => {
             </Button>
           </VStack>
 
+
           <Grid templateColumns="1fr">
             <Slider slides={WebData} />
+
 
           </Grid>
         </Grid>

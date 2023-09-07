@@ -8,7 +8,7 @@ import {
   Heading,
 } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
-const BoxTable = () => {
+const BoxTable = (props) => {
   return (
     <Box
       borderRadius="4px"
@@ -34,6 +34,7 @@ const BoxTable = () => {
         marginLeft="2px"
         marginRight="auto"
         bg="#2A2C39"
+        marginTop={1}
       />
 
       <TableContainer>
@@ -48,7 +49,7 @@ const BoxTable = () => {
                 fontWeight="400"
                 lineHeight="normal"
               >
-                Start Date:
+                Year:
               </Td>
               <Td
                 color="#9F9F9F"
@@ -58,10 +59,10 @@ const BoxTable = () => {
                 fontWeight="400"
                 lineHeight="normal"
               >
-                31 May 2022
+                {props.Year}
               </Td>
             </Tr>
-            <Tr>
+            {/* <Tr>
               <Td
                 color="white"
                 fontFamily="roboto"
@@ -105,28 +106,7 @@ const BoxTable = () => {
                 IdeegamesLhr
               </Td>
             </Tr>
-            <Tr>
-              <Td
-                color="white"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                Tags
-              </Td>
-              <Td
-                color="#9F9F9F"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                Web Design
-              </Td>
-            </Tr>
+          
             <Tr>
               <Td
                 color="white"
@@ -148,7 +128,7 @@ const BoxTable = () => {
               >
                 ideegame.com
               </Td>
-            </Tr>
+            </Tr> */}
             <Tr>
               <Td
                 color="white"
@@ -168,7 +148,29 @@ const BoxTable = () => {
                 fontWeight="400"
                 lineHeight="normal"
               >
-                Design
+                {props.Category}
+              </Td>
+            </Tr>
+            <Tr>
+              <Td
+                color="white"
+                fontFamily="roboto"
+                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
+                fontStyle="normal"
+                fontWeight="400"
+                lineHeight="normal"
+              >
+                Tags
+              </Td>
+              <Td
+                color="#9F9F9F"
+                fontFamily="roboto"
+                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
+                fontStyle="normal"
+                fontWeight="400"
+                lineHeight="normal"
+              >
+                {props.Tags}
               </Td>
             </Tr>
           </Tbody>

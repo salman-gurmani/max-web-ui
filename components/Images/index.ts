@@ -13,3 +13,5 @@ export { WebArrowsImages } from './Images'
 
 export { GamesIconImages } from './Images'
 
+export { WebsiteIconsImages } from './Images'
+

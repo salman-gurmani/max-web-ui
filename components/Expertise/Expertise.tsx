@@ -3,6 +3,7 @@ import { Flex, Grid, Heading } from '@chakra-ui/react'
 import { ExpertiseCard } from './ExpertiseCard'
 import { ExpertiseData } from './Expertisedata'
 import { map } from 'lodash'
+import { v4 as uuidv4 } from 'uuid'
 
 const Expertise = () => {
   return (
@@ -31,6 +32,7 @@ const Expertise = () => {
         {map(ExpertiseData, (data) => {
           return (
             <ExpertiseCard
+              key={uuidv4()}
               title={data.title}
               desc={data.desc}
               boxLineWidth={data.boxLineWidth}
