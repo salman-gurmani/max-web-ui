@@ -6,6 +6,7 @@ import {
   VStack,
   Image,
 } from '@chakra-ui/react'
+import React from 'react'
 
 const StatsView = (props) => {
   return (

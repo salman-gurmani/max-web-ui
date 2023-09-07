@@ -15,7 +15,7 @@ const Expertise = () => {
           fontStyle="normal"
           color="transparent"
           fontFamily="roboto"
-          fontSize={{ base: '30px', md: '45px', lg: '55px' }}
+          fontSize={{ base: '25px', md: '45px', lg: '55px' }}
           paddingTop={10}
           textAlign="center"
         >
@@ -25,9 +25,9 @@ const Expertise = () => {
 
       <Grid
         templateColumns={{ base: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }}
-        marginX={20}
-        marginY={10}
-        gap={20}
+        marginX={{ base: 5, md: 10, lg: 20 }}
+        marginY={{ base: 5, md: 7, lg: 10 }}
+        gap={{ base: 10, md: 15, lg: 20 }}
       >
         {map(ExpertiseData, (data) => {
           return (

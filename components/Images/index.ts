@@ -8,5 +8,10 @@ export { OurExpertiseImages } from './Images'
 export { statsImages } from './Images'
 export { logoImage } from './Images'
 export { ProjectDetailsImages } from './Images'
+
+export { WebArrowsImages } from './Images'
+
 export { GamesIconImages } from './Images'
+
 export { WebsiteIconsImages } from './Images'
+
