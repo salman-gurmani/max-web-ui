@@ -36,8 +36,28 @@ import checkmark from '../../public/Icons/ProjectDetails/checkmark.svg'
 import projectEmailIcon from '../../public/Icons/ProjectDetails/emailIcon.svg'
 import linkedinIcon from '../../public/Icons/ProjectDetails/linkedinIcon.svg'
 import projectLocationIcon from '../../public/Icons/ProjectDetails/locationIcon.svg'
+
 import leftArrow from '../../public/Icons/arrowsquareleft.svg'
 import rightArrow from '../../public/Icons/arrowsquareright.svg'
+
+import BusSim from '../../public/Icons/Game Icons/BusSimulator.jpg'
+import ArrowFest from '../../public/Icons/Game Icons/ArrowFest.png'
+import GeniusSay from '../../public/Icons/Game Icons/GeniusSay.png'
+import HillDrive from '../../public/Icons/Game Icons/HillDrive.png'
+import Junkyard from '../../public/Icons/Game Icons/Junkyard.jpg'
+import LuckyEgg from '../../public/Icons/Game Icons/LuckyEgg.png'
+import MegaRamp from '../../public/Icons/Game Icons/MegaRamp.png'
+import Parking from '../../public/Icons/Game Icons/Parking.png'
+import PoliceSim from '../../public/Icons/Game Icons/PoliceSim.png'
+import RealEst from '../../public/Icons/Game Icons/RealEstate.png'
+import Sniper from '../../public/Icons/Game Icons/Sniper.png'
+import TaxiSim from '../../public/Icons/Game Icons/TaxiSim.png'
+import AmazingParking from '../../public/Icons/Game Icons/Amazing Parking.jpg'
+import FlagRunner from '../../public/Icons/Game Icons/Flag Runner.jpg'
+import ModernWarfare from '../../public/Icons/Game Icons/Modern Warfare.jpg'
+import PullThePin from '../../public/Icons/Game Icons/Pull the Pin.jpg'
+import RacingCar from '../../public/Icons/Game Icons/Racing Car.jpg'
+
 
 export const FooterImages = {
   phoneIcon: {
@@ -211,6 +231,7 @@ export const ProjectDetailsImages = {
     alt: '',
   },
 }
+
 export const WebArrowsImages = {
   leftArrow: {
     src: leftArrow,
@@ -218,6 +239,77 @@ export const WebArrowsImages = {
   },
   rightArrow: {
     src: rightArrow,
+  },
+}
+
+export const GamesIconImages = {
+  BusSim: {
+    src: BusSim,
+    alt: '',
+  },
+  ArrowFest: {
+    src: ArrowFest,
+    alt: '',
+  },
+  HillDrive: {
+    src: HillDrive,
+    alt: '',
+  },
+  Junkyard: {
+    src: Junkyard,
+    alt: '',
+  },
+  LuckyEgg: {
+    src: LuckyEgg,
+    alt: '',
+  },
+  MegaRamp: {
+    src: MegaRamp,
+    alt: '',
+  },
+  Parking: {
+    src: Parking,
+    alt: '',
+  },
+  PoliceSim: {
+    src: PoliceSim,
+    alt: '',
+  },
+  RealEst: {
+    src: RealEst,
+    alt: '',
+  },
+  Sniper: {
+    src: Sniper,
+    alt: '',
+  },
+  TaxiSim: {
+    src: TaxiSim,
+    alt: '',
+  },
+  GeniusSay: {
+    src: GeniusSay,
+    alt: '',
+  },
+  AmazingParking: {
+    src: AmazingParking,
+    alt: '',
+  },
+  FlagRunner: {
+    src: FlagRunner,
+    alt: '',
+  },
+  ModernWarfare: {
+    src: ModernWarfare,
+    alt: '',
+  },
+  PullThePin: {
+    src: PullThePin,
+    alt: '',
+  },
+  RacingCar: {
+    src: RacingCar,
+
     alt: '',
   },
 }
