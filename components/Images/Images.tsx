@@ -54,6 +54,9 @@ import ModernWarfare from '../../public/Icons/Game Icons/Modern Warfare.jpg'
 import PullThePin from '../../public/Icons/Game Icons/Pull the Pin.jpg'
 import RacingCar from '../../public/Icons/Game Icons/Racing Car.jpg'
 import Bestow from '../../public/Icons/WebsiteIcons/Bestow.jpg'
+import GameWorld from '../../public/Icons/WebsiteIcons/Gamer World.jpg'
+import MagOne from '../../public/Icons/WebsiteIcons/Magone.jpg'
+import NestMart from '../../public/Icons/WebsiteIcons/Nest Mart.jpg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -300,6 +303,18 @@ export const GamesIconImages = {
 export const WebsiteIconsImages = {
   Bestow: {
     src: Bestow,
+    alt: '',
+  },
+  NestMart: {
+    src: NestMart,
+    alt: '',
+  },
+  MagOne: {
+    src: MagOne,
+    alt: '',
+  },
+  GameWorld: {
+    src: GameWorld,
     alt: '',
   },
 }

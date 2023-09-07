@@ -19,6 +19,7 @@ import { BoxList } from '@components/BoxList'
 import { BoxTable } from '@components/BoxTable'
 import webDetails from './websitesData'
 import { map } from 'lodash'
+import { EllipseImage } from '../../components/Images'
 
 const WebsiteDetail = () => {
   const router = useRouter()
@@ -29,7 +30,7 @@ const WebsiteDetail = () => {
     return
   }
   const reqData = webDetails[websiteIdAsNumber - 1]
-  console.log(reqData.challenge)
+
   return (
     <PrimaryLayout>
       <WebsiteDetailBanner />
@@ -78,34 +79,41 @@ const WebsiteDetail = () => {
             >
               {reqData.description}
             </Text>
-            <Text
-              color="white"
-              fontFamily="roboto"
-              fontSize={{ base: '13px', md: '15px', lg: '18px' }}
-            >
-              {reqData.anotherDes}
-            </Text>
+
             <Heading
               color="white"
               fontFamily="roboto"
               fontSize={{ base: '20px', md: '30px', lg: '38px' }}
             >
-              The Challenge of Project
+              Unique Attributes
             </Heading>
-            {/* <Text
+
+            <List spacing={3}>
+              {map(reqData.uniquePoints, (data, index) => (
+                <ListItem
+                  key={index}
+                  color="white"
+                  fontFamily="roboto"
+                  fontSize={{ base: '13px', md: '15px', lg: '18px' }}
+                  display="flex"
+                  alignItems="center"
+                >
+                  <Image src={EllipseImage.ellipseIcon.src.src} alt="" />
+                  <span style={{ marginLeft: '20px' }}>{data}</span>
+                </ListItem>
+              ))}
+            </List>
+
+            <Heading
               color="white"
               fontFamily="roboto"
-              fontSize={{ base: '13px', md: '15px', lg: '18px' }}
+              fontSize={{ base: '20px', md: '30px', lg: '38px' }}
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </Text> */}
+              Features of the Project
+            </Heading>
+
             <List spacing={3}>
-              {map(reqData.challenge, (data, index) => (
+              {map(reqData.features, (data, index) => (
                 <ListItem
                   key={index}
                   color="white"
@@ -125,22 +133,11 @@ const WebsiteDetail = () => {
               fontFamily="roboto"
               fontSize={{ base: '20px', md: '30px', lg: '38px' }}
             >
-              Bestow Online Store's Unique Attributes
+              Technology Stack
             </Heading>
-            {/* <Text
-              color="white"
-              fontFamily="roboto"
-              fontSize={{ base: '13px', md: '15px', lg: '18px' }}
-            >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </Text> */}
+
             <List spacing={3}>
-              {map(reqData.uniquePoints, (data, index) => (
+              {map(reqData.technologies, (data, index) => (
                 <ListItem
                   key={index}
                   color="white"
@@ -149,7 +146,7 @@ const WebsiteDetail = () => {
                   display="flex"
                   alignItems="center"
                 >
-                  <Image src={ProjectDetailsImages.checkmark.src.src} alt="" />
+                  <Image src={EllipseImage.ellipseIcon.src.src} alt="" />
                   <span style={{ marginLeft: '20px' }}>{data}</span>
                 </ListItem>
               ))}

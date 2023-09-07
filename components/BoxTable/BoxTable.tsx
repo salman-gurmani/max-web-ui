@@ -9,7 +9,6 @@ import {
 } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
 const BoxTable = (props) => {
-  console.log(props)
   return (
     <Box
       borderRadius="4px"
