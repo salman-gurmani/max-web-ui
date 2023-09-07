@@ -134,7 +134,7 @@ const Slider = ({ slides }) => {
                   {data.name}
                 </Text>
                 <Link
-                  href={data.link}
+                  href={`Websites/${data.id}`}
                   color="white"
                   fontFamily="roboto"
                   fontWeight="400"
