@@ -3,25 +3,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { Box } from '@chakra-ui/react'
 
+const Overlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`
 const VideoBanner = () => {
-  {
-    const VideoContainer = styled.div`
-      width: 100%;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-      video {
-        position: absolute;
-      }
-    `
-  }
-
   return (
-    <Box>
-      <video autoPlay="autoplay" loop="loop" muted>
+    <Box position="relative">
+      <Overlay />
+      <video autoPlay loop muted>
         <source src={LoopVideo} type="video/mp4" />
       </video>
+      <Overlay />
     </Box>
   )
 }
