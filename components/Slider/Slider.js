@@ -21,12 +21,13 @@ import {
 } from '@chakra-ui/react'
 import ProjectImage from '../../public/images/ProjectImage.png'
 import { v4 as uuidv4 } from 'uuid'
-
+import { WebArrowsImages } from '../Images'
+WebArrowsImages.leftArrow.src.src
 const StyledSwiper = styled(Swiper)`
   .swiper-button-prev {
     color: transparent;
     top: 50%;
-    background-image: url('/_next/static/media/arrowsquareleft.91ce714f.svg') !important;
+    background-image: url(${WebArrowsImages.leftArrow.src.src}) !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 35px;
@@ -38,7 +39,7 @@ const StyledSwiper = styled(Swiper)`
   .swiper-button-next {
     color: transparent;
     top: 50%;
-    background-image: url('/_next/static/media/arrowsquareright.398e65a3.svg') !important;
+    background-image: url(${WebArrowsImages.rightArrow.src.src}) !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 35px;

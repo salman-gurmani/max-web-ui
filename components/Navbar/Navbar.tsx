@@ -32,7 +32,7 @@ import {
 import { v4 as uuidv4 } from 'uuid'
 import { css } from '@emotion/react'
 import { useTranslation } from 'next-i18next'
-import { logoImage } from '@components/Images'
+import { logoImage } from '../../components/Images'
 import React from 'react'
 
 const NavigationBar = () => {

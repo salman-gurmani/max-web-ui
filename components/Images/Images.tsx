@@ -36,10 +36,8 @@ import checkmark from '../../public/Icons/ProjectDetails/checkmark.svg'
 import projectEmailIcon from '../../public/Icons/ProjectDetails/emailIcon.svg'
 import linkedinIcon from '../../public/Icons/ProjectDetails/linkedinIcon.svg'
 import projectLocationIcon from '../../public/Icons/ProjectDetails/locationIcon.svg'
-
 import leftArrow from '../../public/Icons/arrowsquareleft.svg'
 import rightArrow from '../../public/Icons/arrowsquareright.svg'
-
 import BusSim from '../../public/Icons/Game Icons/BusSimulator.jpg'
 import ArrowFest from '../../public/Icons/Game Icons/ArrowFest.png'
 import GeniusSay from '../../public/Icons/Game Icons/GeniusSay.png'
@@ -57,7 +55,6 @@ import FlagRunner from '../../public/Icons/Game Icons/Flag Runner.jpg'
 import ModernWarfare from '../../public/Icons/Game Icons/Modern Warfare.jpg'
 import PullThePin from '../../public/Icons/Game Icons/Pull the Pin.jpg'
 import RacingCar from '../../public/Icons/Game Icons/Racing Car.jpg'
-
 
 export const FooterImages = {
   phoneIcon: {

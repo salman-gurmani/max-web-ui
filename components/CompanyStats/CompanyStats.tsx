@@ -4,6 +4,7 @@ import { StatsData } from './StatsData'
 import StatsView from './StatsView'
 
 import { map } from 'lodash'
+import React from 'react'
 
 const CompanyStats = () => {
   return (
