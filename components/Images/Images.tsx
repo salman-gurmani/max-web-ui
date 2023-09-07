@@ -36,7 +36,8 @@ import checkmark from '../../public/Icons/ProjectDetails/checkmark.svg'
 import projectEmailIcon from '../../public/Icons/ProjectDetails/emailIcon.svg'
 import linkedinIcon from '../../public/Icons/ProjectDetails/linkedinIcon.svg'
 import projectLocationIcon from '../../public/Icons/ProjectDetails/locationIcon.svg'
-
+import leftArrow from '../../public/Icons/arrowsquareleft.svg'
+import rightArrow from '../../public/Icons/arrowsquareright.svg'
 
 export const FooterImages = {
   phoneIcon: {
@@ -207,6 +208,16 @@ export const ProjectDetailsImages = {
   },
   checkmark: {
     src: checkmark,
+    alt: '',
+  },
+}
+export const WebArrowsImages = {
+  leftArrow: {
+    src: leftArrow,
+    alt: '',
+  },
+  rightArrow: {
+    src: rightArrow,
     alt: '',
   },
 }

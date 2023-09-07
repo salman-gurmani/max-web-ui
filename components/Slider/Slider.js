@@ -1,7 +1,7 @@
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css'
-
+import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y, breakpoints } from 'swiper'
 import { map } from 'lodash'
@@ -22,19 +22,48 @@ import {
 import ProjectImage from '../../public/images/ProjectImage.png'
 import { v4 as uuidv4 } from 'uuid'
 
+const StyledSwiper = styled(Swiper)`
+  .swiper-button-prev {
+    color: transparent;
+    top: 50%;
+    background-image: url('/_next/static/media/arrowsquareleft.91ce714f.svg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    &:after {
+      font-size: 20px;
+    }
+  }
+  .swiper-button-next {
+    color: transparent;
+    top: 50%;
+    background-image: url('/_next/static/media/arrowsquareright.398e65a3.svg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    &:after {
+      font-size: 20px;
+    }
+  }
+`
+
 const Slider = ({ slides }) => {
   const Paddingsize = useBreakpointValue({
-    base: 0,
+    base: 20,
     md: 50,
-    lg: 60,
+    lg: 50,
   })
 
   return (
-    <Swiper
+    <StyledSwiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       navigation
-      pagination={{ clickable: true }}
-      style={{ width: '100%', paddingLeft: Paddingsize }}
+      style={{
+        width: '100%',
+        paddingLeft: Paddingsize,
+      }}
       breakpoints={{
         600: {
           slidesPerView: 1,
@@ -50,8 +79,8 @@ const Slider = ({ slides }) => {
         },
 
         1200: {
-          slidesPerView: 1,
-          spaceBetween: 3,
+          slidesPerView: 2,
+          spaceBetween: 4,
         },
         1600: {
           slidesPerView: 2,
@@ -68,8 +97,8 @@ const Slider = ({ slides }) => {
           <SwiperSlide key={uuidv4()}>
             <Box
               key={uuidv4()}
-              width={{ base: '250px', md: '275px', lg: '275px' }}
-              height="350px"
+              width={{ base: '210px', md: '240px', lg: '245px' }}
+              height={{ base: '310px', md: '320px', lg: '350px' }}
               borderRadius="10px"
               border="1px solid #2A2C39"
               background="#18191D"
@@ -139,7 +168,7 @@ const Slider = ({ slides }) => {
           </SwiperSlide>
         )
       })}
-    </Swiper>
+    </StyledSwiper>
   )
 }
 export { Slider }

@@ -8,7 +8,7 @@ const OurWebProjects = () => {
   return (
     <Box
       bg="#111215"
-      padding={{ base: '20px', md: '30px', lg: '40px' }}
+      padding={{ base: '20px', md: '30px', lg: '35px' }}
       position="relative"
     >
       <Box padding="40px">
@@ -77,7 +77,7 @@ const OurWebProjects = () => {
               View All
             </Button>
           </VStack>
-          <Grid templateColumns="1fr" gap={0}>
+          <Grid templateColumns="1fr">
             <Slider slides={WebData} />
           </Grid>
         </Grid>
