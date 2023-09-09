@@ -51,7 +51,7 @@ const OurWebProjects = () => {
                 leave a lasting impression on your target audience.
               </Text>
 
-              <Button
+              {/* <Button
                 color="white"
                 fontFamily="roboto"
                 fontWeight="400"
@@ -77,7 +77,7 @@ const OurWebProjects = () => {
                 }}
               >
                 View All
-              </Button>
+              </Button> */}
             </VStack>
 
             <Grid templateColumns="1fr">

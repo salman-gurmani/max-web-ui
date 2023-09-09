@@ -49,7 +49,7 @@ const BoxList = () => {
           alignItems="center"
         >
           <Image src={ProjectDetailsImages.projectEmailIcon.src.src} alt="" />
-          <span style={{ marginLeft: '20px' }}>info@ideegames.com</span>
+          <span style={{ marginLeft: '20px' }}>maxovation@gmail.com</span>
         </ListItem>
         <ListItem
           color="white"
@@ -59,7 +59,7 @@ const BoxList = () => {
           alignItems="center"
         >
           <Image src={ProjectDetailsImages.linkedinIcon.src.src} alt="" />
-          <span style={{ marginLeft: '20px' }}>@idee-games-core</span>
+          <span style={{ marginLeft: '20px' }}>Maxovation</span>
         </ListItem>
         <ListItem
           color="white"
