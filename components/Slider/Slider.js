@@ -19,7 +19,6 @@ import {
   useBreakpointValue,
   Link,
 } from '@chakra-ui/react'
-import ProjectImage from '../../public/images/ProjectImage.png'
 import { v4 as uuidv4 } from 'uuid'
 import { WebArrowsImages } from '../Images'
 WebArrowsImages.leftArrow.src.src
@@ -110,7 +109,7 @@ const Slider = ({ slides }) => {
               overflow="hidden"
             >
               <Image
-                src={ProjectImage.src}
+                src={data.image}
                 alt=""
                 borderRadius="10px 10px 0 0"
                 style={{ flex: '1', objectFit: 'cover' }}
@@ -148,7 +147,6 @@ const Slider = ({ slides }) => {
                   fontSize="12px"
                   paddingX={{ base: '1', md: '5', lg: '4' }}
                   paddingY={2}
-                  target="_blank"
                   backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
                   backgroundClip="text"
                   sx={{

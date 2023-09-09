@@ -10,7 +10,6 @@ import {
   List,
   ListItem,
 } from '@chakra-ui/react'
-import { PrimaryLayout } from '../../components/Layout/Layout'
 import React from 'react'
 import { WebsiteDetailBanner } from '../../components/WebisteDetailBanner'
 import { ProjectDetailsImages } from '@components/Images'
@@ -20,6 +19,8 @@ import { BoxTable } from '@components/BoxTable'
 import webDetails from './websitesData'
 import { map } from 'lodash'
 import { EllipseImage } from '../../components/Images'
+import { Footer } from '../../components/Footer'
+import { BackToHomeNavBar } from '../../components/BackToHomeNavBar'
 
 const WebsiteDetail = () => {
   const router = useRouter()
@@ -32,8 +33,9 @@ const WebsiteDetail = () => {
   const reqData = webDetails[websiteIdAsNumber - 1]
 
   return (
-    <PrimaryLayout>
-      <WebsiteDetailBanner />
+    <Box>
+      <BackToHomeNavBar />
+      <WebsiteDetailBanner title={reqData.title} />
       <Flex
         flexDirection="column"
         alignItems="left"
@@ -164,7 +166,8 @@ const WebsiteDetail = () => {
         </Grid>
         <TextOnImagePanel />
       </Flex>
-    </PrimaryLayout>
+      <Footer />
+    </Box>
   )
 }
 

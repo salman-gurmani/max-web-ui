@@ -1,22 +1,23 @@
+import { WebsiteIconsImages } from '@components/Images'
 const WebData = [
   {
-    image: '',
+    image: WebsiteIconsImages.Bestow.src.src,
     name: 'Bestow',
-    date: 'August 11, 2022',
+    date: '2022',
     link: 'https://bestow.qodeinteractive.com/online-store/',
     id: '1',
   },
   {
-    image: '',
+    image: WebsiteIconsImages.GameWorld.src.src,
     name: 'ShopO',
-    date: 'August 11, 2023',
+    date: '2022',
     link: 'https://shopo.quomodothemes.website/',
     id: '2',
   },
   {
-    image: '',
+    image: WebsiteIconsImages.NestMart.src.src,
     name: 'Nest Mart and Grocery',
-    date: 'August 11, 2023',
+    date: '2022',
     link: 'https://themepanthers.com/wp/nest/d2/home-5/',
     id: '3',
   },
@@ -33,9 +34,9 @@ const WebData = [
   //   link: 'https://shofy-client.vercel.app/',
   // },
   {
-    image: '',
+    image: WebsiteIconsImages.MagOne.src.src,
     name: 'MagOne',
-    date: 'August 11, 2023',
+    date: '2022',
     link: 'https://preview.themeforest.net/item/magone-responsive-news-magazine-blogger-template/full_screen_preview/12016203?_ga=2.140973690.933272694.1686033132-803145408.1684847666',
     id: '4',
   },
