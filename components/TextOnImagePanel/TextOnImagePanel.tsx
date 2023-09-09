@@ -7,6 +7,7 @@ import {
   Image,
   Button,
   VStack,
+  Link,
 } from '@chakra-ui/react'
 
 import React from 'react'
@@ -77,31 +78,38 @@ function TextOnImagePanel() {
                 I am a website designer, who is excited about unique ideas and
                 help.
               </Text>
-              <Button
-                color="white"
-                fontFamily="roboto"
-                fontWeight="17px"
-                w={{ base: '100px', md: '105px', lg: '145px' }}
-                height={{ base: '30px', md: '35px', lg: '40px' }}
-                flex-shrink="0"
-                fontSize={{ base: '16px', md: '20px', lg: '20px' }}
-                border-radius="6px"
-                background="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
-                paddingX={{ base: '3', md: '5', lg: '9' }}
-                paddingY={6}
-                zIndex="5"
+              <Link
+                marginLeft="auto"
+                marginRight="auto"
+                href="/"
                 alignSelf={{ lg: 'flex-start', md: 'center', base: 'center' }}
-                _hover={{
-                  bgGradient:
-                    'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
-                  backgroundClip: 'text',
-                  borderColor: 'white',
-                  borderStyle: 'solid',
-                  borderWidth: '2px',
-                }}
               >
-                Hire Me!
-              </Button>
+                <Button
+                  color="white"
+                  fontFamily="roboto"
+                  fontWeight="17px"
+                  w={{ base: '100px', md: '105px', lg: '145px' }}
+                  height={{ base: '30px', md: '35px', lg: '40px' }}
+                  flex-shrink="0"
+                  fontSize={{ base: '16px', md: '20px', lg: '20px' }}
+                  border-radius="6px"
+                  background="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
+                  paddingX={{ base: '3', md: '5', lg: '9' }}
+                  paddingY={6}
+                  zIndex="5"
+                  alignSelf={{ lg: 'flex-start', md: 'center', base: 'center' }}
+                  _hover={{
+                    bgGradient:
+                      'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
+                    backgroundClip: 'text',
+                    borderColor: 'white',
+                    borderStyle: 'solid',
+                    borderWidth: '2px',
+                  }}
+                >
+                  Hire Me!
+                </Button>
+              </Link>
             </VStack>
           </Box>
         </Grid>

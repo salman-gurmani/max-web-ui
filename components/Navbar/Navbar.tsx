@@ -5,12 +5,6 @@ import {
   IconButton,
   Stack,
   Collapse,
-  Icon,
-  Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  useColorModeValue,
   useDisclosure,
   Show,
   Hide,
@@ -24,18 +18,15 @@ import {
   Grid,
   VStack,
 } from '@chakra-ui/react'
-import {
-  HamburgerIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from '@chakra-ui/icons'
-import { v4 as uuidv4 } from 'uuid'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import { css } from '@emotion/react'
 import { useTranslation } from 'next-i18next'
 import { logoImage } from '../../components/Images'
-import React from 'react'
+import React, { useState } from 'react'
+import { Link as ScrollLink } from 'react-scroll'
 
 const NavigationBar = () => {
+  const [selectedSection, setSelectedSection] = useState('home')
   const {
     isOpen: isOpenDrawer,
     onOpen: onOpenDrawer,
@@ -44,7 +35,7 @@ const NavigationBar = () => {
 
   const boxStyle = css`
     width: 100%;
-    z-index: 2;
+    z-index: 6;
     padding: 0px 15px;
     height: 72px;
     align-items: center;
@@ -53,7 +44,7 @@ const NavigationBar = () => {
   `
 
   return (
-    <Box css={boxStyle} backgroundColor="black">
+    <Box css={boxStyle} backgroundColor="#111215" position="fixed">
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
           <Image
@@ -76,12 +67,11 @@ const NavigationBar = () => {
           <Flex mr={{ base: -4 }} justifyContent="flex-end">
             <IconButton
               onClick={onOpenDrawer}
-              icon={
-                <HamburgerIcon color="white" w={5} h={5} marginRight="20px" />
-              }
+              icon={<HamburgerIcon color="blue" w={5} h={5} />}
               variant="ghost"
               aria-label="Toggle Navigation"
               size="sm"
+              marginRight="20px"
             />
           </Flex>
         </Show>
@@ -91,7 +81,10 @@ const NavigationBar = () => {
           alignItems="center"
           mr={4}
         >
-          <DesktopNav />
+          <DesktopNav
+            selectedSection={selectedSection}
+            onSelect={setSelectedSection}
+          />
         </Flex>
       </Flex>
 
@@ -102,118 +95,68 @@ const NavigationBar = () => {
   )
 }
 
-const DesktopNav = () => {
+const DesktopNav = ({ selectedSection, onSelect }) => {
   const gradientColor =
     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)'
 
   const { t } = useTranslation()
+
+  const handleSectionClick = (sectionId) => {
+    onSelect(sectionId)
+  }
   return (
     <Flex direction={'row'} justify={'flex-end'} alignItems="center">
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label} mr={14}>
-          <Popover trigger="hover" placement="bottom-start">
-            <PopoverTrigger>
-              <Link
-                href={navItem.href ?? '#'}
-                fontSize={{ base: 'xs', sm: 'xs', md: 'xs', xl: 'md' }}
-                fontFamily="roboto"
-                fontWeight={500}
-                color={navItem.isSelected ? 'transparent' : 'white'}
-                backgroundImage={navItem.isSelected ? gradientColor : 'none'}
-                backgroundClip={navItem.isSelected ? 'text' : 'none'}
-                textDecoration="none"
-                outline="none"
-                position="relative"
-                transition="all 0.3s ease-in-out"
-                transform="scale(1)"
-                _after={{
-                  bottom: '-2px',
-                  content: "''",
-                  height: '2px',
-                  left: 0,
-                  position: 'absolute',
-                  width: 0,
-                  backgroundColor: 'white',
-                  transition: 'width 0.3s ease-in-out',
-                }}
-                _hover={{
-                  textDecoration: 'none',
-                  transform: 'scale(0.95)',
-                  backgroundImage: gradientColor,
-                  backgroundClip: 'text',
-                  color: 'transparent',
-                  '&::after': {
-                    width: '100%',
-                  },
-                }}
-              >
-                {t(navItem.label)}
-              </Link>
-            </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent
-                border={1}
-                maxWidth={200}
-                bg="#FAF9F6"
-                p={2}
-                rounded={'xl'}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
+          <ScrollLink
+            to={navItem.id}
+            smooth={true}
+            duration={1500}
+            spy
+            offset={-72}
+          >
+            <Text
+              onClick={() => handleSectionClick(navItem.id)}
+              cursor="pointer"
+              fontSize={{ base: 'xs', sm: 'xs', md: 'xs', xl: 'md' }}
+              fontFamily="roboto"
+              fontWeight={500}
+              color={navItem.id === selectedSection ? 'transparent' : 'white'}
+              backgroundImage={
+                navItem.id === selectedSection ? gradientColor : 'none'
+              }
+              backgroundClip={navItem.id === selectedSection ? 'text' : 'none'}
+              position="relative"
+              transition="all 0.3s ease-in-out"
+              transform="scale(1)"
+              variant="ghost"
+              _after={{
+                bottom: '-2px',
+                content: "''",
+                height: '2px',
+                left: 0,
+                position: 'absolute',
+                width: 0,
+                backgroundColor: 'white',
+                transition: 'width 0.3s ease-in-out',
+              }}
+              _hover={{
+                textDecoration: 'none',
+                transform: 'scale(0.95)',
+                backgroundImage: gradientColor,
+                backgroundClip: 'text',
+                color: 'transparent',
+                '&::after': {
+                  width: '100%',
+                },
+              }}
+            >
+              {t(navItem.label)}
+            </Text>
+          </ScrollLink>
         </Box>
       ))}
     </Flex>
-  )
-}
-
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-  const { t } = useTranslation()
-
-  return (
-    <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{
-        bg: useColorModeValue('white', 'gray.900'),
-        textDecoration: 'none',
-      }}
-    >
-      <Stack direction={'row'} align={'center'}>
-        <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{ color: 'red.400' }}
-            fontFamily="roboto"
-            fontSize="xs"
-            fontWeight={600}
-          >
-            {t(label)}
-          </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={'all .3s ease'}
-          transform={'translateX(-10px)'}
-          opacity={0}
-          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-          justify={'flex-end'}
-          align={'center'}
-          flex={1}
-        >
-          <Icon color={'red.400'} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
   )
 }
 
@@ -248,7 +191,36 @@ const MobileNav = ({ isOpen, onClose }) => {
           <Flex justify="center" align="center" minHeight="65vh">
             <VStack alignItems="start" spacing={4}>
               {NAV_ITEMS.map((navItem) => (
-                <MobileNavItem key={uuidv4()} {...navItem} />
+                <Stack spacing={4}>
+                  <ScrollLink
+                    to={navItem.id}
+                    smooth={true}
+                    duration={1500}
+                    spy
+                    offset={-72}
+                  >
+                    <Box
+                      py={2}
+                      justify="space-between"
+                      width="200px"
+                      align={'center'}
+                      _hover={{
+                        textDecoration: 'none',
+                      }}
+                    >
+                      <Text
+                        cursor="pointer"
+                        fontWeight={600}
+                        color="white"
+                        fontFamily="roboto"
+                        textAlign="center"
+                        onClick={onClose}
+                      >
+                        {navItem.label}
+                      </Text>
+                    </Box>
+                  </ScrollLink>
+                </Stack>
               ))}
             </VStack>
           </Flex>
@@ -258,94 +230,45 @@ const MobileNav = ({ isOpen, onClose }) => {
   )
 }
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure()
-
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Box
-        py={2}
-        as={Link}
-        href={href ?? '#'}
-        justify="space-between"
-        width="200px"
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}
-      >
-        <Text
-          fontWeight={600}
-          color="white"
-          fontFamily="roboto"
-          textAlign="center"
-        >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
-      </Box>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}
-        >
-          {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  )
-}
-
 interface NavItem {
   label: string
   subLabel?: string
   children?: Array<NavItem>
   href?: string
   isSelected: boolean
+  id: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
     isSelected: true,
+    id: 'home',
   },
   {
     label: 'About',
     isSelected: false,
+    id: 'about',
   },
   {
     label: 'Web',
     isSelected: false,
+    id: 'web',
   },
   {
     label: 'Games',
     isSelected: false,
+    id: 'games',
   },
   {
     label: 'Service',
     isSelected: false,
+    id: 'service',
   },
   {
     label: 'Contact us',
     isSelected: false,
+    id: 'contact',
   },
 ]
 
