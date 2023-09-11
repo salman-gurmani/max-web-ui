@@ -15,11 +15,11 @@ const GameTechnologies = () => {
           Technologies we work in
           <BoxLine
             width="50%"
-            height={1}
+            height="1px"
             marginLeft="auto"
             marginRight="auto"
             bg="#FF0084"
-            marginTop={2}
+            marginTop="2px"
           />
         </Heading>
 

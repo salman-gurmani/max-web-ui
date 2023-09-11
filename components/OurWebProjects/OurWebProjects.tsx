@@ -50,34 +50,6 @@ const OurWebProjects = () => {
                 to delivering cutting-edge designs and functionalities that
                 leave a lasting impression on your target audience.
               </Text>
-
-              {/* <Button
-                color="white"
-                fontFamily="roboto"
-                fontWeight="400"
-                alignSelf="flex-start"
-                backgroundColor="transparent"
-                size="md"
-                zIndex="5"
-                variant="outline"
-                marginTop="20px"
-                fontSize={{ base: '12px', md: '12px', lg: '15px' }}
-                paddingX={{ base: '3', md: '8', lg: '10' }}
-                backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
-                backgroundClip="text"
-                sx={{
-                  borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
-                  borderStyle: 'solid',
-                  borderWidth: '1px',
-                }}
-                _hover={{
-                  background:
-                    'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
-                  textColor: 'white',
-                }}
-              >
-                View All
-              </Button> */}
             </VStack>
 
             <Grid templateColumns="1fr">

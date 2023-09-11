@@ -25,6 +25,15 @@ import { logoImage } from '../../components/Images'
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 
+interface DesktopNavProps {
+  selectedSection: string
+  onSelect: (sectionId: string) => void
+}
+interface MobileNavProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
 const NavigationBar = () => {
   const [selectedSection, setSelectedSection] = useState('home')
   const {
@@ -95,13 +104,16 @@ const NavigationBar = () => {
   )
 }
 
-const DesktopNav = ({ selectedSection, onSelect }) => {
+const DesktopNav: React.FC<DesktopNavProps> = ({
+  selectedSection,
+  onSelect,
+}) => {
   const gradientColor =
     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)'
 
   const { t } = useTranslation()
 
-  const handleSectionClick = (sectionId) => {
+  const handleSectionClick = (sectionId: string) => {
     onSelect(sectionId)
   }
   return (
@@ -160,7 +172,7 @@ const DesktopNav = ({ selectedSection, onSelect }) => {
   )
 }
 
-const MobileNav = ({ isOpen, onClose }) => {
+const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
   return (
     <Drawer
       isOpen={isOpen}
@@ -201,9 +213,9 @@ const MobileNav = ({ isOpen, onClose }) => {
                   >
                     <Box
                       py={2}
-                      justify="space-between"
+                      justifyContent="space-between"
                       width="200px"
-                      align={'center'}
+                      alignContent={'center'}
                       _hover={{
                         textDecoration: 'none',
                       }}

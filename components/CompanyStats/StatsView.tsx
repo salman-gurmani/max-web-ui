@@ -7,14 +7,16 @@ import {
   Image,
 } from '@chakra-ui/react'
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
-const StatsView = (props) => {
+const StatsView = (props: any) => {
   return (
     <Grid
       templateColumns="25% 75%" //25% for icon and 75% for text
       alignContent="flex-start" //horzontally align content on left
       justifyContent="flex-start" // vertically align content on left
       marginTop={{ base: 5 }} // marginTop only for small screen for better view
+      key={uuidv4()}
     >
       <GridItem
         display={'flex'} //gridItem should behave like flex instead of adding flex componenet

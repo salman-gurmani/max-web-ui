@@ -3,6 +3,7 @@ import { Footer } from '../Footer'
 import { Header } from '../Header'
 
 import { Box } from '@chakra-ui/react'
+import { ReactNode } from 'react'
 
 const LayoutContainer = styled.div`
   display: flex;
@@ -13,8 +14,11 @@ const LayoutContainer = styled.div`
 const Main = styled.main`
   flex: 1;
 `
+interface PrimaryLayoutProps {
+  children: ReactNode
+}
 
-const PrimaryLayout = ({ children }) => {
+const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({ children }) => {
   return (
     <LayoutContainer>
       <Header />

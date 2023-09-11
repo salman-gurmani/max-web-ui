@@ -24,8 +24,11 @@ const ContactUsSchema = Yup.object({
   user_subject: Yup.string().required(' * Subject is required'),
   message: Yup.string().required(' * Message is required'),
 })
+interface ContactUsFormProps {
+  onClose: () => void
+}
 
-const ContactUsForm = ({ onClose }) => {
+const ContactUsForm: React.FC<ContactUsFormProps> = ({ onClose }) => {
   const formik = useFormik({
     initialValues: {
       user_name: '',
@@ -41,22 +44,23 @@ const ContactUsForm = ({ onClose }) => {
   const { handleChange, values, errors, touched } = formik
   const toast = useToast()
 
-  const form = useRef()
+  const form = useRef<HTMLFormElement | null>(null)
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
+    const formElement = e.currentTarget
     emailjs
       .sendForm(
         'service_zi44le9',
         'template_lr39rqi',
-        form.current,
+        formElement,
         'ie2lCapw8rasPD3Wz'
       )
       .then(
         (result) => {
           console.log(result.text)
-          e.target.reset()
+          formik.resetForm()
 
           // Show a success toast
           toast({
@@ -98,7 +102,7 @@ const ContactUsForm = ({ onClose }) => {
           Contact Us
         </Heading>
       </Flex>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={(el) => (form.current = el!)} onSubmit={sendEmail}>
         <Box bg="#0A0C19" padding={12} borderRadius="14px 0px 0px 14px">
           <Grid
             templateColumns={{
@@ -111,7 +115,7 @@ const ContactUsForm = ({ onClose }) => {
             <GridItem mb={5}>
               <FormControl
                 isRequired
-                isInvalid={errors.user_name && touched.user_name}
+                isInvalid={!!(errors.user_name && touched.user_name)}
               >
                 <Input
                   placeholder="Enter your name"
@@ -135,7 +139,7 @@ const ContactUsForm = ({ onClose }) => {
 
             <GridItem mb={5}>
               <FormControl
-                isInvalid={errors.user_phone && touched.user_phone}
+                isInvalid={!!(errors.user_phone && touched.user_phone)}
                 isRequired
               >
                 <Input
@@ -159,7 +163,7 @@ const ContactUsForm = ({ onClose }) => {
             </GridItem>
             <GridItem mb={5}>
               <FormControl
-                isInvalid={errors.user_email && touched.user_email}
+                isInvalid={!!(errors.user_email && touched.user_email)}
                 isRequired
               >
                 <Input
@@ -184,7 +188,7 @@ const ContactUsForm = ({ onClose }) => {
 
             <GridItem mb={5}>
               <FormControl
-                isInvalid={errors.user_subject && touched.user_subject}
+                isInvalid={!!(errors.user_subject && touched.user_subject)}
                 isRequired
               >
                 <Input
@@ -209,7 +213,7 @@ const ContactUsForm = ({ onClose }) => {
           </Grid>
           <Flex mt={5}>
             <FormControl
-              isInvalid={errors.message && touched.message}
+              isInvalid={!!(errors.message && touched.message)}
               isRequired
             >
               <Textarea

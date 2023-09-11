@@ -8,7 +8,7 @@ import {
   Heading,
 } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
-const BoxTable = (props) => {
+const BoxTable = (props: any) => {
   return (
     <Box
       borderRadius="4px"
@@ -34,7 +34,7 @@ const BoxTable = (props) => {
         marginLeft="2px"
         marginRight="auto"
         bg="#2A2C39"
-        marginTop={1}
+        marginTop="1px"
       />
 
       <TableContainer>
@@ -62,73 +62,6 @@ const BoxTable = (props) => {
                 {props.Year}
               </Td>
             </Tr>
-            {/* <Tr>
-              <Td
-                color="white"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                End Date:
-              </Td>
-              <Td
-                color="#9F9F9F"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                15 June 2022
-              </Td>
-            </Tr>
-            <Tr>
-              <Td
-                color="white"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                Client
-              </Td>
-              <Td
-                color="#9F9F9F"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                IdeegamesLhr
-              </Td>
-            </Tr>
-          
-            <Tr>
-              <Td
-                color="white"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                Website
-              </Td>
-              <Td
-                color="#9F9F9F"
-                fontFamily="roboto"
-                fontSize={{ base: '11px', md: '13px', lg: '16px' }}
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="normal"
-              >
-                ideegame.com
-              </Td>
-            </Tr> */}
             <Tr>
               <Td
                 color="white"
