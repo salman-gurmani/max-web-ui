@@ -10,36 +10,81 @@ import {
   AspectRatio,
   Textarea,
   Text,
+  useToast,
 } from '@chakra-ui/react'
 import { useFormik } from 'formik'
-import React from 'react'
+
 import { BsSend } from 'react-icons/bs'
 import * as Yup from 'yup'
 import { Element } from 'react-scroll'
+
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
+
 const ContactUsSchema = Yup.object({
-  name: Yup.mixed().required(' * Name is required'),
-  phoneNumber: Yup.string().required(' * phoneNumber is required'),
-  email: Yup.string().required(' * Email is required'),
-  subject: Yup.string().required(' * Subject is required'),
+  user_name: Yup.mixed().required(' * Name is required'),
+  user_phone: Yup.string().required(' * Phone Number is required'),
+  user_email: Yup.string().required(' * Email is required'),
+  user_subject: Yup.string().required(' * Subject is required'),
   message: Yup.string().required(' * Message is required'),
 })
 
 const ContactUs = () => {
   const formik = useFormik({
     initialValues: {
-      name: '',
-      phoneNumber: '',
-      email: '',
-      subject: '',
+      user_name: '',
+      user_phone: '',
+      user_email: '',
+      user_subject: '',
       message: '',
     },
     validationSchema: ContactUsSchema,
-
     onSubmit: () => {},
   })
 
-  const { handleChange, handleSubmit, values, errors, touched } = formik
+  const { handleChange, values, errors, touched } = formik
+  const toast = useToast()
 
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_zi44le9',
+        'template_lr39rqi',
+        form.current,
+        'ie2lCapw8rasPD3Wz'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+          e.target.reset()
+
+          // Show a success toast
+          toast({
+            title: 'Success',
+            description: 'Email sent successfully',
+            status: 'success',
+            duration: 3000,
+            isClosable: true,
+          })
+        },
+        (error) => {
+          console.log(error.text)
+
+          // Show an error toast
+          toast({
+            title: 'Error',
+            description: 'Error sending the email. Please try again.',
+            status: 'error',
+            duration: 3000,
+            isClosable: true,
+          })
+        }
+      )
+  }
   return (
     <Element name="contact">
       <Flex bg="#18191D" direction="column">
@@ -58,7 +103,7 @@ const ContactUs = () => {
           </Heading>
         </Flex>
         <>
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={sendEmail}>
             <Grid
               templateColumns={{ base: '1fr', md: '50% 50%', lg: '65% 35%' }}
               marginY={10}
@@ -77,13 +122,13 @@ const ContactUs = () => {
                   <GridItem mb={5}>
                     <FormControl
                       isRequired
-                      isInvalid={errors.name && touched.name}
+                      isInvalid={errors.user_name && touched.user_name}
                     >
                       <Input
                         placeholder="Enter your name"
                         backgroundColor="#171926"
                         type="text"
-                        name="name"
+                        name="user_name"
                         height={50}
                         border="none"
                         color="white"
@@ -91,26 +136,24 @@ const ContactUs = () => {
                         fontFamily="roboto"
                         size="sm"
                         onChange={handleChange}
-                        value={values.name}
+                        value={values.user_name}
                       />
                       <Text fontFamily="roboto" color="red" fontSize="xs">
-                        {errors.name}
+                        {errors.user_name}
                       </Text>
                     </FormControl>
                   </GridItem>
 
                   <GridItem mb={5}>
                     <FormControl
-                      isInvalid={errors.phoneNumber && touched.phoneNumber}
+                      isInvalid={errors.user_phone && touched.user_phone}
                       isRequired
                     >
                       <Input
                         placeholder="Enter your phone"
                         backgroundColor="#171926"
                         type="number"
-                        name="phoneNumber"
-                        onChange={handleChange}
-                        value={values.phoneNumber}
+                        name="user_phone"
                         height={50}
                         border="none"
                         color="white"
@@ -119,19 +162,19 @@ const ContactUs = () => {
                         size="sm"
                       />
                       <Text fontFamily="roboto" color="red" fontSize="xs">
-                        {errors.phoneNumber}
+                        {errors.user_phone}
                       </Text>
                     </FormControl>
                   </GridItem>
                   <GridItem mb={5}>
                     <FormControl
-                      isInvalid={errors.email && touched.email}
+                      isInvalid={errors.user_email && touched.user_email}
                       isRequired
                     >
                       <Input
                         placeholder="Enter your Email"
                         backgroundColor="#171926"
-                        name="email"
+                        name="user_email"
                         type="email"
                         height={50}
                         border="none"
@@ -139,27 +182,23 @@ const ContactUs = () => {
                         _placeholder={{ color: '#CFCFCF' }}
                         fontFamily="roboto"
                         size="sm"
-                        onChange={handleChange}
-                        value={values.email}
                       />
                       <Text fontFamily="roboto" color="red" fontSize="xs">
-                        {errors.email}
+                        {errors.user_email}
                       </Text>
                     </FormControl>
                   </GridItem>
 
                   <GridItem mb={5}>
                     <FormControl
-                      isInvalid={errors.subject && touched.subject}
+                      isInvalid={errors.user_subject && touched.user_subject}
                       isRequired
                     >
                       <Input
                         placeholder="Enter your subject"
                         backgroundColor="#171926"
                         type="text"
-                        name="subject"
-                        onChange={handleChange}
-                        value={values.subject}
+                        name="user_subject"
                         height={50}
                         border="none"
                         color="white"
@@ -168,7 +207,7 @@ const ContactUs = () => {
                         size="sm"
                       />
                       <Text fontFamily="roboto" color="red" fontSize="xs">
-                        {errors.subject}
+                        {errors.user_subject}
                       </Text>
                     </FormControl>
                   </GridItem>
@@ -180,8 +219,6 @@ const ContactUs = () => {
                   >
                     <Textarea
                       name="message"
-                      value={values.message}
-                      onChange={handleChange}
                       bg="#171926"
                       placeholder="Type your message here..."
                       border="none"
