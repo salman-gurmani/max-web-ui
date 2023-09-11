@@ -160,6 +160,8 @@ const ContactUs = () => {
                         _placeholder={{ color: '#CFCFCF' }}
                         fontFamily="roboto"
                         size="sm"
+                        onChange={handleChange}
+                        value={values.user_phone}
                       />
                       <Text fontFamily="roboto" color="red" fontSize="xs">
                         {errors.user_phone}
@@ -182,6 +184,8 @@ const ContactUs = () => {
                         _placeholder={{ color: '#CFCFCF' }}
                         fontFamily="roboto"
                         size="sm"
+                        onChange={handleChange}
+                        value={values.user_email}
                       />
                       <Text fontFamily="roboto" color="red" fontSize="xs">
                         {errors.user_email}
@@ -205,6 +209,8 @@ const ContactUs = () => {
                         _placeholder={{ color: '#CFCFCF' }}
                         fontFamily="roboto"
                         size="sm"
+                        onChange={handleChange}
+                        value={values.user_subject}
                       />
                       <Text fontFamily="roboto" color="red" fontSize="xs">
                         {errors.user_subject}
@@ -228,6 +234,8 @@ const ContactUs = () => {
                       size="sm"
                       minHeight={340}
                       maxHeight={400}
+                      onChange={handleChange}
+                      value={values.message}
                     />
                     <Text fontFamily="roboto" color="red" fontSize="xs">
                       {errors.message}
