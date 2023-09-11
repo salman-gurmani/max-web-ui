@@ -9,7 +9,11 @@ import {
 } from '@chakra-ui/react'
 import { ContactUsForm } from './ContactUsForm'
 
-const ContactUsModal = ({ isOpen, onClose }) => {
+interface ContactUsModalProps {
+  isOpen: boolean
+  onClose: () => void
+}
+const ContactUsModal: React.FC<ContactUsModalProps> = ({ isOpen, onClose }) => {
   return (
     <>
       <Modal
