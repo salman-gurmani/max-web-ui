@@ -12,6 +12,7 @@
     "@ajna/pagination": "^1.4.19",
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.1",
+    "@emailjs/browser": "^3.11.0",
     "@emotion/css": "^11.10.6",
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",

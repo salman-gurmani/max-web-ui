@@ -1,4 +1,4 @@
-import { Text, Heading, VStack, Grid, Button, Box } from '@chakra-ui/react'
+import { Text, Heading, VStack, Grid, Box } from '@chakra-ui/react'
 import React from 'react'
 import { WebData } from './WebProjectsData'
 
