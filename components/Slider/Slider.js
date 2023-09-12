@@ -3,19 +3,13 @@ import 'swiper/css/pagination'
 import 'swiper/css'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y, breakpoints } from 'swiper'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { map } from 'lodash'
 import {
   Box,
   Text,
-  Heading,
   VStack,
-  Grid,
   Image,
-  Flex,
-  HStack,
-  Button,
-  IconButton,
   useBreakpointValue,
   Link,
 } from '@chakra-ui/react'

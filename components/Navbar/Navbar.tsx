@@ -24,6 +24,7 @@ import { useTranslation } from 'next-i18next'
 import { logoImage } from '../../components/Images'
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
+import { v4 as uuidv4 } from 'uuid'
 
 interface DesktopNavProps {
   selectedSection: string
@@ -203,7 +204,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           <Flex justify="center" align="center" minHeight="65vh">
             <VStack alignItems="start" spacing={4}>
               {NAV_ITEMS.map((navItem) => (
-                <Stack spacing={4}>
+                <Stack key={uuidv4()} spacing={4}>
                   <ScrollLink
                     to={navItem.id}
                     smooth={true}

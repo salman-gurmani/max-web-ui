@@ -41,7 +41,9 @@ const ContactUs = () => {
       message: '',
     },
     validationSchema: ContactUsSchema,
-    onSubmit: () => {},
+    onSubmit: () => {
+      console.log(values)
+    },
   })
 
   const { handleChange, values, errors, touched } = formik

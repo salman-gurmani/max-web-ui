@@ -1,4 +1,4 @@
-import { WebsiteIconsImages } from '../../components/Images'
+import { WebsiteIconsImages } from '../Images'
 const projectDetailsData = [
   {
     title: 'Bestow',

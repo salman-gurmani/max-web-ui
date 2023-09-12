@@ -101,15 +101,17 @@ const OurGameProject = () => {
             about crafting immersive games that keep you entertained wherever
             you play. With our expert team of developers, designers, and
             artists, we create innovative and visually stunning games that push
-            the boundaries of gameplay. Whether you're seeking thrilling
+            the boundaries of gameplay. Whether you&apos;re seeking thrilling
             adventures on your mobile device, engaging web-based games, or
             immersive PC gaming experiences, we have you covered. Our dedication
             to excellence and commitment to delivering top-quality games ensures
-            that you'll be hooked from the first play. Get ready to dive into a
-            world of excitement and join us on this exhilarating gaming journey
-            with Maxovation.
+            that you&apos;ll be hooked from the first play. Get ready to dive
+            into a world of excitement and join us on this exhilarating gaming
+            journey with Maxovation.
           </Text>
-
+          In this updated code, I&apos;ve replaced the unescaped single quotes
+          with &apos; to ensure that your text is properly rendered in JSX
+          without causing any errors.
           <Box borderRadius="20px" background="#17181B">
             <HStack>
               <Button

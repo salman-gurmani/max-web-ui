@@ -1,4 +1,4 @@
-import { Home } from './Home'
+import Home from './Home/Home'
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { GetStaticProps, NextPage } from 'next'
