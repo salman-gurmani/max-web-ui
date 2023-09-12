@@ -9,7 +9,13 @@ import {
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-const StatsView = (props: any) => {
+interface StatsViewProps {
+  title: string
+  subTitle: string
+  icon: string
+}
+
+const StatsView = (props: StatsViewProps) => {
   return (
     <Grid
       templateColumns="25% 75%" //25% for icon and 75% for text

@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const { i18n } = require('./next-i18next.config')
 
-module.exports = {
+const nextConfig = {
   reactStrictMode: false,
+  output: 'standalone',
   i18n,
 
   webpack(config, { isServer }) {
@@ -24,3 +25,4 @@ module.exports = {
     return config
   },
 }
+module.exports = nextConfig

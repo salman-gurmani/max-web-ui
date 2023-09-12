@@ -2,7 +2,10 @@ import { Flex, VStack, Heading, Box, Image, Text } from '@chakra-ui/react'
 import BannerImg from '../../public/images/header.png'
 import { FaAngleRight } from 'react-icons/fa'
 
-const WebsiteDetailBanner = (prop: any) => {
+interface WebsiteDetailBannerProps {
+  title: string
+}
+const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
   return (
     <Box overflow="hidden" position="relative">
       <Image

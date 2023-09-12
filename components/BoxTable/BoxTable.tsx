@@ -8,7 +8,14 @@ import {
   Heading,
 } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
-const BoxTable = (props: any) => {
+
+interface BoxTableProps {
+  Year: string
+  Category: string
+  Tags: string
+}
+
+const BoxTable = (props: BoxTableProps) => {
   return (
     <Box
       borderRadius="4px"

@@ -10,7 +10,14 @@ import { v4 as uuidv4 } from 'uuid'
 
 import { BoxLine } from '@components/BoxLine'
 
-const ExpertiseCard = (props: any) => {
+interface ExpertiseCardProps {
+  title: string
+  boxLineWidth: string
+  desc: string
+  icon: string
+}
+
+const ExpertiseCard = (props: ExpertiseCardProps) => {
   return (
     <Card
       key={uuidv4()}

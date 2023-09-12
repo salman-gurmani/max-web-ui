@@ -8,7 +8,7 @@ interface BoxLineProps {
   marginRight: string
   bg: string
   marginTop: string
-  sx?: Record<string, any> // Allow additional custom styles
+  sx?: Record<string, number>
 }
 
 const BoxLine: React.FC<BoxLineProps> = ({
