@@ -4,13 +4,12 @@ import {
   Grid,
   Heading,
   Text,
-  Image,
   Button,
   VStack,
 } from '@chakra-ui/react'
 import React from 'react'
-import BGImage from '../../public/images/BackgroundImage.png'
 import { ContactUsModal } from '@components/ContactUsModal'
+import { CldImage } from 'next-cloudinary'
 
 function TextOnImagePanel() {
   const [isModalOpen, setModalOpen] = React.useState(false)
@@ -30,11 +29,10 @@ function TextOnImagePanel() {
         w="100%"
         h={{ lg: '600px', md: '400px', base: '400px' }}
       >
-        <Image
-          src={BGImage.src}
-          width="100%"
-          height="100%"
-          objectFit="cover"
+        <CldImage
+          src="v1694585507/Icons/BackgroundImage_ftauuq.png"
+          width="1940"
+          height="462"
           alt="Background Image"
         />
 

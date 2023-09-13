@@ -2,6 +2,10 @@
 const { i18n } = require('./next-i18next.config')
 
 const nextConfig = {
+  images: {
+    domains: ['localhost', 'res.cloudinary.com'],
+  },
+
   reactStrictMode: false,
   output: 'standalone',
   i18n,

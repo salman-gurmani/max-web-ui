@@ -7,12 +7,10 @@ import {
   Text,
   GridItem,
   VStack,
-  Image,
 } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
 import { SocialMedia } from '@components/SocialMedia'
-import { FooterImages } from '@components/Images'
-import { logoImage } from '@components/Images'
+import { CldImage } from 'next-cloudinary'
 
 const Footer = () => {
   return (
@@ -44,16 +42,16 @@ const Footer = () => {
         >
           <GridItem>
             <HStack alignItems="flex-start">
-              <Image
-                src={FooterImages.phoneIcon.src.src}
-                alt={FooterImages.phoneIcon.alt}
-                aria-label="phone"
-                boxSize="50px" // Adjust the size as needed
-                objectFit="contain" // Adjust the object fit mode as needed
-                backgroundColor="#1B1C1F"
-                color="white"
-                rounded="full"
-              />
+              <Box boxSize="50px" backgroundColor="#1B1C1F" rounded="full">
+                <CldImage
+                  src="v1694585508/Icons/Footer/call_qwiqq2.svg"
+                  alt=""
+                  aria-label="phone"
+                  color="white"
+                  width={50}
+                  height={50}
+                />
+              </Box>
 
               <Box>
                 <Heading
@@ -80,16 +78,16 @@ const Footer = () => {
 
           <GridItem>
             <HStack alignItems="center">
-              <Image
-                src={FooterImages.locationIcon.src.src}
-                alt={FooterImages.locationIcon.alt}
-                aria-label="location"
-                boxSize="50px" // Adjust the size as needed
-                objectFit="contain" // Adjust the object fit mode as needed
-                backgroundColor="#1B1C1F"
-                color="white"
-                rounded="full"
-              />
+              <Box boxSize="50px" backgroundColor="#1B1C1F" rounded="full">
+                <CldImage
+                  src="v1694585508/Icons/Footer/location_slsznh.svg"
+                  alt=""
+                  aria-label="location"
+                  color="white"
+                  width={54}
+                  height={54}
+                />
+              </Box>
 
               <Box>
                 <Heading
@@ -117,16 +115,16 @@ const Footer = () => {
 
           <GridItem>
             <HStack alignItems="flex-start">
-              <Image
-                src={FooterImages.emailIcon.src.src}
-                alt={FooterImages.emailIcon.alt}
-                aria-label="email"
-                boxSize="50px" // Adjust the size as needed
-                objectFit="contain" // Adjust the object fit mode as needed
-                backgroundColor="#1B1C1F"
-                color="white"
-                rounded="full"
-              />
+              <Box boxSize="50px" backgroundColor="#1B1C1F" rounded="full">
+                <CldImage
+                  src="v1694585507/Icons/Footer/email_vn9xjv.svg"
+                  alt=""
+                  aria-label="email"
+                  color="white"
+                  width={50}
+                  height={50}
+                />
+              </Box>
 
               <Box>
                 <Heading
@@ -163,11 +161,11 @@ const Footer = () => {
       <Flex alignItems="center" justify="center">
         {' '}
         <VStack alignItems="center" gap={5}>
-          <Image
-            src={logoImage.logo.src.src}
+          <CldImage
+            src="v1694585522/Icons/Logo_vgiwq0.svg"
+            width={60}
+            height={60}
             style={{
-              maxWidth: 60,
-              maxHeight: 60,
               marginTop: '25px',
             }}
             alt="Logo"

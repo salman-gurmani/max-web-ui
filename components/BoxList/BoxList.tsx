@@ -1,7 +1,6 @@
-import { Box, Heading, List, Image, ListItem } from '@chakra-ui/react'
+import { Box, Heading, List, ListItem } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
-
-import { ProjectDetailsImages } from '@components/Images'
+import { CldImage } from 'next-cloudinary'
 const BoxList = () => {
   return (
     <Box
@@ -38,7 +37,12 @@ const BoxList = () => {
           alignItems="left"
           marginTop={5}
         >
-          <Image src={ProjectDetailsImages.callIcon.src.src} alt="" />
+          <CldImage
+            src="v1694585526/Icons/ProjectDetails/callIcon_kf1msn.svg"
+            width={25}
+            height={25}
+            alt=""
+          />
           <span style={{ marginLeft: '20px' }}>+4917634649431</span>
         </ListItem>
         <ListItem
@@ -48,7 +52,12 @@ const BoxList = () => {
           display="flex"
           alignItems="center"
         >
-          <Image src={ProjectDetailsImages.projectEmailIcon.src.src} alt="" />
+          <CldImage
+            src="v1694585526/Icons/ProjectDetails/emailIcon_jkfwgv.svg"
+            width={25}
+            height={25}
+            alt=""
+          />
           <span style={{ marginLeft: '20px' }}>maxovation@gmail.com</span>
         </ListItem>
         <ListItem
@@ -58,7 +67,12 @@ const BoxList = () => {
           display="flex"
           alignItems="center"
         >
-          <Image src={ProjectDetailsImages.linkedinIcon.src.src} alt="" />
+          <CldImage
+            src="v1694585526/Icons/ProjectDetails/linkedinIcon_zjyqb1.svg"
+            width={25}
+            height={25}
+            alt=""
+          />
           <span style={{ marginLeft: '20px' }}>Maxovation</span>
         </ListItem>
         <ListItem
@@ -68,8 +82,10 @@ const BoxList = () => {
           display="flex"
           alignItems="center"
         >
-          <Image
-            src={ProjectDetailsImages.projectLocationIcon.src.src}
+          <CldImage
+            src="v1694585526/Icons/ProjectDetails/locationIcon_l88uee.svg"
+            width={25}
+            height={25}
             alt=""
           />
           <span style={{ marginLeft: '20px' }}>Eindhoven, North Brabant</span>

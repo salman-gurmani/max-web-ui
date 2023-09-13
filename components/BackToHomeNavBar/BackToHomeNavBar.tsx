@@ -1,9 +1,7 @@
-import { Box, Flex, Image, Hide, Show, Link } from '@chakra-ui/react'
-
+import { Box, Flex, Hide, Show, Link } from '@chakra-ui/react'
 import React from 'react'
-
+import { CldImage } from 'next-cloudinary'
 import { css } from '@emotion/react'
-import { logoImage } from '../../components/Images'
 import { FaAngleDoubleLeft } from 'react-icons/fa'
 
 const BackToHomeNavBar = () => {
@@ -23,11 +21,13 @@ const BackToHomeNavBar = () => {
     <Box css={boxStyle} backgroundColor="#111215" position="fixed">
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
-          <Image
-            src={logoImage.logo.src.src}
+          <CldImage
+            src="v1694585522/Icons/Logo_vgiwq0.svg"
+            width={60}
+            height={60}
             style={{
-              maxWidth: 60,
-              maxHeight: 60,
+              //  maxWidth: 60,
+              // maxHeight: 60,
               marginLeft: '50px',
               marginTop: '5px',
             }}
@@ -35,8 +35,10 @@ const BackToHomeNavBar = () => {
           />
         </Hide>
         <Show below="md">
-          <Image
-            src={logoImage.logo.src.src}
+          <CldImage
+            src="v1694585522/Icons/Logo_vgiwq0.svg"
+            width={40}
+            height={40}
             style={{ maxWidth: 40, maxHeight: 40, marginLeft: '0px' }}
             alt="Logo"
           />

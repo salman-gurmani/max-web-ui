@@ -1,5 +1,5 @@
-import { Flex, IconButton, Image, Link } from '@chakra-ui/react'
-import { SocialMediaImages } from '@components/Images'
+import { Flex, IconButton, Link } from '@chakra-ui/react'
+import { CldImage } from 'next-cloudinary'
 
 const SocialMedia = ({ ...rest }) => {
   return (
@@ -18,9 +18,11 @@ const SocialMedia = ({ ...rest }) => {
         <IconButton
           aria-label="Facebook"
           icon={
-            <Image
-              src={SocialMediaImages.facebookIcon.src.src}
-              alt={SocialMediaImages.facebookIcon.alt}
+            <CldImage
+              src="v1694585527/Icons/SoicalMedia/facebook_ycwspr.svg"
+              alt=""
+              width={25}
+              height={25}
             />
           }
           fill="white"
@@ -42,9 +44,11 @@ const SocialMedia = ({ ...rest }) => {
           aria-label="LinkedIn"
           marginX={{ base: '5px', md: '10px', lg: '15px' }}
           icon={
-            <Image
-              src={SocialMediaImages.linkedin.src.src}
-              alt={SocialMediaImages.linkedin.alt}
+            <CldImage
+              src="v1694585528/Icons/SoicalMedia/linkedin_ykjurz.svg"
+              alt=""
+              width={25}
+              height={25}
             />
           }
           color="white"
@@ -66,9 +70,11 @@ const SocialMedia = ({ ...rest }) => {
           aria-label="GitHub"
           marginX={{ base: '5px', md: '10px', lg: '15px' }}
           icon={
-            <Image
-              src={SocialMediaImages.githubIcon.src.src}
-              alt={SocialMediaImages.githubIcon.alt}
+            <CldImage
+              src="v1694585527/Icons/SoicalMedia/github_frw4qd.svg"
+              alt=""
+              width={25}
+              height={25}
             />
           }
           color="white"

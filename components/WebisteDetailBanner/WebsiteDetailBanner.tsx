@@ -1,6 +1,6 @@
-import { Flex, VStack, Heading, Box, Image, Text } from '@chakra-ui/react'
-import BannerImg from '../../public/images/header.png'
+import { Flex, VStack, Heading, Box, Text } from '@chakra-ui/react'
 import { FaAngleRight } from 'react-icons/fa'
+import { CldImage } from 'next-cloudinary'
 
 interface WebsiteDetailBannerProps {
   title: string
@@ -8,13 +8,13 @@ interface WebsiteDetailBannerProps {
 const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
   return (
     <Box overflow="hidden" position="relative">
-      <Image
-        src={BannerImg.src}
+      <CldImage
+        src="v1694585521/Icons/Header_cd7yet.png"
+        width={1980}
+        height={700}
         alt=""
-        height={{ base: '300px', lg: '500px' }}
         style={{
           zIndex: 0,
-          width: '100%',
         }}
       />
       <Flex

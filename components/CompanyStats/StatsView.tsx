@@ -1,11 +1,5 @@
-import {
-  Text,
-  IconButton,
-  Grid,
-  GridItem,
-  VStack,
-  Image,
-} from '@chakra-ui/react'
+import { Text, IconButton, Grid, GridItem, VStack } from '@chakra-ui/react'
+import { CldImage } from 'next-cloudinary'
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -29,7 +23,7 @@ const StatsView = (props: StatsViewProps) => {
         key={uuidv4()}
       >
         <IconButton
-          icon={<Image src={props.icon} alt="" />}
+          icon={<CldImage src={props.icon} width={56} height={56} alt="" />}
           aria-label={props.title}
           isRound={false}
           background="#18191D"

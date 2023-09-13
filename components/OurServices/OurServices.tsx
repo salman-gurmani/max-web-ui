@@ -7,11 +7,11 @@ import {
   Grid,
   HStack,
   IconButton,
-  Image,
 } from '@chakra-ui/react'
 import { ServiceData } from './ServiceData'
 import { map } from 'lodash'
 import { Element } from 'react-scroll'
+import { CldImage } from 'next-cloudinary'
 const OurServices = () => {
   const gridTemplateColumns = {
     base: 'repeat(1, 1fr)',
@@ -93,7 +93,14 @@ const OurServices = () => {
                     justifyContent="center"
                   >
                     <IconButton
-                      icon={<Image src={data.icon} alt="" />}
+                      icon={
+                        <CldImage
+                          src={data.icon}
+                          alt=""
+                          width={40}
+                          height={40}
+                        />
+                      }
                       aria-label={data.title}
                       isRound
                       background="#2A2C39"
