@@ -1,4 +1,3 @@
-import { statsImages } from '@components/Images'
 const StatsData = [
   {
     title: '8 Years',

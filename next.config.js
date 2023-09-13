@@ -6,6 +6,7 @@ const nextConfig = {
   },
 
   reactStrictMode: false,
+  output: 'standalone',
   webpack(config, { isServer }) {
     const prefix = config.assetPrefix ?? config.basePath ?? ''
     config.module.rules.push({
