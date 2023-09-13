@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config')
 
 const nextConfig = {
   reactStrictMode: false,
-  output: 'standalone',
-  i18n,
-
   webpack(config, { isServer }) {
     const prefix = config.assetPrefix ?? config.basePath ?? ''
     config.module.rules.push({
