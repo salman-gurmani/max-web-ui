@@ -1,4 +1,3 @@
-import LoopVideo from './assets/HyperCasual.mp4'
 import React from 'react'
 import styled from 'styled-components'
 import { Box } from '@chakra-ui/react'
@@ -13,9 +12,14 @@ const VideoBanner = () => {
   return (
     <Box position="relative">
       <Overlay />
+
       <video autoPlay loop muted>
-        <source src={LoopVideo} type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/dkorerd2g/video/upload/v1694585673/Video/HyperCasual_wxpjdi.mp4"
+          type="video/mp4"
+        />
       </video>
+
       <Overlay />
     </Box>
   )

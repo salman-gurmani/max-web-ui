@@ -1,14 +1,8 @@
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Text,
-  IconButton,
-  Image,
-} from '@chakra-ui/react'
+import { Card, CardBody, CardHeader, Text, IconButton } from '@chakra-ui/react'
 import { v4 as uuidv4 } from 'uuid'
 
 import { BoxLine } from '@components/BoxLine'
+import { CldImage } from 'next-cloudinary'
 
 interface ExpertiseCardProps {
   title: string
@@ -33,7 +27,7 @@ const ExpertiseCard = (props: ExpertiseCardProps) => {
     >
       <CardHeader>
         <IconButton
-          icon={<Image src={props.icon} alt="" />}
+          icon={<CldImage src={props.icon} width={40} height={40} alt="" />}
           aria-label={props.title}
           isRound
           background="#2A2C39"

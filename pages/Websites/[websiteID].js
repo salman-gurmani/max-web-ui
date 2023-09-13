@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { WebsiteDetailBanner } from '../../components/WebisteDetailBanner'
-import { ProjectDetailsImages } from '@components/Images'
 import { TextOnImagePanel } from '@components/TextOnImagePanel'
 import { BoxList } from '@components/BoxList'
 import { BoxTable } from '@components/BoxTable'
@@ -21,6 +20,7 @@ import { map } from 'lodash'
 import { EllipseImage } from '../../components/Images'
 import { Footer } from '../../components/Footer'
 import { BackToHomeNavBar } from '../../components/BackToHomeNavBar'
+import { CldImage } from 'next-cloudinary'
 
 const WebsiteDetail = () => {
   const router = useRouter()
@@ -64,13 +64,15 @@ const WebsiteDetail = () => {
         >
           <VStack alignItems="left" justifyContent="left" spacing={6}>
             <Box overflow="hidden" position="relative">
-              <Image
+              <CldImage
                 src={reqData.image}
                 alt=""
-                h="100%"
+                width="1920"
+                height={1080}
+                // h="100%"
                 style={{
                   zIndex: 0,
-                  width: '100%',
+                  // width: '100%',
                 }}
               />
             </Box>
@@ -124,7 +126,12 @@ const WebsiteDetail = () => {
                   display="flex"
                   alignItems="center"
                 >
-                  <Image src={ProjectDetailsImages.checkmark.src.src} alt="" />
+                  <CldImage
+                    src="v1694585526/Icons/ProjectDetails/checkmark_kfgivm.svg"
+                    alt=""
+                    width={30}
+                    height={30}
+                  />
                   <span style={{ marginLeft: '20px' }}>{data}</span>
                 </ListItem>
               ))}

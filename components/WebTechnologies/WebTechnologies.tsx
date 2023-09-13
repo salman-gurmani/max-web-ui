@@ -1,15 +1,7 @@
-import {
-  Flex,
-  Heading,
-  VStack,
-  Text,
-  HStack,
-  Box,
-  Image,
-} from '@chakra-ui/react'
+import { Flex, Heading, VStack, Text, HStack, Box } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
 
-import { WebTechnologiesImages } from '@components/Images'
+import { CldImage } from 'next-cloudinary'
 
 const WebTechnologies = () => {
   return (
@@ -65,51 +57,67 @@ const WebTechnologies = () => {
           justifyContent="center"
         >
           <Box>
-            <Image
-              src={WebTechnologiesImages.htmlIcon.src.src}
-              alt={WebTechnologiesImages.htmlIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/html_imdjdo.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
           <Box>
-            <Image
-              src={WebTechnologiesImages.cssIcon.src.src}
-              alt={WebTechnologiesImages.cssIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/css_vmeeuz.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
           <Box>
-            <Image
-              src={WebTechnologiesImages.jsIcon.src.src}
-              alt={WebTechnologiesImages.jsIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/js_bvjygm.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
           <Box>
-            <Image
-              src={WebTechnologiesImages.reactIcon.src.src}
-              alt={WebTechnologiesImages.reactIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/react_rmsuz2.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
           <Box>
-            <Image
-              src={WebTechnologiesImages.angularIcon.src.src}
-              alt={WebTechnologiesImages.angularIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/angular_tinvcf.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
           <Box>
-            <Image
-              src={WebTechnologiesImages.nodeIcon.src.src}
-              alt={WebTechnologiesImages.nodeIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/nodeJs_mnw9ht.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
           <Box>
-            <Image
-              src={WebTechnologiesImages.phpIcon.src.src}
-              alt={WebTechnologiesImages.phpIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/php_joafrd.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
           <Box>
-            <Image
-              src={WebTechnologiesImages.railIcon.src.src}
-              alt={WebTechnologiesImages.railIcon.alt}
+            <CldImage
+              src="v1694585532/Icons/WebTechnologies/rails_ezlu2r.svg"
+              alt=""
+              height={110}
+              width={110}
             />
           </Box>
         </HStack>

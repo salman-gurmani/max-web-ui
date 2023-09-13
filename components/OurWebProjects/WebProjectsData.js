@@ -1,21 +1,20 @@
-import { WebsiteIconsImages } from '@components/Images'
 const WebData = [
   {
-    image: WebsiteIconsImages.Bestow.src.src,
+    image: 'v1694585531/Icons/WebsiteIcons/Bestow_ovu73b.jpg',
     name: 'Bestow',
     date: '2022',
     link: 'https://bestow.qodeinteractive.com/online-store/',
     id: '1',
   },
   {
-    image: WebsiteIconsImages.GameWorld.src.src,
+    image: 'v1694585531/Icons/WebsiteIcons/Gamer_World_ejlmdu.jpg',
     name: 'ShopO',
     date: '2022',
     link: 'https://shopo.quomodothemes.website/',
     id: '2',
   },
   {
-    image: WebsiteIconsImages.NestMart.src.src,
+    image: 'v1694585534/Icons/WebsiteIcons/Nest_Mart_l9e5ab.jpg',
     name: 'Nest Mart and Grocery',
     date: '2022',
     link: 'https://themepanthers.com/wp/nest/d2/home-5/',
@@ -34,7 +33,7 @@ const WebData = [
   //   link: 'https://shofy-client.vercel.app/',
   // },
   {
-    image: WebsiteIconsImages.MagOne.src.src,
+    image: 'v1694585532/Icons/WebsiteIcons/Magone_zjcqu9.jpg',
     name: 'MagOne',
     date: '2022',
     link: 'https://preview.themeforest.net/item/magone-responsive-news-magazine-blogger-template/full_screen_preview/12016203?_ga=2.140973690.933272694.1686033132-803145408.1684847666',

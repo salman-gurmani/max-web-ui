@@ -1,6 +1,6 @@
-import { Flex, Heading, VStack, HStack, Box, Image } from '@chakra-ui/react'
+import { Flex, Heading, VStack, HStack, Box } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
-import { gameTechnologiesImages } from '@components/Images'
+import { CldImage } from 'next-cloudinary'
 
 const GameTechnologies = () => {
   return (
@@ -29,15 +29,19 @@ const GameTechnologies = () => {
           justifyContent="center"
         >
           <Box>
-            <Image
-              src={gameTechnologiesImages.unityIcon.src.src}
-              alt={gameTechnologiesImages.unityIcon.alt}
+            <CldImage
+              src="v1694585521/Icons/gameTechnologies/unity_mjjvql.svg"
+              alt=""
+              width={110}
+              height={110}
             />
           </Box>
           <Box>
-            <Image
-              src={gameTechnologiesImages.unrealIcon.src.src}
-              alt={gameTechnologiesImages.unrealIcon.alt}
+            <CldImage
+              src="v1694585521/Icons/gameTechnologies/unrealEngine_c53jnv.svg"
+              alt=""
+              width={110}
+              height={110}
             />
           </Box>
         </HStack>

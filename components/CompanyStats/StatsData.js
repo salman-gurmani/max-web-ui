@@ -3,22 +3,22 @@ const StatsData = [
   {
     title: '8 Years',
     subTitle: 'Experience',
-    icon: statsImages.experience.src.src,
+    icon: 'v1694585529/Icons/stats/experience_tuvkxe.svg',
   },
   {
     title: '10+',
     subTitle: 'Clients',
-    icon: statsImages.clients.src.src,
+    icon: 'v1694585529/Icons/stats/clients_bb0jxc.svg',
   },
   {
     title: '20+',
     subTitle: 'Products',
-    icon: statsImages.products.src.src,
+    icon: 'v1694585529/Icons/stats/products_kj9tcm.svg',
   },
   {
     title: '12+',
     subTitle: 'Team members',
-    icon: statsImages.team.src.src,
+    icon: 'v1694585530/Icons/stats/team_kk2prn.svg',
   },
 ]
 export { StatsData }

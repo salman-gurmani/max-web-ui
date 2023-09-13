@@ -5,17 +5,10 @@ import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { map } from 'lodash'
-import {
-  Box,
-  Text,
-  VStack,
-  Image,
-  useBreakpointValue,
-  Link,
-} from '@chakra-ui/react'
+import { Box, Text, VStack, useBreakpointValue, Link } from '@chakra-ui/react'
 import { v4 as uuidv4 } from 'uuid'
 import { WebArrowsImages } from '../Images'
-WebArrowsImages.leftArrow.src.src
+import { CldImage } from 'next-cloudinary'
 const StyledSwiper = styled(Swiper)`
   .swiper-button-prev {
     color: transparent;
@@ -93,7 +86,6 @@ const Slider = ({ slides }) => {
               key={uuidv4()}
               width={{ base: '210px', md: '240px', lg: '245px' }}
               height={{ base: '310px', md: '320px', lg: '350px' }}
-              borderRadius="10px"
               border="1px solid #2A2C39"
               background="#18191D"
               display="flex"
@@ -101,13 +93,9 @@ const Slider = ({ slides }) => {
               justifyContent="center"
               alignItems="center"
               overflow="hidden"
+              borderRadius="10px 10px 0 0"
             >
-              <Image
-                src={data.image}
-                alt=""
-                borderRadius="10px 10px 0 0"
-                style={{ flex: '1', objectFit: 'cover' }}
-              />
+              <CldImage src={data.image} alt="" width={265} height={350} />
 
               <VStack mt="4" spacing="5" style={{ flex: '1', width: '100%' }}>
                 <Text

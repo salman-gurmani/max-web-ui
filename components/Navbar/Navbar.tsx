@@ -8,7 +8,6 @@ import {
   useDisclosure,
   Show,
   Hide,
-  Image,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -21,10 +20,10 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { css } from '@emotion/react'
 import { useTranslation } from 'next-i18next'
-import { logoImage } from '../../components/Images'
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
+import { CldImage } from 'next-cloudinary'
 
 interface DesktopNavProps {
   selectedSection: string
@@ -57,11 +56,13 @@ const NavigationBar = () => {
     <Box css={boxStyle} backgroundColor="#111215" position="fixed">
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
-          <Image
-            src={logoImage.logo.src.src}
+          <CldImage
+            src="v1694585522/Icons/Logo_vgiwq0.svg"
+            width={60}
+            height={60}
             style={{
-              maxWidth: 60,
-              maxHeight: 60,
+              //  maxWidth: 60,
+              // maxHeight: 60,
               marginLeft: '50px',
               marginTop: '5px',
             }}
@@ -69,8 +70,10 @@ const NavigationBar = () => {
           />
         </Hide>
         <Show below="md">
-          <Image
-            src={logoImage.logo.src.src}
+          <CldImage
+            src="v1694585522/Icons/Logo_vgiwq0.svg"
+            width={40}
+            height={40}
             style={{ maxWidth: 40, maxHeight: 40, marginLeft: '0px' }}
             alt="Logo"
           />
@@ -187,9 +190,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <Box backgroundColor="black">
           <DrawerHeader>
             <Grid templateColumns={'1fr 1fr 1fr'} gap={10} paddingY="10px">
-              <Image
-                src={logoImage.logo.src.src}
-                style={{ maxWidth: 50, maxHeight: 70 }}
+              <CldImage
+                src="v1694585522/Icons/Logo_vgiwq0.svg"
+                width={50}
+                height={70}
                 alt="Logo"
               />
               <Text color="white" textAlign="center">

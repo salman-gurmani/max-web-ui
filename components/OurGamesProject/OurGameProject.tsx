@@ -27,6 +27,7 @@ import React from 'react'
 
 import { EllipseImage } from '@components/Images'
 import { Element } from 'react-scroll'
+import { CldImage } from 'next-cloudinary'
 
 const OurGameProject = () => {
   const gamesPerPage = 6
@@ -196,14 +197,11 @@ const OurGameProject = () => {
                       overflow="hidden"
                     >
                       {
-                        <Image
+                        <CldImage
                           src={data.image}
                           alt=""
-                          style={{
-                            height: '100%',
-                            width: '100%',
-                            objectFit: 'contain',
-                          }}
+                          width={400}
+                          height={400}
                         />
                       }
                     </Box>
