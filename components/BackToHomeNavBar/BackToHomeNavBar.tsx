@@ -37,9 +37,9 @@ const BackToHomeNavBar = () => {
         <Show below="md">
           <CldImage
             src="v1694585522/Icons/Orig_Colors_H_pnjnpy.svg"
-            width={40}
-            height={40}
-            style={{ maxWidth: 40, maxHeight: 40, marginLeft: '0px' }}
+            width={140}
+            height={140}
+            style={{ marginLeft: '0px' }}
             alt="Logo"
           />
         </Show>
