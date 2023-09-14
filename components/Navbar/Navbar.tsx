@@ -57,9 +57,9 @@ const NavigationBar = () => {
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
           <CldImage
-            src="v1694585522/Icons/Logo_vgiwq0.svg"
-            width={60}
-            height={60}
+            src="v1694585522/Icons/Orig_Colors_H_pnjnpy.svg"
+            width={251}
+            height={137}
             style={{
               //  maxWidth: 60,
               // maxHeight: 60,
@@ -71,10 +71,10 @@ const NavigationBar = () => {
         </Hide>
         <Show below="md">
           <CldImage
-            src="v1694585522/Icons/Logo_vgiwq0.svg"
-            width={40}
-            height={40}
-            style={{ maxWidth: 40, maxHeight: 40, marginLeft: '0px' }}
+            src="v1694585522/Icons/Orig_Colors_H_pnjnpy.svg"
+            width={140}
+            height={80}
+            style={{ marginLeft: '0px' }}
             alt="Logo"
           />
           <Flex mr={{ base: -4 }} justifyContent="flex-end">
@@ -191,9 +191,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           <DrawerHeader>
             <Grid templateColumns={'1fr 1fr 1fr'} gap={10} paddingY="10px">
               <CldImage
-                src="v1694585522/Icons/Logo_vgiwq0.svg"
-                width={50}
-                height={70}
+                src="v1694585522/Icons/Orig_Colors_H_pnjnpy.svg"
+                width={140}
+                height={80}
                 alt="Logo"
               />
               <Text color="white" textAlign="center">

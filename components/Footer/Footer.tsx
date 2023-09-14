@@ -162,7 +162,7 @@ const Footer = () => {
         {' '}
         <VStack alignItems="center" gap={5}>
           <CldImage
-            src="v1694585522/Icons/Logo_vgiwq0.svg"
+            src="v1694585522/Icons/Orig_colors_V_df5dts.svg"
             width={60}
             height={60}
             style={{

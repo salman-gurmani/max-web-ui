@@ -1,7 +1,6 @@
 import '../styles/globals.css'
-import { ChakraProvider } from '@chakra-ui/react'
-import { Kanit, Roboto } from '@next/font/google'
-import { extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { Roboto } from '@next/font/google'
 import { createOvermind, createOvermindSSR, rehydrate } from 'overmind'
 import { Provider } from 'overmind-react'
 import App from 'next/app'
@@ -9,10 +8,6 @@ import React from 'react'
 import { IAppContext, storeConfig } from '@store/index'
 import { appWithTranslation } from 'next-i18next'
 
-const kanit = Kanit({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-})
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
@@ -20,7 +15,6 @@ const roboto = Roboto({
 
 const theme = extendTheme({
   fonts: {
-    kanit: kanit.style.fontFamily,
     roboto: roboto.style.fontFamily,
   },
 })
