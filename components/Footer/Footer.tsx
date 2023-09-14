@@ -162,7 +162,7 @@ const Footer = () => {
         {' '}
         <VStack alignItems="center" gap={5}>
           <CldImage
-            src="v1694585522/Icons/Orig_colors_V_df5dts.svg"
+            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_kfmabd.svg"
             width={60}
             height={60}
             style={{
