@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-import { Roboto } from '@next/font/google'
+import { Roboto } from "next/font/google"
 import { createOvermind, createOvermindSSR, rehydrate } from 'overmind'
 import { Provider } from 'overmind-react'
 import App from 'next/app'
