@@ -1,5 +1,21 @@
-const projectDetailsData = [
+
+
+export interface ProjectDetailTypes {
+  key: string
+  title: string
+  image: string
+
+  description: string
+  uniquePoints: string[]
+  features: string[]
+  technologies: string[]
+  Year: string
+  Category: string
+  Tags: string
+}
+const projectDetailsData: ProjectDetailTypes[] = [
   {
+    key: 'bestow',
     title: 'Bestow',
     image: 'v1694585531/Icons/WebsiteIcons/Bestow_ovu73b.jpg',
     description:
@@ -30,6 +46,7 @@ const projectDetailsData = [
     Tags: 'E-Commerce',
   },
   {
+    key: 'gamerworld',
     title: 'Gamer World',
     image: 'v1694585531/Icons/WebsiteIcons/Gamer_World_ejlmdu.jpg',
     description:
@@ -59,6 +76,7 @@ const projectDetailsData = [
     Tags: 'E-Commerce',
   },
   {
+    key: 'nest mart',
     title: 'Nest Mart',
     image: 'v1694585534/Icons/WebsiteIcons/Nest_Mart_l9e5ab.jpg',
     description:
@@ -89,6 +107,7 @@ const projectDetailsData = [
     Tags: 'E-Commerce',
   },
   {
+    key: 'magone',
     title: 'MagOne',
     image: 'v1694585532/Icons/WebsiteIcons/Magone_zjcqu9.jpg',
     description:

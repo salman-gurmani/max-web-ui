@@ -33,6 +33,6 @@
     "**/*.ts",
     "**/*.tsx",
 
-    "components/Slider/Slider.js"
+    "components/Slider/Slider.ts"
   ]
 }

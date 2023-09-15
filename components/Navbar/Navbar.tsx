@@ -115,8 +115,6 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
   const gradientColor =
     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)'
 
-  const { t } = useTranslation()
-
   const handleSectionClick = (sectionId: string) => {
     onSelect(sectionId)
   }
@@ -167,7 +165,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
                 },
               }}
             >
-              {t(navItem.label)}
+              {navItem.label}
             </Text>
           </ScrollLink>
         </Box>
