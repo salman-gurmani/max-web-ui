@@ -21,7 +21,7 @@ const Banner = () => {
           <VideoBanner />
           <Grid
             position="absolute"
-            top={{ base: '2%', md: '20%', lg: '20%' }}
+            top={{ base: '2%', md: '5%', lg: '25%' }}
             left="0"
             width="100%"
             height="100%"
@@ -33,16 +33,11 @@ const Banner = () => {
                 lg: '1fr 1fr 1fr',
               }}
             >
-              <Box
-                justifyContent="center"
-                alignItems="center"
-                height="100%"
-                color="red"
-              >
+              <Box justifyContent="center" alignItems="center" height="100%">
                 <VStack
                   w={{ base: '90%', md: '70%', lg: '50%' }}
                   position="relative"
-                  padding={{ base: '15px', md: '70px' }}
+                  padding={{ base: '15px', md: '40px' }}
                   gap={{ base: '1', md: '2', lg: '4' }}
                 >
                   <Button
