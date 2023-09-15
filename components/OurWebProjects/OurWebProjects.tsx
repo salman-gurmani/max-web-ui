@@ -1,6 +1,6 @@
 import { Text, Heading, VStack, Grid, Box } from '@chakra-ui/react'
 import React from 'react'
-import { WebData } from './WebProjectsData'
+import projectDetailsData from '@components/Data/websitesData'
 
 import { Slider } from '../Slider/Slider'
 import { Element } from 'react-scroll'
@@ -53,7 +53,7 @@ const OurWebProjects = () => {
             </VStack>
 
             <Grid templateColumns="1fr">
-              <Slider slides={WebData} />
+              <Slider slides={projectDetailsData} />
             </Grid>
           </Grid>
         </Box>

@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { css } from '@emotion/react'
-import { useTranslation } from 'next-i18next'
+
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
@@ -115,8 +115,6 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
   const gradientColor =
     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)'
 
-  const { t } = useTranslation()
-
   const handleSectionClick = (sectionId: string) => {
     onSelect(sectionId)
   }
@@ -167,7 +165,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
                 },
               }}
             >
-              {t(navItem.label)}
+              {navItem.label}
             </Text>
           </ScrollLink>
         </Box>
