@@ -7,23 +7,28 @@ interface WebsiteDetailBannerProps {
 }
 const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
   return (
-    <Box overflow="hidden" position="relative">
+    <Box
+      overflow="hidden"
+      position="relative"
+      h={{ lg: '400px', md: '150px', base: '150px' }}
+    >
       <CldImage
-        src="v1694585521/Icons/Header_cd7yet.png"
-        width={1980}
-        height={700}
+        src="v1694585521/Icons/Header_cd7yet_jvrrcd.png"
+        width="1920"
+        height="1080"
         alt=""
         style={{
           zIndex: 0,
         }}
       />
-      <Flex
+      <Box
         position="absolute"
-        top="3%"
+        top={{ base: '22%', md: '15%', lg: '3%' }}
         left="0"
         width="100%"
         height="100%"
         justifyContent="center"
+        display="flex"
       >
         <VStack
           w={{ base: '80%', md: '70%', lg: '50%' }}
@@ -68,7 +73,7 @@ const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
             </Text>
           </Flex>
         </VStack>
-      </Flex>
+      </Box>
     </Box>
   )
 }
