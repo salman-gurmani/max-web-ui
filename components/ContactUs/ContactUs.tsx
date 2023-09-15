@@ -111,7 +111,7 @@ const ContactUs = () => {
               templateColumns={{ base: '1fr', md: '50% 50%', lg: '65% 35%' }}
               marginY={10}
               marginX={{ base: '5', md: '10', lg: '20' }}
-              gap={{ base: 10, md: 10, lg: 1 }}
+              gap={{ base: 10, md: 2, lg: 1 }}
             >
               <Box bg="#0A0C19" padding={12} borderRadius="14px 0px 0px 14px">
                 <Grid
@@ -253,7 +253,7 @@ const ContactUs = () => {
                     type="submit"
                     fontFamily="roboto"
                     fontWeight="17px"
-                    w={{ base: '100px', md: '105px', lg: '330px' }}
+                    w={{ base: '115px', md: '125px', lg: '330px' }}
                     height={{ base: '30px', md: '35px', lg: '40px' }}
                     flex-shrink="0"
                     fontSize={{ base: '12px', md: '14px', lg: '16px' }}

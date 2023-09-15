@@ -3,7 +3,7 @@ const ExpertiseData = [
     title: 'Web',
     boxLineWidth: '25px',
     icon: 'v1694585523/Icons/OurExpertise/webDev_xxjqjd.svg',
-    desc: 'We are a leading company at the forefront of the digital landscape, offering a diverse range of cutting-edge products in the domains of AI, Blockchain, Gaming, and Web2.0. Our expertise lies in delivering exceptional graphic design, website development, and top-notch web solutions. With a focus on optimizing Google page rankings and ensuring robust website security, we are committed to providing unparalleled digital marketing services. Through our innovative approach and a team of experts,we empower businesses to thrive in the dynamic and competitive online ecosystem.',
+    desc: 'We are a leading company at the forefront of the digital landscape, offering a diverse range of cutting-edge products in the domains of AI, Blockchain, Gaming, and Web2.0. Our expertise lies in delivering exceptional graphic design, website development, and top-notch web solutions. With a focus on optimizing Google page rankings and ensuring robust website security, we are committed to providing unparalleled digital marketing services. Through our innovative approach and a team of experts, we empower businesses to thrive in the dynamic and competitive online ecosystem.',
   },
   {
     title: 'Video Games',

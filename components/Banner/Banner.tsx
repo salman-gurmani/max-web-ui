@@ -26,13 +26,24 @@ const Banner = () => {
             width="100%"
             height="100%"
           >
-            <GridItem gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr 1fr' }}>
-              <Box justifyContent="center" alignItems="center" height="100%">
+            <GridItem
+              gridTemplateColumns={{
+                base: '1fr',
+                md: '1fr 1fr',
+                lg: '1fr 1fr 1fr',
+              }}
+            >
+              <Box
+                justifyContent="center"
+                alignItems="center"
+                height="100%"
+                color="red"
+              >
                 <VStack
-                  w={{ base: '80%', md: '70%', lg: '50%' }}
+                  w={{ base: '90%', md: '70%', lg: '50%' }}
                   position="relative"
-                  padding={{ base: '40px', md: '70px' }}
-                  gap={{ base: '1', md: '3', lg: '6' }}
+                  padding={{ base: '15px', md: '70px' }}
+                  gap={{ base: '1', md: '2', lg: '4' }}
                 >
                   <Button
                     color="white"
@@ -87,7 +98,7 @@ const Banner = () => {
                     overflowWrap="break-word"
                     alignSelf="flex-start"
                   >
-                    APP DEVELOPER | WEB DESIGNERS | UX DESIGNERS
+                    APP DEVELOPERS | WEB DESIGNERS | UX DESIGNERS
                   </Text>
 
                   <ScrollLink
