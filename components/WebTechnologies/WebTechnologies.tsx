@@ -98,7 +98,7 @@ const WebTechnologies = () => {
           </Box>
           <Box>
             <CldImage
-              src="v1694585532/Icons/WebTechnologies/nodeJs_mnw9ht.svg"
+              src="v1694585532/Icons/WebTechnologies/nodeJsIcon_ac573p.svg"
               alt=""
               height={110}
               width={110}

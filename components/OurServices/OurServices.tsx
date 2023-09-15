@@ -91,6 +91,7 @@ const OurServices = () => {
                     alignItems="center"
                     marginX={5}
                     justifyContent="center"
+                    height="100%"
                   >
                     <IconButton
                       icon={
@@ -110,7 +111,7 @@ const OurServices = () => {
                       pointerEvents="none"
                     />
 
-                    <Box>
+                    <Box height="100%">
                       <Heading
                         color="white"
                         fontFamily="roboto"
@@ -122,11 +123,11 @@ const OurServices = () => {
                       </Heading>
                       <Text
                         fontFamily="roboto"
-                        marginLeft={{ base: '15px', md: '15px', lg: '20px' }}
-                        width="100%" // Ensure the text takes full width
+                        marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                        width="90%" // Ensure the text takes full width
                         marginTop="10px"
                         color="white"
-                        fontSize={['10px', '11px', '13px']}
+                        fontSize={['10px', '11px', '12px']}
                       >
                         {data.desc}
                       </Text>
