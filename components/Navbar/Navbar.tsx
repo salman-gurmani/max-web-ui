@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { css } from '@emotion/react'
-import { useTranslation } from 'next-i18next'
+
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'

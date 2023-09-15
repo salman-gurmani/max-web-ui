@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { map } from 'lodash'
-import { Box, Text, VStack, useBreakpointValue, Link } from '@chakra-ui/react'
+import { Box, Text, VStack, useBreakpointValue, Button } from '@chakra-ui/react'
 import { v4 as uuidv4 } from 'uuid'
 import { WebArrowsImages } from '../Images'
 import { CldImage } from 'next-cloudinary'
+import { ProjectDetailTypes } from '@components/Data/websitesData'
 const StyledSwiper = styled(Swiper)`
   .swiper-button-prev {
     color: transparent;
