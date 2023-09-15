@@ -10,6 +10,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { WebArrowsImages } from '../Images'
 import { CldImage } from 'next-cloudinary'
 import { ProjectDetailTypes } from '@components/Data/websitesData'
+import { useRouter } from 'next/router'
+
 const StyledSwiper = styled(Swiper)`
   .swiper-button-prev {
     color: transparent;
