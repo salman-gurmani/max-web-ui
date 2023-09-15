@@ -6,7 +6,6 @@ import { Provider } from 'overmind-react'
 import App from 'next/app'
 import React from 'react'
 import { IAppContext, storeConfig } from '@store/index'
-import { appWithTranslation } from 'next-i18next'
 
 const roboto = Roboto({
   weight: '400',
@@ -52,4 +51,4 @@ class MyApp extends App {
   }
 }
 
-export default appWithTranslation(MyApp)
+export default MyApp

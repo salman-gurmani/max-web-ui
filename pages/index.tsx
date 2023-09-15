@@ -1,4 +1,4 @@
-import Home from './Home/Home'
+import Home from './home/Home'
 import { GetStaticProps, NextPage } from 'next'
 import { createOvermindSSR } from 'overmind'
 import React from 'react'

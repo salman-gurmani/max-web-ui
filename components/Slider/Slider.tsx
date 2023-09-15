@@ -5,10 +5,13 @@ import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { map } from 'lodash'
-import { Box, Text, VStack, useBreakpointValue, Link } from '@chakra-ui/react'
+import { Box, Text, VStack, useBreakpointValue, Button } from '@chakra-ui/react'
 import { v4 as uuidv4 } from 'uuid'
 import { WebArrowsImages } from '../Images'
 import { CldImage } from 'next-cloudinary'
+import { ProjectDetailTypes } from '@components/Data/websitesData'
+import { useRouter } from 'next/router'
+
 const StyledSwiper = styled(Swiper)`
   .swiper-button-prev {
     color: transparent;
@@ -35,14 +38,21 @@ const StyledSwiper = styled(Swiper)`
     }
   }
 `
+interface SliderProps {
+  slides: ProjectDetailTypes[]
+}
 
-const Slider = ({ slides }) => {
+const Slider = ({ slides }: SliderProps) => {
   const Paddingsize = useBreakpointValue({
     base: 20,
     md: 50,
     lg: 50,
   })
+  const router = useRouter()
 
+  const handleClick = (id: string) => {
+    router.push(`/projects/${id}`)
+  }
   return (
     <StyledSwiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -79,7 +89,7 @@ const Slider = ({ slides }) => {
         },
       }}
     >
-      {map(slides, (data) => {
+      {map(slides, (data: ProjectDetailTypes) => {
         return (
           <SwiperSlide key={uuidv4()}>
             <Box
@@ -104,7 +114,7 @@ const Slider = ({ slides }) => {
                   fontWeight="400"
                   alignSelf="center"
                 >
-                  {data.date}
+                  {data.Year}
                 </Text>
                 <Text
                   color="white"
@@ -112,10 +122,9 @@ const Slider = ({ slides }) => {
                   fontWeight="400"
                   alignSelf="center"
                 >
-                  {data.name}
+                  {data.title}
                 </Text>
-                <Link
-                  href={`Websites/${data.id}`}
+                <Button
                   color="white"
                   fontFamily="roboto"
                   fontWeight="400"
@@ -141,9 +150,10 @@ const Slider = ({ slides }) => {
                       'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
                     textColor: 'white',
                   }}
+                  onClick={() => handleClick(data.key)}
                 >
                   View Project
-                </Link>
+                </Button>
               </VStack>
             </Box>
           </SwiperSlide>
