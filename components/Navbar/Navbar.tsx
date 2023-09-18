@@ -72,7 +72,6 @@ const NavigationBar = () => {
             src="v1694585522/Icons/Maxovation_TL_gj9zwa.svg"
             width={220}
             height={170}
-            style={{ marginLeft: '0px' }}
             alt="Logo"
           />
           <Flex mr={{ base: -4 }} justifyContent="flex-end">
@@ -119,7 +118,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
   return (
     <Flex direction={'row'} justify={'flex-end'} alignItems="center">
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label} mr={14}>
+        <Box key={navItem.label} mr={8}>
           <ScrollLink
             to={navItem.id}
             smooth={true}
@@ -130,7 +129,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
             <Text
               onClick={() => handleSectionClick(navItem.id)}
               cursor="pointer"
-              fontSize={{ base: 'xs', sm: 'xs', md: 'xs', xl: 'md' }}
+              fontSize={{ base: 'xs', sm: 'xs', md: 'xs', lg: 'sm', xl: 'md' }}
               fontFamily="roboto"
               fontWeight={500}
               color={navItem.id === selectedSection ? 'transparent' : 'white'}
