@@ -22,7 +22,7 @@ const BackToHomeNavBar = () => {
       <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
         <Hide below="md">
           <CldImage
-            src="v1694585522/Icons/Maxovation_TL_gj9zwa.svg"
+            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
             width={271}
             height={127}
             style={{
@@ -34,7 +34,7 @@ const BackToHomeNavBar = () => {
         </Hide>
         <Show below="md">
           <CldImage
-            src="v1694585522/Icons/Maxovation_TL_gj9zwa.svg"
+            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
             width={200}
             height={150}
             alt="Logo"
