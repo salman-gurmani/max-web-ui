@@ -6,7 +6,7 @@ const VideoBanner = () => {
     <Box position="relative">
       <video autoPlay loop muted>
         <source
-          src="https://res.cloudinary.com/dkorerd2g/video/upload/v1694697880/Icons/New_Video_Banner_ep90ov.mp4"
+          src="https://res.cloudinary.com/dkorerd2g/video/upload/v1694697880/Icons/video_2160p_kyu4ac.mp4"
           type="video/mp4"
         />
       </video>

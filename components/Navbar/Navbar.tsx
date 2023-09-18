@@ -58,11 +58,9 @@ const NavigationBar = () => {
         <Hide below="md">
           <CldImage
             src="v1694585522/Icons/Maxovation_TL_gj9zwa.svg"
-            width={271}
-            height={127}
+            width={261}
+            height={117}
             style={{
-              //  maxWidth: 60,
-              // maxHeight: 60,
               marginLeft: '50px',
               marginTop: '5px',
             }}
@@ -190,9 +188,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
             <Grid templateColumns={'1fr 1fr 1fr'} paddingY="10px">
               <CldImage
                 src="v1694585522/Icons/Maxovation_TL_gj9zwa.svg"
-                width={220}
-                height={270}
+                width={250}
+                height={300}
                 alt="Logo"
+                style={{ marginTop: '5px' }}
               />
               <Text color="white" textAlign="center">
                 Menu

@@ -246,10 +246,10 @@ const ContactUsForm: React.FC<ContactUsFormProps> = ({ onClose }) => {
               w={{ base: '100px', md: '105px', lg: '330px' }}
               height={{ base: '30px', md: '35px', lg: '40px' }}
               flex-shrink="0"
-              fontSize={{ base: '12px', md: '14px', lg: '16px' }}
+              fontSize={{ base: '10px', md: '14px', lg: '16px' }}
               border-radius="8px"
               background="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
-              paddingX={{ base: '3', md: '5', lg: '5' }}
+              paddingX={{ base: '2', md: '5', lg: '5' }}
               zIndex="5"
               alignSelf="center"
               _hover={{

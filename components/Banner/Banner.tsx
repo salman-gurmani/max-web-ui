@@ -40,7 +40,7 @@ const Banner = () => {
                   padding={{ base: '15px', md: '40px' }}
                   gap={{ base: '1', md: '2', lg: '4' }}
                 >
-                  <Button
+                  {/* <Button
                     color="white"
                     fontFamily="roboto"
                     fontWeight="17px"
@@ -64,7 +64,7 @@ const Banner = () => {
                     }}
                   >
                     Visionize
-                  </Button>
+                  </Button> */}
                   <Heading
                     color="white"
                     fontSize={{ base: '20px', md: '40px', lg: '55px' }}
