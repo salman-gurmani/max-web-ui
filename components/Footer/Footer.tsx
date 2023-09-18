@@ -21,12 +21,12 @@ const Footer = () => {
 
   const gridGap = {
     base: 0,
-    md: 4,
+    md: 0,
     lg: 6,
   }
   const marginPx = {
     base: 0,
-    md: 3,
+    md: 0,
     lg: 6,
   }
   return (

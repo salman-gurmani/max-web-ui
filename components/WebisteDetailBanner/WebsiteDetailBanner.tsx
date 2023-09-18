@@ -1,37 +1,112 @@
-import { Flex, VStack, Heading, Box, Text } from '@chakra-ui/react'
+// import { Flex, VStack, Heading, Box, Text } from '@chakra-ui/react'
+// import { FaAngleRight } from 'react-icons/fa'
+// import { CldImage } from 'next-cloudinary'
+
+// interface WebsiteDetailBannerProps {
+//   title: string
+// }
+// const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
+//   return (
+//     <Box
+//       overflow="hidden"
+//       position="relative"
+//       h={{ lg: '400px', md: '150px', base: '150px' }}
+//     >
+//       <CldImage
+//         src="v1694585521/Icons/Header_cd7yet_jvrrcd.png"
+//         width="1920"
+//         height="1080"
+//         alt=""
+//         style={{
+//           zIndex: 0,
+//         }}
+//       />
+//       <Box
+//         position="absolute"
+//         top={{ base: '22%', md: '15%', lg: '3%' }}
+//         left="0"
+//         width="100%"
+//         height="100%"
+//         justifyContent="center"
+//         display="flex"
+//       >
+//         <VStack
+//           w={{ base: '80%', md: '70%', lg: '50%' }}
+//           position="relative"
+//           padding={{ base: '40px', md: '70px' }}
+//           gap={{ base: '1', md: '3', lg: '6' }}
+//           align="center"
+//           justify="center"
+//         >
+//           <Heading
+//             color="transparent"
+//             backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
+//             backgroundClip="text"
+//             fontSize={{ base: '20px', md: '40px', lg: '55px' }}
+//             zIndex={1}
+//             fontFamily="roboto"
+//             fontStyle="normal"
+//             fontWeight="600"
+//           >
+//             Portfolio Details{' '}
+//           </Heading>
+
+//           <Flex alignItems="center">
+//             <Text
+//               color="white"
+//               fontFamily="roboto"
+//               maxWidth="100%"
+//               fontSize={{ base: '14px', md: '18px', lg: '20px' }}
+//             >
+//               Home
+//             </Text>
+//             <Box as="span" mx="2" color="white">
+//               <FaAngleRight />
+//             </Box>
+//             <Text
+//               color="white"
+//               fontFamily="roboto"
+//               maxWidth="100%"
+//               fontSize={{ base: '14px', md: '18px', lg: '20px' }}
+//             >
+//               {prop.title}
+//             </Text>
+//           </Flex>
+//         </VStack>
+//       </Box>
+//     </Box>
+//   )
+// }
+// export { WebsiteDetailBanner }
+import { Flex, VStack, Heading, Box, Image, Text } from '@chakra-ui/react'
+import BannerImg from '../../public/Icons/header.png'
 import { FaAngleRight } from 'react-icons/fa'
-import { CldImage } from 'next-cloudinary'
 
 interface WebsiteDetailBannerProps {
   title: string
 }
 const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
   return (
-    <Box
-      overflow="hidden"
-      position="relative"
-      h={{ lg: '400px', md: '150px', base: '150px' }}
-    >
-      <CldImage
-        src="v1694585521/Icons/Header_cd7yet_jvrrcd.png"
-        width="1920"
-        height="1080"
+    <Box overflow="hidden" position="relative">
+      <Image
+        src={BannerImg.src}
         alt=""
+        height={{ base: '300px', md: '400px', lg: '500px' }}
         style={{
           zIndex: 0,
+          width: '100%',
         }}
       />
-      <Box
+      <Flex
         position="absolute"
-        top={{ base: '22%', md: '15%', lg: '3%' }}
+        top="3%"
         left="0"
         width="100%"
         height="100%"
         justifyContent="center"
-        display="flex"
       >
         <VStack
-          w={{ base: '80%', md: '70%', lg: '50%' }}
+          w={{ base: '80%', md: '80%', lg: '50%' }}
           position="relative"
           padding={{ base: '40px', md: '70px' }}
           gap={{ base: '1', md: '3', lg: '6' }}
@@ -42,7 +117,7 @@ const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
             color="transparent"
             backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
             backgroundClip="text"
-            fontSize={{ base: '20px', md: '40px', lg: '55px' }}
+            fontSize={{ base: '20px', md: '35px', lg: '55px' }}
             zIndex={1}
             fontFamily="roboto"
             fontStyle="normal"
@@ -73,7 +148,7 @@ const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
             </Text>
           </Flex>
         </VStack>
-      </Box>
+      </Flex>
     </Box>
   )
 }

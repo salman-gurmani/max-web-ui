@@ -26,8 +26,6 @@ const BackToHomeNavBar = () => {
             width={271}
             height={127}
             style={{
-              //  maxWidth: 60,
-              // maxHeight: 60,
               marginLeft: '50px',
               marginTop: '5px',
             }}
@@ -37,9 +35,8 @@ const BackToHomeNavBar = () => {
         <Show below="md">
           <CldImage
             src="v1694585522/Icons/Maxovation_TL_gj9zwa.svg"
-            width={220}
-            height={170}
-            style={{ marginLeft: '0px' }}
+            width={200}
+            height={150}
             alt="Logo"
           />
         </Show>
@@ -47,7 +44,7 @@ const BackToHomeNavBar = () => {
           display={{ base: 'flex', md: 'flex' }}
           justify={'flex-start'}
           alignItems="center"
-          mr={4}
+          mr={{ base: 0, md: 2, lg: 4 }}
         >
           <Box as="span" mx="2" color="#2FBBFB">
             <FaAngleDoubleLeft />

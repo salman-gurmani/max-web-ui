@@ -18,13 +18,14 @@ interface BoxTableProps {
 const BoxTable = (props: BoxTableProps) => {
   return (
     <Box
-      borderRadius="4px"
+      borderRadius="3px"
       border="1px solid #2A2C39"
       background="#18191D"
-      paddingY={5}
+      paddingY={8}
       marginTop={{ base: 5, md: 3, lg: 0 }}
-      w="auto"
+      w={{ base: '300px', md: '300px', lg: '320px' }}
       h="auto"
+      overflow="hidden"
     >
       <Heading
         color="white"
@@ -36,9 +37,9 @@ const BoxTable = (props: BoxTableProps) => {
         Project Details
       </Heading>
       <BoxLine
-        width="100%"
+        width="70%"
         height="1px"
-        marginLeft="2px"
+        marginLeft="auto"
         marginRight="auto"
         bg="#2A2C39"
         marginTop="1px"
