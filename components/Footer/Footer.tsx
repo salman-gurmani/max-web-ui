@@ -211,8 +211,8 @@ const Footer = () => {
         marginRight="auto"
         bg="gray"
         height="1px"
-        width={{ base: '300px', md: '700px', lg: '1000px' }}
-        marginTop="30px"
+        width="70%"
+        marginTop="10px"
       />
       <Flex alignItems="center" justify="center">
         {' '}

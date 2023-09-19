@@ -13,31 +13,43 @@ import { ProjectDetailTypes } from '@components/Data/websitesData'
 import { useRouter } from 'next/router'
 
 const StyledSwiper = styled(Swiper)`
+  position: relative;
+
   .swiper-button-prev {
     color: transparent;
+    position: absolute;
+    left: 0;
     top: 50%;
-    background-image: url(${WebArrowsImages.leftArrow.src.src}) !important;
+    transform: translateY(-50%);
+    background-image: url(${WebArrowsImages.leftArrow.src.src});
     background-repeat: no-repeat;
     background-size: cover;
     width: 35px;
     height: 35px;
+    z-index: 10;
     &:after {
       font-size: 20px;
     }
   }
+
   .swiper-button-next {
     color: transparent;
+    position: absolute;
+    right: 0;
     top: 50%;
-    background-image: url(${WebArrowsImages.rightArrow.src.src}) !important;
+    transform: translateY(-50%);
+    background-image: url(${WebArrowsImages.rightArrow.src.src});
     background-repeat: no-repeat;
     background-size: cover;
     width: 35px;
     height: 35px;
+    z-index: 10;
     &:after {
       font-size: 20px;
     }
   }
 `
+
 interface SliderProps {
   slides: ProjectDetailTypes[]
 }
@@ -48,6 +60,7 @@ const Slider = ({ slides }: SliderProps) => {
     md: 50,
     lg: 50,
   })
+
   const router = useRouter()
 
   const handleClick = (id: string) => {

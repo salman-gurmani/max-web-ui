@@ -120,11 +120,19 @@ const Banner = () => {
                         borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
                         borderStyle: 'solid',
                         borderWidth: '1px',
-                      }}
-                      _hover={{
-                        background:
-                          'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
-                        textColor: 'white',
+
+                        '&:hover': {
+                          background:
+                            'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
+                          textColor: 'white',
+                        },
+                        '&:after': {
+                          backgroundImage:
+                            'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
+                          borderImage:
+                            'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1',
+                          borderWidth: '1px',
+                        },
                       }}
                     >
                       Hire Me!
