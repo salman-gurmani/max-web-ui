@@ -5,7 +5,7 @@ import { ExpertiseData } from './Expertisedata'
 import { map } from 'lodash'
 import { v4 as uuidv4 } from 'uuid'
 import { Element } from 'react-scroll'
-import { Roll, Zoom } from 'react-awesome-reveal'
+import { Fade, Slide, Zoom } from 'react-awesome-reveal'
 
 const Expertise = () => {
   return (
@@ -34,19 +34,21 @@ const Expertise = () => {
           marginY={{ base: 5, md: 7, lg: 10 }}
           gap={{ base: 10, md: 15, lg: 20 }}
         >
-          <Roll cascade>
-            {map(ExpertiseData, (data) => {
-              return (
-                <ExpertiseCard
-                  key={uuidv4()}
-                  title={data.title}
-                  desc={data.desc}
-                  boxLineWidth={data.boxLineWidth}
-                  icon={data.icon}
-                />
-              )
-            })}
-          </Roll>
+          {map(ExpertiseData, (data) => {
+            return (
+              <Fade>
+                <Slide direction="left">
+                  <ExpertiseCard
+                    key={uuidv4()}
+                    title={data.title}
+                    desc={data.desc}
+                    boxLineWidth={data.boxLineWidth}
+                    icon={data.icon}
+                  />
+                </Slide>
+              </Fade>
+            )
+          })}
         </Grid>
       </Flex>
     </Element>
