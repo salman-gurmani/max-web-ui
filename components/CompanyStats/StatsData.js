@@ -1,6 +1,6 @@
 const StatsData = [
   {
-    title: '8 Years',
+    title: '8+ Years',
     subTitle: 'Experience',
     icon: 'v1694585529/Icons/stats/experience_tuvkxe.svg',
   },

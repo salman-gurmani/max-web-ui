@@ -11,6 +11,7 @@ import {
 import { BoxLine } from '@components/BoxLine'
 import { SocialMedia } from '@components/SocialMedia'
 import { CldImage } from 'next-cloudinary'
+import { Zoom, AttentionSeeker, Fade } from 'react-awesome-reveal'
 
 const Footer = () => {
   const gridTemplateColumns = {
@@ -38,171 +39,183 @@ const Footer = () => {
     >
       <Box width="100%" height="100%">
         <Grid templateColumns={gridTemplateColumns} gap={gridGap}>
-          <Box
-            justifySelf="center"
-            height="100%"
-            width="80%"
-            paddingY={{ base: 30, md: 35, lg: 45 }}
-            paddingX={2}
-            marginRight={marginPx}
-          >
-            <HStack
-              alignItems="center"
-              marginX={5}
-              justifyContent="flex-start"
-              height="100%"
-            >
-              <IconButton
-                icon={
-                  <CldImage
-                    src="v1694585508/Icons/Footer/call_qwiqq2.svg"
-                    alt=""
-                    width={50}
-                    height={50}
-                  />
-                }
-                aria-label="phone"
-                isRound
-                background="#1B1C1F"
-                color="white"
-                size="lg"
+          <Zoom delay={100}>
+            <AttentionSeeker effect="heartBeat" delay={100}>
+              <Box
                 justifySelf="center"
-                pointerEvents="none"
-              />
-
-              <Box height="100%">
-                <Heading
-                  color="white"
-                  fontFamily="roboto"
-                  fontSize={['lg', 'lg', '22px']}
-                  marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                  width="100%"
+                height="100%"
+                width="80%"
+                paddingY={{ base: 30, md: 35, lg: 45 }}
+                paddingX={2}
+                marginRight={marginPx}
+              >
+                <HStack
+                  alignItems="center"
+                  marginX={5}
+                  justifyContent="flex-start"
+                  height="100%"
                 >
-                  Phone Number{' '}
-                </Heading>
-                <Text
-                  fontFamily="roboto"
-                  marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                  width="90%"
-                  marginTop="10px"
-                  color="white"
-                  fontSize={['10px', '11px', '12px']}
-                >
-                  +4917634649431{' '}
-                </Text>
-              </Box>
-            </HStack>
-          </Box>
-          <Box
-            justifySelf="center"
-            height="100%"
-            width="80%"
-            paddingY={{ base: 30, md: 35, lg: 45 }}
-            paddingX={2}
-          >
-            <HStack
-              alignItems="center"
-              marginX={5}
-              justifyContent="flex-start"
-              height="100%"
-            >
-              <IconButton
-                icon={
-                  <CldImage
-                    src="v1694585508/Icons/Footer/location_slsznh.svg"
-                    alt=""
-                    width={50}
-                    height={50}
+                  <IconButton
+                    icon={
+                      <CldImage
+                        src="v1694585508/Icons/Footer/call_qwiqq2.svg"
+                        alt=""
+                        width={50}
+                        height={50}
+                      />
+                    }
+                    aria-label="phone"
+                    isRound
+                    background="#1B1C1F"
+                    color="white"
+                    size="lg"
+                    justifySelf="center"
+                    pointerEvents="none"
                   />
-                }
-                aria-label="location"
-                isRound
-                background="#1B1C1F"
-                color="white"
-                size="lg"
-                justifySelf="center"
-                pointerEvents="none"
-              />
 
-              <Box height="100%">
-                <Heading
-                  color="white"
-                  fontFamily="roboto"
-                  fontSize={['lg', 'lg', '22px']}
-                  marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                  width="100%"
-                >
-                  Head Office Address{' '}
-                </Heading>
-                <Text
-                  fontFamily="roboto"
-                  marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                  width="90%"
-                  marginTop="10px"
-                  color="white"
-                  fontSize={['10px', '11px', '12px']}
-                >
-                  Versailleslaan 12 5627LW Eindhoven The Netherlands, Eindhoven,
-                  NL{' '}
-                </Text>
+                  <Box height="100%">
+                    <Heading
+                      color="white"
+                      fontFamily="roboto"
+                      fontSize={['lg', 'lg', '22px']}
+                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="100%"
+                    >
+                      Phone Number{' '}
+                    </Heading>
+                    <Text
+                      fontFamily="roboto"
+                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="90%"
+                      marginTop="10px"
+                      color="white"
+                      fontSize={['10px', '11px', '12px']}
+                    >
+                      +4917634649431{' '}
+                    </Text>
+                  </Box>
+                </HStack>
               </Box>
-            </HStack>
-          </Box>
-          <Box
-            justifySelf="center"
-            height="100%"
-            width="80%"
-            paddingY={{ base: 30, md: 35, lg: 45 }}
-            paddingX={2}
-            marginLeft={marginPx}
-          >
-            <HStack
-              alignItems="center"
-              marginX={5}
-              justifyContent="flex-start"
-              height="100%"
-            >
-              <IconButton
-                icon={
-                  <CldImage
-                    src="v1694585507/Icons/Footer/email_vn9xjv.svg"
-                    alt=""
-                    width={50}
-                    height={50}
+            </AttentionSeeker>
+          </Zoom>
+          <Zoom delay={250}>
+            <AttentionSeeker effect="heartBeat" delay={250}>
+              <Box
+                justifySelf="center"
+                height="100%"
+                width="80%"
+                paddingY={{ base: 30, md: 35, lg: 45 }}
+                paddingX={2}
+              >
+                <HStack
+                  alignItems="center"
+                  marginX={5}
+                  justifyContent="flex-start"
+                  height="100%"
+                >
+                  <IconButton
+                    icon={
+                      <CldImage
+                        src="v1694585508/Icons/Footer/location_slsznh.svg"
+                        alt=""
+                        width={50}
+                        height={50}
+                      />
+                    }
+                    aria-label="location"
+                    isRound
+                    background="#1B1C1F"
+                    color="white"
+                    size="lg"
+                    justifySelf="center"
+                    pointerEvents="none"
                   />
-                }
-                aria-label="email"
-                isRound
-                background="#1B1C1F"
-                color="white"
-                size="lg"
-                justifySelf="center"
-                pointerEvents="none"
-              />
 
-              <Box height="100%">
-                <Heading
-                  color="white"
-                  fontFamily="roboto"
-                  fontSize={['lg', 'lg', '22px']}
-                  marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                  width="100%"
-                >
-                  Email Address{' '}
-                </Heading>
-                <Text
-                  fontFamily="roboto"
-                  marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                  width="90%"
-                  marginTop="10px"
-                  color="white"
-                  fontSize={['10px', '11px', '12px']}
-                >
-                  maxovation@gmail.com{' '}
-                </Text>
+                  <Box height="100%">
+                    <Heading
+                      color="white"
+                      fontFamily="roboto"
+                      fontSize={['lg', 'lg', '22px']}
+                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="100%"
+                    >
+                      Head Office Address{' '}
+                    </Heading>
+                    <Text
+                      fontFamily="roboto"
+                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="90%"
+                      marginTop="10px"
+                      color="white"
+                      fontSize={['10px', '11px', '12px']}
+                    >
+                      Versailleslaan 12 5627LW Eindhoven The Netherlands,
+                      Eindhoven, NL{' '}
+                    </Text>
+                  </Box>
+                </HStack>
               </Box>
-            </HStack>
-          </Box>
+            </AttentionSeeker>
+          </Zoom>
+          <Zoom delay={350}>
+            <AttentionSeeker effect="heartBeat" delay={350}>
+              <Box
+                justifySelf="center"
+                height="100%"
+                width="80%"
+                paddingY={{ base: 30, md: 35, lg: 45 }}
+                paddingX={2}
+                marginLeft={marginPx}
+              >
+                <HStack
+                  alignItems="center"
+                  marginX={5}
+                  justifyContent="flex-start"
+                  height="100%"
+                >
+                  <IconButton
+                    icon={
+                      <CldImage
+                        src="v1694585507/Icons/Footer/email_vn9xjv.svg"
+                        alt=""
+                        width={50}
+                        height={50}
+                      />
+                    }
+                    aria-label="email"
+                    isRound
+                    background="#1B1C1F"
+                    color="white"
+                    size="lg"
+                    justifySelf="center"
+                    pointerEvents="none"
+                  />
+
+                  <Box height="100%">
+                    <Heading
+                      color="white"
+                      fontFamily="roboto"
+                      fontSize={['lg', 'lg', '22px']}
+                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="100%"
+                    >
+                      Email Address{' '}
+                    </Heading>
+                    <Text
+                      fontFamily="roboto"
+                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="90%"
+                      marginTop="10px"
+                      color="white"
+                      fontSize={['10px', '11px', '12px']}
+                    >
+                      maxovation@gmail.com{' '}
+                    </Text>
+                  </Box>
+                </HStack>
+              </Box>
+            </AttentionSeeker>
+          </Zoom>
         </Grid>
       </Box>
 
@@ -217,25 +230,27 @@ const Footer = () => {
       <Flex alignItems="center" justify="center">
         {' '}
         <VStack alignItems="center" gap={5}>
-          <CldImage
-            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_kfmabd.svg"
-            width={60}
-            height={60}
-            style={{
-              marginTop: '25px',
-            }}
-            alt="Logo"
-          />
-
+          <AttentionSeeker effect="bounce" delay={100}>
+            <CldImage
+              src="v1694585522/Icons/Maxovation_Logo_V.2-ai_kfmabd.svg"
+              width={60}
+              height={60}
+              style={{
+                marginTop: '25px',
+              }}
+              alt="Logo"
+            />
+          </AttentionSeeker>
           <SocialMedia />
-
-          <Text
-            fontSize={{ base: '10px', md: '12px', lg: '15px' }}
-            color="white"
-            fontFamily="roboto"
-          >
-            Maxovation © 2023 All Right Reserved
-          </Text>
+          <Fade delay={150}>
+            <Text
+              fontSize={{ base: '10px', md: '12px', lg: '15px' }}
+              color="white"
+              fontFamily="roboto"
+            >
+              Maxovation © 2023 All Right Reserved
+            </Text>
+          </Fade>
         </VStack>
       </Flex>
     </Box>

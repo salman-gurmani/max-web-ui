@@ -5,23 +5,27 @@ import { ExpertiseData } from './Expertisedata'
 import { map } from 'lodash'
 import { v4 as uuidv4 } from 'uuid'
 import { Element } from 'react-scroll'
+import { Roll, Zoom } from 'react-awesome-reveal'
+
 const Expertise = () => {
   return (
     <Element name="about">
       <Flex direction="column" bg="#111215">
         <Flex alignContent="center" justifyContent="center">
-          <Heading
-            backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
-            backgroundClip="text"
-            fontStyle="normal"
-            color="transparent"
-            fontFamily="roboto"
-            fontSize={{ base: '25px', md: '45px', lg: '55px' }}
-            paddingTop={10}
-            textAlign="center"
-          >
-            Our Expertise / What we do
-          </Heading>
+          <Zoom cascade>
+            <Heading
+              backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
+              backgroundClip="text"
+              fontStyle="normal"
+              color="transparent"
+              fontFamily="roboto"
+              fontSize={{ base: '25px', md: '45px', lg: '55px' }}
+              paddingTop={10}
+              textAlign="center"
+            >
+              Our Expertise / What we do
+            </Heading>
+          </Zoom>
         </Flex>
 
         <Grid
@@ -30,17 +34,19 @@ const Expertise = () => {
           marginY={{ base: 5, md: 7, lg: 10 }}
           gap={{ base: 10, md: 15, lg: 20 }}
         >
-          {map(ExpertiseData, (data) => {
-            return (
-              <ExpertiseCard
-                key={uuidv4()}
-                title={data.title}
-                desc={data.desc}
-                boxLineWidth={data.boxLineWidth}
-                icon={data.icon}
-              />
-            )
-          })}
+          <Roll cascade>
+            {map(ExpertiseData, (data) => {
+              return (
+                <ExpertiseCard
+                  key={uuidv4()}
+                  title={data.title}
+                  desc={data.desc}
+                  boxLineWidth={data.boxLineWidth}
+                  icon={data.icon}
+                />
+              )
+            })}
+          </Roll>
         </Grid>
       </Flex>
     </Element>
