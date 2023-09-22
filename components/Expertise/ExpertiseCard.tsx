@@ -16,7 +16,7 @@ const ExpertiseCard = (props: ExpertiseCardProps) => {
     <Card
       key={uuidv4()}
       w="auto"
-      h="auto"
+      h="500px"
       borderRadius="10px"
       bg="#18191D"
       display="flex" // Added display flex

@@ -28,6 +28,7 @@ import React from 'react'
 import { EllipseImage } from '@components/Images'
 import { Element } from 'react-scroll'
 import { CldImage } from 'next-cloudinary'
+import { Zoom, Fade, JackInTheBox, Slide } from 'react-awesome-reveal'
 
 const OurGameProject = () => {
   const gamesPerPage = 6
@@ -76,43 +77,44 @@ const OurGameProject = () => {
         direction="column"
       >
         <VStack gap={5} paddingX={{ base: 0, md: 35, lg: 45 }}>
-          <Heading
-            backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
-            backgroundClip="text"
-            fontStyle="normal"
-            color="transparent"
-            fontFamily="roboto"
-            fontSize={{ base: '30px', md: '35px', lg: '46px' }}
-            paddingTop={{ base: 0, md: 3, lg: 5 }}
-            textAlign="center"
-          >
-            Our Games Projects
-          </Heading>
-          <Text
-            fontFamily="roboto"
-            color="white"
-            textAlign="center"
-            fontSize={{ base: '12px', md: '14px', lg: '16px' }}
-            fontStyle="normal"
-            fontWeight="400"
-            lineHeight="22px"
-          >
-            Maxovation Gaming Department, your gateway to captivating gaming
-            experiences across mobile, web, and PC platforms. We are passionate
-            about crafting immersive games that keep you entertained wherever
-            you play. With our expert team of developers, designers, and
-            artists, we create innovative and visually stunning games that push
-            the boundaries of gameplay. Whether you&apos;re seeking thrilling
-            adventures on your mobile device, engaging web-based games, or
-            immersive PC gaming experiences, we have you covered. Our dedication
-            to excellence and commitment to delivering top-quality games ensures
-            that you&apos;ll be hooked from the first play. Get ready to dive
-            into a world of excitement and join us on this exhilarating gaming
-            journey with Maxovation.
-          </Text>
-          In this updated code, I&apos;ve replaced the unescaped single quotes
-          with &apos; to ensure that your text is properly rendered in JSX
-          without causing any errors.
+          <JackInTheBox>
+            <Heading
+              backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
+              backgroundClip="text"
+              fontStyle="normal"
+              color="transparent"
+              fontFamily="roboto"
+              fontSize={{ base: '30px', md: '35px', lg: '46px' }}
+              paddingTop={{ base: 0, md: 3, lg: 5 }}
+              textAlign="center"
+            >
+              Our Games Projects
+            </Heading>
+          </JackInTheBox>
+          <Slide direction="up">
+            <Text
+              fontFamily="roboto"
+              color="white"
+              textAlign="center"
+              fontSize={{ base: '12px', md: '14px', lg: '16px' }}
+              fontStyle="normal"
+              fontWeight="400"
+              lineHeight="22px"
+            >
+              Maxovation Gaming Department, your gateway to captivating gaming
+              experiences across mobile, web, and PC platforms. We are
+              passionate about crafting immersive games that keep you
+              entertained wherever you play. With our expert team of developers,
+              designers, and artists, we create innovative and visually stunning
+              games that push the boundaries of gameplay. Whether you&apos;re
+              seeking thrilling adventures on your mobile device, engaging
+              web-based games, or immersive PC gaming experiences, we have you
+              covered. Our dedication to excellence and commitment to delivering
+              top-quality games ensures that you&apos;ll be hooked from the
+              first play. Get ready to dive into a world of excitement and join
+              us on this exhilarating gaming journey with Maxovation.
+            </Text>
+          </Slide>
           <Box borderRadius="20px" background="#17181B">
             <HStack>
               <Button
@@ -178,84 +180,88 @@ const OurGameProject = () => {
           <Grid templateColumns={gridTemplateColumns} gap={gridGap}>
             {map(gamesToShow, (data) => {
               return (
-                <Box
-                  key={uuidv4()}
-                  justifySelf="center"
-                  height="auto"
-                  width="auto"
-                  borderRadius="10px"
-                  border="1px solid #2A2C39"
-                  background="#17181B"
-                  marginY={25}
-                >
-                  <VStack width="100%">
+                <Fade cascade delay={10}>
+                  <Zoom>
                     <Box
-                      borderTopRadius="10px"
-                      height="400"
+                      key={uuidv4()}
+                      justifySelf="center"
+                      height="auto"
                       width="auto"
-                      bg="black"
-                      overflow="hidden"
+                      borderRadius="10px"
+                      border="1px solid #2A2C39"
+                      background="#17181B"
+                      marginY={25}
                     >
-                      {
-                        <CldImage
-                          src={data.image}
-                          alt=""
-                          width={400}
-                          height={400}
-                        />
-                      }
+                      <VStack width="100%">
+                        <Box
+                          borderTopRadius="10px"
+                          height="400"
+                          width="auto"
+                          bg="black"
+                          overflow="hidden"
+                        >
+                          {
+                            <CldImage
+                              src={data.image}
+                              alt=""
+                              width={400}
+                              height={400}
+                            />
+                          }
+                        </Box>
+
+                        <VStack padding="10px" align="center" spacing={2}>
+                          <Text
+                            color="white"
+                            text-align="center"
+                            fontFamily="roboto"
+                            fontSize="18px"
+                            fontStyle="normal"
+                            fontWeight="400"
+                            lineHeight="normal"
+                          >
+                            {data.name}
+                          </Text>
+
+                          <Text
+                            color="#C0C0C0"
+                            text-align="center"
+                            fontFamily="roboto"
+                            fontSize="14px"
+                            fontStyle="normal"
+                            fontWeight="400"
+                            lineHeight="normal"
+                          >
+                            {data.date} | {data.platform}
+                          </Text>
+                          <Link
+                            href={data.link}
+                            fontFamily="roboto"
+                            fontSize={{ base: '12px', md: '12px', lg: '14px' }}
+                            paddingX={{ base: '2', md: '2', lg: '4' }}
+                            paddingY={2}
+                            target="_blank"
+                            backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
+                            backgroundClip="text"
+                            sx={{
+                              borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
+                              borderStyle: 'solid',
+                              borderWidth: '1px',
+                            }}
+                            _hover={{
+                              background:
+                                'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
+                              textColor: 'white',
+                            }}
+                          >
+                            {' '}
+                            View Game
+                          </Link>
+                        </VStack>
+                      </VStack>
                     </Box>
-
-                    <VStack padding="10px" align="center" spacing={2}>
-                      <Text
-                        color="white"
-                        text-align="center"
-                        fontFamily="roboto"
-                        fontSize="18px"
-                        fontStyle="normal"
-                        fontWeight="400"
-                        lineHeight="normal"
-                      >
-                        {data.name}
-                      </Text>
-
-                      <Text
-                        color="#C0C0C0"
-                        text-align="center"
-                        fontFamily="roboto"
-                        fontSize="14px"
-                        fontStyle="normal"
-                        fontWeight="400"
-                        lineHeight="normal"
-                      >
-                        {data.date} | {data.platform}
-                      </Text>
-                      <Link
-                        href={data.link}
-                        fontFamily="roboto"
-                        fontSize={{ base: '12px', md: '12px', lg: '14px' }}
-                        paddingX={{ base: '2', md: '2', lg: '4' }}
-                        paddingY={2}
-                        target="_blank"
-                        backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
-                        backgroundClip="text"
-                        sx={{
-                          borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
-                          borderStyle: 'solid',
-                          borderWidth: '1px',
-                        }}
-                        _hover={{
-                          background:
-                            'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
-                          textColor: 'white',
-                        }}
-                      >
-                        {' '}
-                        View Game
-                      </Link>
-                    </VStack>
-                  </VStack>
-                </Box>
+                  </Zoom>
+                </Fade>
               )
             })}
           </Grid>

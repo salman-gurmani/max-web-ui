@@ -1,6 +1,5 @@
 import {
   Box,
-  Text,
   Heading,
   Button,
   VStack,
@@ -12,6 +11,37 @@ import { VideoBanner } from '@components/Banner/VideoBanner'
 import React from 'react'
 import { BoxLine } from '@components/BoxLine'
 import { Element, Link as ScrollLink } from 'react-scroll'
+import Typewriter from 'typewriter-effect'
+import styled from 'styled-components'
+import { AttentionSeeker, Zoom } from 'react-awesome-reveal'
+
+const Type = styled.div`
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 100%;
+  font-size: 20px;
+
+  overflow-wrap: break-word;
+  align-self: flex-start;
+  @media (min-width: 768px) {
+    margin-left: 6px;
+  }
+  @media (max-width: 767px) {
+    margin-left: 2px;
+  }
+  @media (min-width: 768px) and (max-width: 1500px) {
+    font-size: 23px;
+    line-height: 20px;
+  }
+  @media (max-width: 767px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  span {
+    font-family: roboto;
+  }
+`
 
 const Banner = () => {
   return (
@@ -21,7 +51,7 @@ const Banner = () => {
           <VideoBanner />
           <Grid
             position="absolute"
-            top={{ base: '2%', md: '5%', lg: '25%' }}
+            top={{ base: '2%', md: '15%', lg: '25%' }}
             left="0"
             width="100%"
             height="100%"
@@ -65,6 +95,7 @@ const Banner = () => {
                   >
                     Visionize
                   </Button> */}
+                  {/* <AttentionSeeker effect="flash"> */}
                   <Heading
                     color="white"
                     fontSize={{ base: '20px', md: '40px', lg: '55px' }}
@@ -84,8 +115,8 @@ const Banner = () => {
                       marginTop="0px"
                     ></BoxLine>
                   </Heading>
-
-                  <Text
+                  {/* </AttentionSeeker> */}
+                  {/* <Text
                     color="white"
                     fontFamily="roboto"
                     maxWidth="100%"
@@ -94,7 +125,20 @@ const Banner = () => {
                     alignSelf="flex-start"
                   >
                     APP DEVELOPERS | WEB DESIGNERS | UX DESIGNERS
-                  </Text>
+                  </Text> */}
+                  <Type>
+                    <Typewriter
+                      options={{
+                        strings: [
+                          'App Developers',
+                          'Web Designers',
+                          'UX Designers',
+                        ],
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                  </Type>
 
                   <ScrollLink
                     to="contact"
@@ -103,40 +147,44 @@ const Banner = () => {
                     spy
                     style={{ alignSelf: 'flex-start' }}
                   >
-                    <Button
-                      color="white"
-                      fontFamily="roboto"
-                      fontWeight="400"
-                      alignSelf="flex-start"
-                      backgroundColor="transparent"
-                      size="md"
-                      zIndex="5"
-                      variant="outline"
-                      fontSize={{ base: '10px', md: '12px', lg: '15px' }}
-                      paddingX={{ base: '3', md: '8', lg: '10' }}
-                      backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
-                      backgroundClip="text"
-                      sx={{
-                        borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
-                        borderStyle: 'solid',
-                        borderWidth: '1px',
+                    <Zoom>
+                      <AttentionSeeker effect="rubberBand" delay={200}>
+                        <Button
+                          color="white"
+                          fontFamily="roboto"
+                          fontWeight="400"
+                          alignSelf="flex-start"
+                          backgroundColor="transparent"
+                          size="md"
+                          zIndex="5"
+                          variant="outline"
+                          fontSize={{ base: '10px', md: '12px', lg: '15px' }}
+                          paddingX={{ base: '3', md: '8', lg: '10' }}
+                          backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
+                          backgroundClip="text"
+                          sx={{
+                            borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
+                            borderStyle: 'solid',
+                            borderWidth: '1px',
 
-                        '&:hover': {
-                          background:
-                            'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
-                          textColor: 'white',
-                        },
-                        '&:after': {
-                          backgroundImage:
-                            'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
-                          borderImage:
-                            'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1',
-                          borderWidth: '1px',
-                        },
-                      }}
-                    >
-                      Hire Me!
-                    </Button>
+                            '&:hover': {
+                              background:
+                                'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
+                              textColor: 'white',
+                            },
+                            '&:after': {
+                              backgroundImage:
+                                'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
+                              borderImage:
+                                'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1',
+                              borderWidth: '1px',
+                            },
+                          }}
+                        >
+                          Hire Me!
+                        </Button>
+                      </AttentionSeeker>
+                    </Zoom>
                   </ScrollLink>
                 </VStack>
               </Box>

@@ -9,10 +9,11 @@ import { CompanyStats } from '@components/CompanyStats'
 import React from 'react'
 import { ContactUs } from '@components/ContactUs'
 import { OurGameProject } from '@components/OurGamesProject'
-
+//import ParticlesBg from '@components/ParticlesBg/ParticlesBg'
 const Home = () => {
   return (
     <PrimaryLayout>
+      {/* <ParticlesBg /> */}
       <Banner />
       <Expertise />
       <CompanyStats />

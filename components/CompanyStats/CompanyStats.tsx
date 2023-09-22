@@ -5,7 +5,7 @@ import StatsView from './StatsView'
 
 import { map } from 'lodash'
 import React from 'react'
-
+import { AttentionSeeker } from 'react-awesome-reveal'
 const CompanyStats = () => {
   return (
     <Flex direction="column" bg="#18191D">
@@ -19,13 +19,16 @@ const CompanyStats = () => {
         marginY={25}
         gap={{ base: 2, md: 10, lg: 20 }} // gap for different screen sizes
       >
-        {map(StatsData, (data) => {
+        {map(StatsData, (data, index) => {
           return (
-            <StatsView
-              title={data.title}
-              subTitle={data.subTitle}
-              icon={data.icon}
-            />
+            <AttentionSeeker effect="heartBeat">
+              <StatsView
+                title={data.title}
+                subTitle={data.subTitle}
+                icon={data.icon}
+                index={index}
+              />
+            </AttentionSeeker>
           )
         })}
       </Grid>
