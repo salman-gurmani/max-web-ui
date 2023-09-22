@@ -13,6 +13,8 @@ import { map } from 'lodash'
 import { Element } from 'react-scroll'
 import { CldImage } from 'next-cloudinary'
 import { Zoom, Fade, Slide, Bounce } from 'react-awesome-reveal'
+import React from 'react'
+
 const OurServices = () => {
   const gridTemplateColumns = {
     base: 'repeat(1, 1fr)',

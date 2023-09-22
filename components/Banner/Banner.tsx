@@ -51,7 +51,7 @@ const Banner = () => {
           <VideoBanner />
           <Grid
             position="absolute"
-            top={{ base: '2%', md: '5%', lg: '25%' }}
+            top={{ base: '2%', md: '15%', lg: '25%' }}
             left="0"
             width="100%"
             height="100%"
@@ -95,27 +95,27 @@ const Banner = () => {
                   >
                     Visionize
                   </Button> */}
-                  <AttentionSeeker effect="flash">
-                    <Heading
-                      color="white"
-                      fontSize={{ base: '20px', md: '40px', lg: '55px' }}
-                      zIndex={1}
-                      fontFamily="roboto"
-                      fontStyle="normal"
-                      fontWeight="600"
-                      alignSelf="flex-start"
-                    >
-                      WEB & MOBILE SOLUTIONS
-                      <BoxLine
-                        width={{ base: '70px', md: '100px', lg: '200px' }}
-                        height="3px"
-                        marginLeft="2px"
-                        marginRight="auto"
-                        bg="white"
-                        marginTop="0px"
-                      ></BoxLine>
-                    </Heading>
-                  </AttentionSeeker>
+                  {/* <AttentionSeeker effect="flash"> */}
+                  <Heading
+                    color="white"
+                    fontSize={{ base: '20px', md: '40px', lg: '55px' }}
+                    zIndex={1}
+                    fontFamily="roboto"
+                    fontStyle="normal"
+                    fontWeight="600"
+                    alignSelf="flex-start"
+                  >
+                    WEB & MOBILE SOLUTIONS
+                    <BoxLine
+                      width={{ base: '70px', md: '100px', lg: '200px' }}
+                      height="3px"
+                      marginLeft="2px"
+                      marginRight="auto"
+                      bg="white"
+                      marginTop="0px"
+                    ></BoxLine>
+                  </Heading>
+                  {/* </AttentionSeeker> */}
                   {/* <Text
                     color="white"
                     fontFamily="roboto"

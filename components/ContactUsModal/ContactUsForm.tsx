@@ -16,6 +16,7 @@ import { BsSend } from 'react-icons/bs'
 import * as Yup from 'yup'
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { Slide, Zoom } from 'react-awesome-reveal'
 
 const ContactUsSchema = Yup.object({
   user_name: Yup.mixed().required(' * Name is required'),
@@ -114,160 +115,166 @@ const ContactUsForm: React.FC<ContactUsFormProps> = ({ onClose }) => {
             }}
             gap={5}
           >
-            <GridItem mb={5}>
-              <FormControl
-                isRequired
-                isInvalid={!!(errors.user_name && touched.user_name)}
-              >
-                <Input
-                  placeholder="Enter your name"
-                  backgroundColor="#171926"
-                  type="text"
-                  name="user_name"
-                  height={50}
-                  border="none"
-                  color="white"
-                  _placeholder={{ color: '#CFCFCF' }}
-                  fontFamily="roboto"
-                  size="sm"
-                  onChange={handleChange}
-                  value={values.user_name}
-                />
-                <Text fontFamily="roboto" color="red" fontSize="xs">
-                  {errors.user_name}
-                </Text>
-              </FormControl>
-            </GridItem>
+            <Slide direction="down">
+              <GridItem mb={5}>
+                <FormControl
+                  isRequired
+                  isInvalid={!!(errors.user_name && touched.user_name)}
+                >
+                  <Input
+                    placeholder="Enter your name"
+                    backgroundColor="#171926"
+                    type="text"
+                    name="user_name"
+                    height={50}
+                    border="none"
+                    color="white"
+                    _placeholder={{ color: '#CFCFCF' }}
+                    fontFamily="roboto"
+                    size="sm"
+                    onChange={handleChange}
+                    value={values.user_name}
+                  />
+                  <Text fontFamily="roboto" color="red" fontSize="xs">
+                    {errors.user_name}
+                  </Text>
+                </FormControl>
+              </GridItem>
 
-            <GridItem mb={5}>
-              <FormControl
-                isInvalid={!!(errors.user_phone && touched.user_phone)}
-                isRequired
-              >
-                <Input
-                  placeholder="Enter your phone"
-                  backgroundColor="#171926"
-                  type="number"
-                  name="user_phone"
-                  height={50}
-                  border="none"
-                  color="white"
-                  _placeholder={{ color: '#CFCFCF' }}
-                  fontFamily="roboto"
-                  size="sm"
-                  onChange={handleChange}
-                  value={values.user_phone}
-                />
-                <Text fontFamily="roboto" color="red" fontSize="xs">
-                  {errors.user_phone}
-                </Text>
-              </FormControl>
-            </GridItem>
-            <GridItem mb={5}>
-              <FormControl
-                isInvalid={!!(errors.user_email && touched.user_email)}
-                isRequired
-              >
-                <Input
-                  placeholder="Enter your Email"
-                  backgroundColor="#171926"
-                  name="user_email"
-                  type="email"
-                  height={50}
-                  border="none"
-                  color="white"
-                  _placeholder={{ color: '#CFCFCF' }}
-                  fontFamily="roboto"
-                  size="sm"
-                  onChange={handleChange}
-                  value={values.user_email}
-                />
-                <Text fontFamily="roboto" color="red" fontSize="xs">
-                  {errors.user_email}
-                </Text>
-              </FormControl>
-            </GridItem>
+              <GridItem mb={5}>
+                <FormControl
+                  isInvalid={!!(errors.user_phone && touched.user_phone)}
+                  isRequired
+                >
+                  <Input
+                    placeholder="Enter your phone"
+                    backgroundColor="#171926"
+                    type="number"
+                    name="user_phone"
+                    height={50}
+                    border="none"
+                    color="white"
+                    _placeholder={{ color: '#CFCFCF' }}
+                    fontFamily="roboto"
+                    size="sm"
+                    onChange={handleChange}
+                    value={values.user_phone}
+                  />
+                  <Text fontFamily="roboto" color="red" fontSize="xs">
+                    {errors.user_phone}
+                  </Text>
+                </FormControl>
+              </GridItem>
+              <GridItem mb={5}>
+                <FormControl
+                  isInvalid={!!(errors.user_email && touched.user_email)}
+                  isRequired
+                >
+                  <Input
+                    placeholder="Enter your Email"
+                    backgroundColor="#171926"
+                    name="user_email"
+                    type="email"
+                    height={50}
+                    border="none"
+                    color="white"
+                    _placeholder={{ color: '#CFCFCF' }}
+                    fontFamily="roboto"
+                    size="sm"
+                    onChange={handleChange}
+                    value={values.user_email}
+                  />
+                  <Text fontFamily="roboto" color="red" fontSize="xs">
+                    {errors.user_email}
+                  </Text>
+                </FormControl>
+              </GridItem>
 
-            <GridItem mb={5}>
-              <FormControl
-                isInvalid={!!(errors.user_subject && touched.user_subject)}
-                isRequired
-              >
-                <Input
-                  placeholder="Enter your subject"
-                  backgroundColor="#171926"
-                  type="text"
-                  name="user_subject"
-                  height={50}
-                  border="none"
-                  color="white"
-                  _placeholder={{ color: '#CFCFCF' }}
-                  fontFamily="roboto"
-                  size="sm"
-                  onChange={handleChange}
-                  value={values.user_subject}
-                />
-                <Text fontFamily="roboto" color="red" fontSize="xs">
-                  {errors.user_subject}
-                </Text>
-              </FormControl>
-            </GridItem>
+              <GridItem mb={5}>
+                <FormControl
+                  isInvalid={!!(errors.user_subject && touched.user_subject)}
+                  isRequired
+                >
+                  <Input
+                    placeholder="Enter your subject"
+                    backgroundColor="#171926"
+                    type="text"
+                    name="user_subject"
+                    height={50}
+                    border="none"
+                    color="white"
+                    _placeholder={{ color: '#CFCFCF' }}
+                    fontFamily="roboto"
+                    size="sm"
+                    onChange={handleChange}
+                    value={values.user_subject}
+                  />
+                  <Text fontFamily="roboto" color="red" fontSize="xs">
+                    {errors.user_subject}
+                  </Text>
+                </FormControl>
+              </GridItem>
+            </Slide>
           </Grid>
           <Flex mt={5}>
             <FormControl
               isInvalid={!!(errors.message && touched.message)}
               isRequired
             >
-              <Textarea
-                name="message"
-                bg="#171926"
-                placeholder="Type your message here..."
-                border="none"
-                color="white"
-                _placeholder={{ color: '#CFCFCF', verticalAlign: 'top' }}
-                fontFamily="roboto"
-                size="sm"
-                minHeight={240}
-                maxHeight={300}
-                onChange={handleChange}
-                value={values.message}
-              />
+              <Slide direction="down">
+                <Textarea
+                  name="message"
+                  bg="#171926"
+                  placeholder="Type your message here..."
+                  border="none"
+                  color="white"
+                  _placeholder={{ color: '#CFCFCF', verticalAlign: 'top' }}
+                  fontFamily="roboto"
+                  size="sm"
+                  minHeight={240}
+                  maxHeight={300}
+                  onChange={handleChange}
+                  value={values.message}
+                />
+              </Slide>
               <Text fontFamily="roboto" color="red" fontSize="xs">
                 {errors.message}
               </Text>
             </FormControl>
           </Flex>
-          <Flex justifyContent="center" mt={5}>
-            <Button
-              color="white"
-              type="submit"
-              fontFamily="roboto"
-              fontWeight="17px"
-              w={{ base: '100px', md: '105px', lg: '330px' }}
-              height={{ base: '30px', md: '35px', lg: '40px' }}
-              flex-shrink="0"
-              fontSize={{ base: '10px', md: '12px', lg: '16px' }}
-              border-radius="8px"
-              background="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
-              paddingX={{ base: '2', md: '5', lg: '5' }}
-              zIndex="5"
-              alignSelf="center"
-              _hover={{
-                bgGradient:
-                  'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
-                backgroundClip: 'text',
-                borderColor: 'white',
-                borderStyle: 'solid',
-                borderWidth: '2px',
-              }}
-            >
-              Send Message{' '}
-              <Box display="inline-block" marginLeft="8px">
-                {' '}
-                <BsSend />
-              </Box>
-            </Button>
-          </Flex>
+          <Zoom>
+            <Flex justifyContent="center" mt={5}>
+              <Button
+                color="white"
+                type="submit"
+                fontFamily="roboto"
+                fontWeight="17px"
+                w={{ base: '100px', md: '105px', lg: '330px' }}
+                height={{ base: '30px', md: '35px', lg: '40px' }}
+                flex-shrink="0"
+                fontSize={{ base: '10px', md: '12px', lg: '16px' }}
+                border-radius="8px"
+                background="var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))"
+                paddingX={{ base: '2', md: '5', lg: '5' }}
+                zIndex="5"
+                alignSelf="center"
+                _hover={{
+                  bgGradient:
+                    'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
+                  backgroundClip: 'text',
+                  borderColor: 'white',
+                  borderStyle: 'solid',
+                  borderWidth: '2px',
+                }}
+              >
+                Send Message{' '}
+                <Box display="inline-block" marginLeft="8px">
+                  {' '}
+                  <BsSend />
+                </Box>
+              </Button>
+            </Flex>
+          </Zoom>
         </Box>
       </form>
     </Flex>

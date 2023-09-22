@@ -58,8 +58,8 @@ const NavigationBar = () => {
         <Hide below="md">
           <CldImage
             src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
-            width={261}
-            height={117}
+            width={271}
+            height={127}
             style={{
               marginLeft: '50px',
               marginTop: '5px',
