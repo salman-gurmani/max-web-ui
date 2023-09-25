@@ -58,7 +58,7 @@ const OurGameProject = () => {
     base: 'repeat(1, 1fr)',
     sm: 'repeat(1, 1fr)',
     md: 'repeat(2, 1fr)',
-    lg: 'repeat(3, 1fr)',
+    lg: 'repeat(2, 1fr)',
     xl: 'repeat(3, 1fr)',
   }
 
@@ -223,8 +223,8 @@ const OurGameProject = () => {
                             <CldImage
                               src={data.image}
                               alt=""
-                              width={400}
-                              height={400}
+                              width={1024}
+                              height={1024}
                             />
                           }
                         </Box>
