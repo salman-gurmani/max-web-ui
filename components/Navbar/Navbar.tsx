@@ -105,10 +105,7 @@ const NavigationBar = () => {
   )
 }
 
-const DesktopNav: React.FC<DesktopNavProps> = ({
-  selectedSection,
-  onSelect,
-}) => {
+const DesktopNav: React.FC<DesktopNavProps> = ({ onSelect }) => {
   const gradientColor =
     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)'
 
@@ -132,11 +129,9 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
               fontSize={{ base: 'xs', sm: 'xs', md: 'xs', lg: 'sm', xl: 'md' }}
               fontFamily="roboto"
               fontWeight={500}
-              color={navItem.id === selectedSection ? 'transparent' : 'white'}
-              backgroundImage={
-                navItem.id === selectedSection ? gradientColor : 'none'
-              }
-              backgroundClip={navItem.id === selectedSection ? 'text' : 'none'}
+              color="white"
+              backgroundImage="none"
+              backgroundClip="none"
               position="relative"
               transition="all 0.3s ease-in-out"
               transform="scale(1)"
@@ -248,39 +243,32 @@ interface NavItem {
   subLabel?: string
   children?: Array<NavItem>
   href?: string
-  isSelected: boolean
   id: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
-    isSelected: true,
     id: 'home',
   },
   {
     label: 'About',
-    isSelected: false,
     id: 'about',
   },
   {
     label: 'Web',
-    isSelected: false,
     id: 'web',
   },
   {
     label: 'Games',
-    isSelected: false,
     id: 'games',
   },
   {
     label: 'Service',
-    isSelected: false,
     id: 'service',
   },
   {
     label: 'Contact us',
-    isSelected: false,
     id: 'contact',
   },
 ]

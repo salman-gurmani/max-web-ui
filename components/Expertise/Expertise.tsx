@@ -32,7 +32,7 @@ const Expertise = () => {
           templateColumns={{ base: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }}
           marginX={{ base: 5, md: 10, lg: 20 }}
           marginY={{ base: 5, md: 7, lg: 10 }}
-          gap={{ base: 10, md: 15, lg: 20 }}
+          gap={{ base: 10, md: 15, lg: '10' }}
         >
           {map(ExpertiseData, (data) => {
             return (
