@@ -90,7 +90,7 @@ const OurServices = () => {
                   <Slide direction="down" delay={50}>
                     <Box
                       justifySelf="center"
-                      height="auto"
+                      height={{ base: '200px', md: '350px', lg: '200px' }}
                       width="auto"
                       borderRadius="10px"
                       border="1px solid #2A2C39"

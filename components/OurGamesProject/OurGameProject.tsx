@@ -23,7 +23,7 @@ import {
   PaginationContainer,
   PaginationSeparator,
 } from '@ajna/pagination'
-import React from 'react'
+import React, { useState } from 'react'
 
 import { EllipseImage } from '@components/Images'
 import { Element } from 'react-scroll'
@@ -31,13 +31,15 @@ import { CldImage } from 'next-cloudinary'
 import { Zoom, Fade, JackInTheBox, Slide } from 'react-awesome-reveal'
 
 const OurGameProject = () => {
+  const [filteredGames, setFilteredGames] = useState(GamesData)
+  const [filter, setFilter] = useState('all')
   const gamesPerPage = 6
   const outerLimit = 2
   const innerLimit = 2
 
   const { pages, pagesCount, offset, isDisabled, currentPage, setCurrentPage } =
     usePagination({
-      total: 17,
+      total: filteredGames.length,
       limits: {
         outer: outerLimit,
         inner: innerLimit,
@@ -65,8 +67,20 @@ const OurGameProject = () => {
     md: 4,
     lg: 6,
   }
-  const gamesToShow = slice(GamesData, offset, offset + gamesPerPage)
 
+  const handleFilterChange = (newFilter: string) => {
+    if (newFilter === 'all') {
+      setFilteredGames(GamesData)
+    } else {
+      const filtered = GamesData.filter(
+        (game) => game.platform.toLowerCase() === newFilter
+      )
+      setFilteredGames(filtered)
+    }
+    setFilter(newFilter)
+    setCurrentPage(1)
+  }
+  const gamesToShow = slice(filteredGames, offset, offset + gamesPerPage)
   return (
     <Element name="games">
       <Flex
@@ -121,7 +135,7 @@ const OurGameProject = () => {
                 backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
                 backgroundClip="text"
                 fontStyle="normal"
-                color="transparent"
+                color={filter === 'all' ? 'transparent' : 'white'}
                 fontFamily="roboto"
                 _hover={{
                   backgroundImage:
@@ -129,6 +143,7 @@ const OurGameProject = () => {
                   backgroundClip: 'text',
                   color: 'transparent',
                 }}
+                onClick={() => handleFilterChange('all')}
               >
                 All
               </Button>
@@ -139,9 +154,10 @@ const OurGameProject = () => {
                 />
               </Box>
               <Button
+                backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
+                backgroundClip="text"
                 fontStyle="normal"
-                backgroundColor="transparent"
-                textColor="white"
+                color={filter === 'unity' ? 'transparent' : 'white'}
                 fontFamily="roboto"
                 _hover={{
                   backgroundImage:
@@ -149,6 +165,7 @@ const OurGameProject = () => {
                   backgroundClip: 'text',
                   color: 'transparent',
                 }}
+                onClick={() => handleFilterChange('unity')}
               >
                 Unity
               </Button>
@@ -159,9 +176,10 @@ const OurGameProject = () => {
                 />
               </Box>
               <Button
+                backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
+                backgroundClip="text"
                 fontStyle="normal"
-                backgroundColor="transparent"
-                textColor="white"
+                color={filter === 'unreal' ? 'transparent' : 'white'}
                 fontFamily="roboto"
                 _hover={{
                   backgroundImage:
@@ -169,6 +187,7 @@ const OurGameProject = () => {
                   backgroundClip: 'text',
                   color: 'transparent',
                 }}
+                onClick={() => handleFilterChange('unreal')}
               >
                 Unreal
               </Button>
@@ -267,7 +286,12 @@ const OurGameProject = () => {
           </Grid>
         </Box>
 
-        <HStack direction="row" spacing="40" align="center">
+        <HStack
+          direction="row"
+          spacing="40"
+          align="center"
+          display={filteredGames.length === 0 ? 'none' : 'flex'}
+        >
           <Pagination
             pagesCount={pagesCount}
             currentPage={currentPage}
