@@ -11,7 +11,7 @@ import {
 import { BoxLine } from '../BoxLine'
 import { SocialMedia } from '../SocialMedia'
 import { CldImage } from 'next-cloudinary'
-import { AttentionSeeker, Fade } from 'react-awesome-reveal'
+import { AttentionSeeker, Zoom, Fade } from 'react-awesome-reveal'
 import React from 'react'
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
     >
       <Box width="100%" height="100%">
         <Grid templateColumns={gridTemplateColumns} gap={gridGap}>
-          <Fade delay={100}>
+          <Zoom cascade>
             <Box
               justifySelf="center"
               height="100%"
@@ -96,8 +96,7 @@ const Footer = () => {
                 </Box>
               </HStack>
             </Box>
-          </Fade>
-          <Fade delay={250}>
+
             <Box
               justifySelf="center"
               height="100%"
@@ -153,8 +152,7 @@ const Footer = () => {
                 </Box>
               </HStack>
             </Box>
-          </Fade>
-          <Fade delay={350}>
+
             <Box
               justifySelf="center"
               height="100%"
@@ -210,7 +208,7 @@ const Footer = () => {
                 </Box>
               </HStack>
             </Box>
-          </Fade>
+          </Zoom>
         </Grid>
       </Box>
 

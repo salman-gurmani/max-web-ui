@@ -28,7 +28,7 @@ import React, { useState } from 'react'
 import { EllipseImage } from '@components/Images'
 import { Element } from 'react-scroll'
 import { CldImage } from 'next-cloudinary'
-import { Zoom, Fade, JackInTheBox, Slide } from 'react-awesome-reveal'
+import { Zoom, Fade, Slide } from 'react-awesome-reveal'
 
 const OurGameProject = () => {
   const [filteredGames, setFilteredGames] = useState(GamesData)
@@ -91,7 +91,7 @@ const OurGameProject = () => {
         direction="column"
       >
         <VStack gap={5} paddingX={{ base: 0, md: 35, lg: 45 }}>
-          <JackInTheBox>
+          <Zoom cascade>
             <Heading
               backgroundImage="linear-gradient(135deg, #2FBBFB 20%, #D442E0 51.56%, #F15D3C 100%)"
               backgroundClip="text"
@@ -104,7 +104,7 @@ const OurGameProject = () => {
             >
               Our Games Projects
             </Heading>
-          </JackInTheBox>
+          </Zoom>
           <Slide direction="up">
             <Text
               fontFamily="roboto"

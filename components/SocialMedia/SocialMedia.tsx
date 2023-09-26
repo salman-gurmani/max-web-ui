@@ -1,6 +1,6 @@
 import { Flex, IconButton, Link } from '@chakra-ui/react'
 import { CldImage } from 'next-cloudinary'
-import { Roll } from 'react-awesome-reveal'
+import { Zoom } from 'react-awesome-reveal'
 
 const SocialMedia = ({ ...rest }) => {
   return (
@@ -11,7 +11,7 @@ const SocialMedia = ({ ...rest }) => {
       justifyContent="center"
       alignItems="center"
     >
-      <Roll>
+      <Zoom cascade>
         <Link
           href="https://www.facebook.com/people/Maxovation/61550761393563/"
           target="_blank"
@@ -89,7 +89,7 @@ const SocialMedia = ({ ...rest }) => {
             }}
           />
         </Link>
-      </Roll>
+      </Zoom>
     </Flex>
   )
 }

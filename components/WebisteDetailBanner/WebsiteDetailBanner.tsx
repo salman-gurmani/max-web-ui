@@ -1,7 +1,6 @@
-import { Flex, VStack, Heading, Box, Image, Text } from '@chakra-ui/react'
+import { Flex, VStack, Heading, Box, Image } from '@chakra-ui/react'
 import BannerImg from '../../public/Icons/HeaderImg.png'
-import { FaAngleRight } from 'react-icons/fa'
-import { Bounce, Fade } from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
 
 interface WebsiteDetailBannerProps {
   title: string
@@ -36,7 +35,7 @@ const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
           align="center"
           justify="center"
         >
-          <Bounce>
+          <Fade>
             <Heading
               color="transparent"
               backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
@@ -47,10 +46,10 @@ const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
               fontStyle="normal"
               fontWeight="600"
             >
-              Portfolio Details{' '}
+              {prop.title}
             </Heading>
-          </Bounce>
-          <Flex alignItems="center">
+          </Fade>
+          {/* <Flex alignItems="center">
             <Fade cascade>
               <Text
                 color="white"
@@ -72,7 +71,7 @@ const WebsiteDetailBanner = (prop: WebsiteDetailBannerProps) => {
                 {prop.title}
               </Text>
             </Fade>
-          </Flex>
+          </Flex> */}
         </VStack>
       </Flex>
     </Box>

@@ -13,7 +13,7 @@ import { BoxLine } from '@components/BoxLine'
 import { Element, Link as ScrollLink } from 'react-scroll'
 import Typewriter from 'typewriter-effect'
 import styled from 'styled-components'
-import { AttentionSeeker, Zoom } from 'react-awesome-reveal'
+import { Zoom } from 'react-awesome-reveal'
 
 const Type = styled.div`
   line-height: 50px;
@@ -148,42 +148,40 @@ const Banner = () => {
                     style={{ alignSelf: 'flex-start' }}
                   >
                     <Zoom>
-                      <AttentionSeeker effect="rubberBand" delay={200}>
-                        <Button
-                          color="white"
-                          fontFamily="roboto"
-                          fontWeight="400"
-                          alignSelf="flex-start"
-                          backgroundColor="transparent"
-                          size="md"
-                          zIndex="5"
-                          variant="outline"
-                          fontSize={{ base: '10px', md: '12px', lg: '15px' }}
-                          paddingX={{ base: '3', md: '8', lg: '10' }}
-                          backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
-                          backgroundClip="text"
-                          sx={{
-                            borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
-                            borderStyle: 'solid',
-                            borderWidth: '1px',
+                      <Button
+                        color="white"
+                        fontFamily="roboto"
+                        fontWeight="400"
+                        alignSelf="flex-start"
+                        backgroundColor="transparent"
+                        size="md"
+                        zIndex="5"
+                        variant="outline"
+                        fontSize={{ base: '10px', md: '12px', lg: '15px' }}
+                        paddingX={{ base: '3', md: '8', lg: '10' }}
+                        backgroundImage="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
+                        backgroundClip="text"
+                        sx={{
+                          borderImage: `linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1`,
+                          borderStyle: 'solid',
+                          borderWidth: '1px',
 
-                            '&:hover': {
-                              background:
-                                'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
-                              textColor: 'white',
-                            },
-                            '&:after': {
-                              backgroundImage:
-                                'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
-                              borderImage:
-                                'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1',
-                              borderWidth: '1px',
-                            },
-                          }}
-                        >
-                          Hire Me!
-                        </Button>
-                      </AttentionSeeker>
+                          '&:hover': {
+                            background:
+                              'var(--gradient, linear-gradient(135deg, #2FBBFB 0%, #D442E0 52.60%, #F15D3C 100%))',
+                            textColor: 'white',
+                          },
+                          '&:after': {
+                            backgroundImage:
+                              'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)',
+                            borderImage:
+                              'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%) 1',
+                            borderWidth: '1px',
+                          },
+                        }}
+                      >
+                        Hire Me!
+                      </Button>
                     </Zoom>
                   </ScrollLink>
                 </VStack>

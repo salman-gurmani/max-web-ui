@@ -2,7 +2,7 @@ import { Flex, Heading, VStack, Text, HStack, Box } from '@chakra-ui/react'
 import { BoxLine } from '@components/BoxLine'
 
 import { CldImage } from 'next-cloudinary'
-import { Bounce, Rotate, Zoom, Fade } from 'react-awesome-reveal'
+import { Slide, Zoom, Fade } from 'react-awesome-reveal'
 
 const WebTechnologies = () => {
   return (
@@ -12,7 +12,8 @@ const WebTechnologies = () => {
       justifyContent="center"
     >
       <VStack gap={5} paddingX={{ base: 0, md: 35 }}>
-        <Bounce>
+        <Zoom cascade>
+          {' '}
           <Heading
             fontFamily="roboto"
             color="white"
@@ -29,8 +30,8 @@ const WebTechnologies = () => {
               marginTop="2px"
             />
           </Heading>
-        </Bounce>
-        <Bounce>
+        </Zoom>
+        <Slide direction="up">
           <Fade>
             <Text
               fontFamily="roboto"
@@ -58,107 +59,84 @@ const WebTechnologies = () => {
               successful web development journey together.
             </Text>
           </Fade>
-        </Bounce>
+        </Slide>
         <HStack
           gap={{ base: 3, md: 7, lg: 10 }}
           flexWrap="wrap"
           justifyContent="center"
         >
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/html_imdjdo.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
-          </Zoom>
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/css_vmeeuz.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
-          </Zoom>
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/js_bvjygm.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
-          </Zoom>
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/react_rmsuz2.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
-          </Zoom>
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/angular_tinvcf.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
-          </Zoom>
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/nodeJsIcon_ac573p.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
-          </Zoom>
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/php_joafrd.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
-          </Zoom>
-          <Zoom>
-            <Rotate delay={100}>
-              <Box>
-                <CldImage
-                  src="v1694585532/Icons/WebTechnologies/rails_ezlu2r.svg"
-                  alt=""
-                  height={110}
-                  width={110}
-                />
-              </Box>
-            </Rotate>
+          <Zoom cascade duration={500}>
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/html_imdjdo.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
+
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/css_vmeeuz.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
+
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/js_bvjygm.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
+
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/react_rmsuz2.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
+
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/angular_tinvcf.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
+
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/nodeJsIcon_ac573p.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
+
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/php_joafrd.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
+
+            <Box>
+              <CldImage
+                src="v1694585532/Icons/WebTechnologies/rails_ezlu2r.svg"
+                alt=""
+                height={110}
+                width={110}
+              />
+            </Box>
           </Zoom>
         </HStack>
       </VStack>

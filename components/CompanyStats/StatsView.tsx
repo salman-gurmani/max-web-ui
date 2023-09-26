@@ -2,7 +2,7 @@ import { Text, IconButton, Grid, GridItem, VStack } from '@chakra-ui/react'
 import { CldImage } from 'next-cloudinary'
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { Fade, Zoom } from 'react-awesome-reveal'
+
 interface StatsViewProps {
   title: string
   subTitle: string
@@ -10,76 +10,64 @@ interface StatsViewProps {
   index: number
 }
 
-const delayAmt: number[] = [10, 15, 20, 25]
-
 const StatsView = (props: StatsViewProps) => {
   return (
-    <Fade
-      cascade
-      fraction={1}
-      delay={delayAmt[props.index]}
-      duration={1000}
-      damping={0.2}
+    <Grid
+      templateColumns="25% 75%" //25% for icon and 75% for text
+      alignContent="flex-start" //horzontally align content on left
+      justifyContent="flex-start" // vertically align content on left
+      marginTop={{ base: 5 }} // marginTop only for small screen for better view
     >
-      <Zoom>
-        <Grid
-          templateColumns="25% 75%" //25% for icon and 75% for text
-          alignContent="flex-start" //horzontally align content on left
-          justifyContent="flex-start" // vertically align content on left
-          marginTop={{ base: 5 }} // marginTop only for small screen for better view
+      <GridItem
+        display={'flex'} //gridItem should behave like flex instead of adding flex componenet
+        justifyContent="center" // justify icon in center
+        key={uuidv4()}
+      >
+        <IconButton
+          icon={<CldImage src={props.icon} width={56} height={56} alt="" />}
+          aria-label={props.title}
+          isRound={false}
+          background="#18191D"
+          borderWidth={1.5}
+          borderColor="#3D3F4C"
+          borderRadius={'20px'}
+          color="white"
+          width={{ base: '60px', md: '70px', lg: '80px' }} //responsive breakpoints
+          height={{ base: '40px', md: '60px', lg: '60px' }} //responsive
+          pointerEvents="none" // button behaviour cancel
+        />
+      </GridItem>
+
+      <GridItem
+        justifyContent="flex-start" //   text align
+        alignContent="flex-start" // text align
+        marginLeft={5} // margin from icon
+      >
+        <VStack
+          align="flex-start" //VStack for vertically stack the title and subtitle
         >
-          <GridItem
-            display={'flex'} //gridItem should behave like flex instead of adding flex componenet
-            justifyContent="center" // justify icon in center
-            key={uuidv4()}
+          <Text
+            fontSize={{ base: '20px', md: '25px', lg: '30px' }} //font sizes for screens
+            color="white"
+            fontFamily="roboto"
+            fontStyle={'normal'}
+            lineHeight={'normal'}
+            fontWeight="100"
           >
-            <IconButton
-              icon={<CldImage src={props.icon} width={56} height={56} alt="" />}
-              aria-label={props.title}
-              isRound={false}
-              background="#18191D"
-              borderWidth={1.5}
-              borderColor="#3D3F4C"
-              borderRadius={'20px'}
-              color="white"
-              width={{ base: '60px', md: '70px', lg: '80px' }} //responsive breakpoints
-              height={{ base: '40px', md: '60px', lg: '60px' }} //responsive
-              pointerEvents="none" // button behaviour cancel
-            />
-          </GridItem>
+            {props.title}
+          </Text>
 
-          <GridItem
-            justifyContent="flex-start" //   text align
-            alignContent="flex-start" // text align
-            marginLeft={5} // margin from icon
+          <Text
+            fontSize={{ base: '12px', md: '13px', lg: '15px' }} // font sizes for different screens
+            color="white"
+            fontFamily="roboto"
+            textOverflow={'false'}
           >
-            <VStack
-              align="flex-start" //VStack for vertically stack the title and subtitle
-            >
-              <Text
-                fontSize={{ base: '20px', md: '25px', lg: '30px' }} //font sizes for screens
-                color="white"
-                fontFamily="roboto"
-                fontStyle={'normal'}
-                lineHeight={'normal'}
-                fontWeight="100"
-              >
-                {props.title}
-              </Text>
-
-              <Text
-                fontSize={{ base: '12px', md: '13px', lg: '15px' }} // font sizes for different screens
-                color="white"
-                fontFamily="roboto"
-                textOverflow={'false'}
-              >
-                {props.subTitle}
-              </Text>
-            </VStack>
-          </GridItem>
-        </Grid>
-      </Zoom>
-    </Fade>
+            {props.subTitle}
+          </Text>
+        </VStack>
+      </GridItem>
+    </Grid>
   )
 }
 

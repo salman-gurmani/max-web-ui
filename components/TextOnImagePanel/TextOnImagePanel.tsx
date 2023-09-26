@@ -13,7 +13,7 @@ import React from 'react'
 
 import BGImage from '../../public/Icons/BackgroundImage.png'
 import { ContactUsModal } from '../ContactUsModal'
-import { Bounce, Zoom } from 'react-awesome-reveal'
+import { Zoom } from 'react-awesome-reveal'
 
 function TextOnImagePanel() {
   const [isModalOpen, setModalOpen] = React.useState(false)
@@ -59,7 +59,7 @@ function TextOnImagePanel() {
             flexDirection="column"
             justifyContent="center"
           >
-            <Zoom>
+            <Zoom cascade>
               <Heading
                 fontSize={{ lg: '40', md: '30px', base: '24px' }}
                 marginBottom="10px"
@@ -72,14 +72,15 @@ function TextOnImagePanel() {
               </Heading>
             </Zoom>
           </Box>
-          <Bounce>
-            <Box
-              height="100%"
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              marginLeft={{ lg: 5, md: 0, base: 0 }}
-            >
+
+          <Box
+            height="100%"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            marginLeft={{ lg: 5, md: 0, base: 0 }}
+          >
+            <Zoom>
               <VStack
                 gap={2}
                 alignItems={{ lg: 'left', md: 'center', base: 'center' }}
@@ -120,10 +121,11 @@ function TextOnImagePanel() {
                 >
                   Hire Me!
                 </Button>
+
                 <ContactUsModal isOpen={isModalOpen} onClose={closeModal} />
               </VStack>
-            </Box>
-          </Bounce>
+            </Zoom>
+          </Box>
         </Grid>
       </Box>
     </Flex>

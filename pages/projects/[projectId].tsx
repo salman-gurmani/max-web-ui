@@ -22,7 +22,7 @@ import { EllipseImage } from '@components/Images'
 import { Footer } from '@components/Footer'
 import { BackToHomeNavBar } from '@components/BackToHomeNavBar'
 import { CldImage } from 'next-cloudinary'
-import { AttentionSeeker, Fade, Slide, Zoom } from 'react-awesome-reveal'
+import { Fade, Slide, Zoom } from 'react-awesome-reveal'
 
 const WebsiteDetail = () => {
   const router = useRouter()
@@ -86,7 +86,7 @@ const WebsiteDetail = () => {
                   </Box>
                 </Zoom>
               </Fade>
-              <AttentionSeeker effect="pulse">
+              <Fade>
                 <Text
                   color="white"
                   fontFamily="roboto"
@@ -94,7 +94,7 @@ const WebsiteDetail = () => {
                 >
                   {webData.description}
                 </Text>
-              </AttentionSeeker>
+              </Fade>
               <Slide>
                 <Heading
                   color="white"
@@ -105,7 +105,7 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Fade cascade>
+                <Fade cascade duration={400}>
                   {map(webData.uniquePoints, (data, index) => (
                     <ListItem
                       key={index}
@@ -131,28 +131,26 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                {map(webData.features, (data, index) => (
-                  <Fade>
-                    <Slide direction="down" delay={50}>
-                      <ListItem
-                        key={index}
-                        color="white"
-                        fontFamily="roboto"
-                        fontSize={{ base: '13px', md: '15px', lg: '18px' }}
-                        display="flex"
-                        alignItems="center"
-                      >
-                        <CldImage
-                          src="v1694585526/Icons/ProjectDetails/checkmark_kfgivm.svg"
-                          alt=""
-                          width={30}
-                          height={30}
-                        />
-                        <span style={{ marginLeft: '20px' }}>{data}</span>
-                      </ListItem>
-                    </Slide>
-                  </Fade>
-                ))}
+                <Fade cascade duration={400}>
+                  {map(webData.features, (data, index) => (
+                    <ListItem
+                      key={index}
+                      color="white"
+                      fontFamily="roboto"
+                      fontSize={{ base: '13px', md: '15px', lg: '18px' }}
+                      display="flex"
+                      alignItems="center"
+                    >
+                      <CldImage
+                        src="v1694585526/Icons/ProjectDetails/checkmark_kfgivm.svg"
+                        alt=""
+                        width={30}
+                        height={30}
+                      />
+                      <span style={{ marginLeft: '20px' }}>{data}</span>
+                    </ListItem>
+                  ))}
+                </Fade>
               </List>
 
               <Slide>
@@ -165,23 +163,21 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                {map(webData.technologies, (data, index) => (
-                  <Fade cascade delay={10}>
-                    <Zoom>
-                      <ListItem
-                        key={index}
-                        color="white"
-                        fontFamily="roboto"
-                        fontSize={{ base: '13px', md: '15px', lg: '18px' }}
-                        display="flex"
-                        alignItems="center"
-                      >
-                        <Image src={EllipseImage.ellipseIcon.src.src} alt="" />
-                        <span style={{ marginLeft: '20px' }}>{data}</span>
-                      </ListItem>
-                    </Zoom>
-                  </Fade>
-                ))}
+                <Fade cascade duration={400}>
+                  {map(webData.technologies, (data, index) => (
+                    <ListItem
+                      key={index}
+                      color="white"
+                      fontFamily="roboto"
+                      fontSize={{ base: '13px', md: '15px', lg: '18px' }}
+                      display="flex"
+                      alignItems="center"
+                    >
+                      <Image src={EllipseImage.ellipseIcon.src.src} alt="" />
+                      <span style={{ marginLeft: '20px' }}>{data}</span>
+                    </ListItem>
+                  ))}
+                </Fade>
               </List>
             </VStack>
             <VStack marginX={{ base: '5', md: '10', lg: '20' }} gap={10}>
