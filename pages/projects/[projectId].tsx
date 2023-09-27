@@ -95,7 +95,7 @@ const WebsiteDetail = () => {
                   {webData.description}
                 </Text>
               </Fade>
-              <Slide>
+              <Slide triggerOnce>
                 <Heading
                   color="white"
                   fontFamily="roboto"
@@ -105,7 +105,13 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Slide cascade delay={200} direction="left" duration={500}>
+                <Slide
+                  triggerOnce
+                  cascade
+                  delay={200}
+                  direction="left"
+                  duration={500}
+                >
                   {map(webData.uniquePoints, (data, index) => (
                     <ListItem
                       key={index}
@@ -121,7 +127,7 @@ const WebsiteDetail = () => {
                   ))}
                 </Slide>
               </List>
-              <Slide>
+              <Slide triggerOnce>
                 <Heading
                   color="white"
                   fontFamily="roboto"
@@ -131,7 +137,13 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Slide cascade delay={200} direction="left" duration={400}>
+                <Slide
+                  triggerOnce
+                  cascade
+                  delay={200}
+                  direction="left"
+                  duration={400}
+                >
                   {map(webData.features, (data, index) => (
                     <ListItem
                       key={index}
@@ -153,7 +165,7 @@ const WebsiteDetail = () => {
                 </Slide>
               </List>
 
-              <Slide>
+              <Slide triggerOnce>
                 <Heading
                   color="white"
                   fontFamily="roboto"
@@ -163,7 +175,13 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Slide cascade delay={200} direction="left" duration={400}>
+                <Slide
+                  triggerOnce
+                  cascade
+                  delay={200}
+                  direction="left"
+                  duration={400}
+                >
                   {map(webData.technologies, (data, index) => (
                     <ListItem
                       key={index}
