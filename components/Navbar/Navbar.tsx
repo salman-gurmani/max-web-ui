@@ -54,7 +54,7 @@ const NavigationBar = () => {
 
   return (
     <Box css={boxStyle} backgroundColor="#111215" position="fixed">
-      <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
+      <Flex flex={{ base: 1 }} alignItems="center">
         <Hide below="md">
           <CldImage
             src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
@@ -70,11 +70,11 @@ const NavigationBar = () => {
         <Show below="md">
           <CldImage
             src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
-            width={220}
-            height={170}
+            width={200}
+            height={150}
             alt="Logo"
           />
-          <Flex mr={{ base: -4 }} justifyContent="flex-end">
+          <Flex mr={{ base: -4 }} justifyContent="flex-end" ml="auto">
             <IconButton
               onClick={onOpenDrawer}
               icon={<HamburgerIcon color="blue" w={5} h={5} />}
@@ -87,9 +87,10 @@ const NavigationBar = () => {
         </Show>
         <Flex
           display={{ base: 'none', md: 'flex' }}
-          justify={'flex-start'}
+          justify="flex-end"
           alignItems="center"
           mr={4}
+          ml="auto"
         >
           <DesktopNav
             selectedSection={selectedSection}

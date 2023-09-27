@@ -1,11 +1,12 @@
 import '../styles/globals.css'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-import { Roboto } from "next/font/google"
+import { Roboto } from 'next/font/google'
 import { createOvermind, createOvermindSSR, rehydrate } from 'overmind'
 import { Provider } from 'overmind-react'
 import App from 'next/app'
 import React from 'react'
 import { IAppContext, storeConfig } from '@store/index'
+import NextNProgress from 'nextjs-progressbar'
 
 const roboto = Roboto({
   weight: '400',
@@ -44,6 +45,13 @@ class MyApp extends App {
       //@ts-ignore
       <Provider value={this.overmind}>
         <ChakraProvider theme={theme}>
+          <NextNProgress
+            color="linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)"
+            startPosition={0.3}
+            stopDelayMs={200}
+            height={3}
+            showOnShallow={true}
+          />
           <Component {...pageProps} />
         </ChakraProvider>
       </Provider>
