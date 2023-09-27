@@ -105,7 +105,7 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Slide cascade delay={200} direction="left">
+                <Slide cascade delay={200} direction="left" duration={500}>
                   {map(webData.uniquePoints, (data, index) => (
                     <ListItem
                       key={index}
@@ -131,7 +131,7 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Slide cascade delay={200} direction="left">
+                <Slide cascade delay={200} direction="left" duration={400}>
                   {map(webData.features, (data, index) => (
                     <ListItem
                       key={index}
@@ -163,7 +163,7 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Slide cascade delay={200} direction="left">
+                <Slide cascade delay={200} direction="left" duration={400}>
                   {map(webData.technologies, (data, index) => (
                     <ListItem
                       key={index}
