@@ -16,6 +16,7 @@ import {
   DrawerOverlay,
   Grid,
   VStack,
+  Image,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { css } from '@emotion/react'
@@ -23,8 +24,7 @@ import { css } from '@emotion/react'
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
-import { CldImage } from 'next-cloudinary'
-
+import logo from '../../public/Icons/Logo.svg'
 interface DesktopNavProps {
   selectedSection: string
   onSelect: (sectionId: string) => void
@@ -56,10 +56,11 @@ const NavigationBar = () => {
     <Box css={boxStyle} backgroundColor="#111215" position="fixed">
       <Flex flex={{ base: 1 }} alignItems="center">
         <Hide below="md">
-          <CldImage
-            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
+          <Image
+            src={logo.src}
+            //  src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
             width={271}
-            height={127}
+            height={54}
             style={{
               marginLeft: '50px',
               marginTop: '5px',
@@ -68,12 +69,7 @@ const NavigationBar = () => {
           />
         </Hide>
         <Show below="md">
-          <CldImage
-            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
-            width={200}
-            height={150}
-            alt="Logo"
-          />
+          <Image src={logo.src} width={200} height={150} alt="Logo" />
           <Flex mr={{ base: -4 }} justifyContent="flex-end" ml="auto">
             <IconButton
               onClick={onOpenDrawer}
@@ -181,8 +177,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <Box backgroundColor="black">
           <DrawerHeader>
             <Grid templateColumns={'1fr 1fr 1fr'} paddingY="10px">
-              <CldImage
-                src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
+              <Image
+                src={logo.src}
                 width={250}
                 height={300}
                 alt="Logo"

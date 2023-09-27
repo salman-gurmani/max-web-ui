@@ -105,7 +105,7 @@ const WebsiteDetail = () => {
                 </Heading>
               </Slide>
               <List spacing={3}>
-                <Fade cascade duration={400}>
+                <Slide cascade delay={200} duration={500} direction="left">
                   {map(webData.uniquePoints, (data, index) => (
                     <ListItem
                       key={index}
@@ -119,7 +119,7 @@ const WebsiteDetail = () => {
                       <span style={{ marginLeft: '20px' }}>{data}</span>
                     </ListItem>
                   ))}
-                </Fade>
+                </Slide>
               </List>
               <Slide>
                 <Heading

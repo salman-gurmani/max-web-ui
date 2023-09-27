@@ -1,8 +1,8 @@
-import { Box, Flex, Hide, Show, Link } from '@chakra-ui/react'
+import { Box, Flex, Hide, Show, Link, Image } from '@chakra-ui/react'
 import React from 'react'
-import { CldImage } from 'next-cloudinary'
 import { css } from '@emotion/react'
 import { FaAngleDoubleLeft } from 'react-icons/fa'
+import logo from '../../public/Icons/Logo.svg'
 
 const BackToHomeNavBar = () => {
   const boxStyle = css`
@@ -19,32 +19,28 @@ const BackToHomeNavBar = () => {
     'linear-gradient(95.1deg, #2FBBFB 0%, #D442E0 52.6%, #F15D3C 100%)'
   return (
     <Box css={boxStyle} backgroundColor="#111215" position="fixed">
-      <Flex flex={{ base: 1 }} justify="space-between" alignItems="center">
+      <Flex flex={{ base: 1 }} alignItems="center">
         <Hide below="md">
-          <CldImage
-            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
+          <Image
+            src={logo.src}
             width={271}
-            height={127}
+            height={54}
             style={{
               marginLeft: '50px',
-              marginTop: '5px',
+              // marginTop: '5px',
             }}
             alt="Logo"
           />
         </Hide>
         <Show below="md">
-          <CldImage
-            src="v1694585522/Icons/Maxovation_Logo_V.2-ai_-_New_i4ycvr.svg"
-            width={200}
-            height={150}
-            alt="Logo"
-          />
+          <Image src={logo.src} width={200} height={150} alt="Logo" />
         </Show>
         <Flex
           display={{ base: 'flex', md: 'flex' }}
           justify={'flex-start'}
           alignItems="center"
           mr={{ base: 0, md: 2, lg: 4 }}
+          ml="auto"
         >
           <Box as="span" mx="2" color="#2FBBFB">
             <FaAngleDoubleLeft />
