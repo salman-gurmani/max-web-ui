@@ -33,7 +33,7 @@ const BackToHomeNavBar = () => {
           />
         </Hide>
         <Show below="md">
-          <Image src={logo.src} width={200} height={150} alt="Logo" />
+          <Image src={logo.src} width={200} height={50} alt="Logo" />
         </Show>
         <Flex
           display={{ base: 'flex', md: 'flex' }}

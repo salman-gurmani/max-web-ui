@@ -69,7 +69,7 @@ const NavigationBar = () => {
           />
         </Hide>
         <Show below="md">
-          <Image src={logo.src} width={200} height={150} alt="Logo" />
+          <Image src={logo.src} width={200} height={54} alt="Logo" />
           <Flex mr={{ base: -4 }} justifyContent="flex-end" ml="auto">
             <IconButton
               onClick={onOpenDrawer}
@@ -177,14 +177,12 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <Box backgroundColor="black">
           <DrawerHeader>
             <Grid templateColumns={'1fr 1fr 1fr'} paddingY="10px">
-              <Image
-                src={logo.src}
-                width={250}
-                height={300}
-                alt="Logo"
-                style={{ marginTop: '5px' }}
-              />
-              <Text color="white" textAlign="center">
+              <Image src={logo.src} width={250} height={50} alt="Logo" />
+              <Text
+                color="white"
+                textAlign="center"
+                style={{ marginTop: '2px' }}
+              >
                 Menu
               </Text>
               <DrawerCloseButton marginTop="15px" color="white" size="lg" />

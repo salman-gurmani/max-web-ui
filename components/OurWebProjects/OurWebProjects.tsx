@@ -1,4 +1,4 @@
-import { Text, Heading, VStack, Grid, Box } from '@chakra-ui/react'
+import { Text, Heading, VStack, Grid, Box, Flex } from '@chakra-ui/react'
 import React from 'react'
 import projectDetailsData from '@components/Data/websitesData'
 
@@ -9,15 +9,15 @@ import { Fade, Slide } from 'react-awesome-reveal'
 const OurWebProjects = () => {
   return (
     <Element name="web">
-      <Box
+      <Flex
         bg="#111215"
-        padding={{ base: '20px', md: '30px', lg: '35px' }}
+        padding={{ base: '20px', md: '30px', lg: '30px' }}
         position="relative"
       >
         <Box padding="40px">
           <Grid
             templateColumns={{ base: '1fr', md: '1fr', lg: '1fr 1fr' }}
-            gap={12}
+            gap={5}
           >
             <VStack spacing={7} align="flex-start">
               <Slide>
@@ -65,7 +65,7 @@ const OurWebProjects = () => {
             </Slide>
           </Grid>
         </Box>
-      </Box>
+      </Flex>
     </Element>
   )
 }

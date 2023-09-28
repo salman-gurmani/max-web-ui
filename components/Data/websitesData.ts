@@ -23,6 +23,7 @@ const projectDetailsData: ProjectDetailTypes[] = [
       'Seamless Navigation: The Bestow interface boasts intuitive navigation, ensuring an effortless shopping experience that leaves a lasting impression.',
       'Tailored Recommendations: Experience the power of AI-driven personalization at Bestow, where every product suggestion enriches your shopping adventure.',
       'Secure Sanctuary: Rest easy knowing that your data and transactions are safeguarded within its impenetrable fortress of cutting-edge security measures.',
+      'Customer-Centric Excellence: The dedicated support team at Bestow is committed to delivering an exceptional shopping experience, guiding you every step of the way towards complete satisfaction.',
     ],
     features: [
       'Responsive design',
