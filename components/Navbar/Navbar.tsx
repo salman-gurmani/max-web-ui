@@ -181,11 +181,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
               <Text
                 color="white"
                 textAlign="center"
-                style={{ marginTop: '2px' }}
+                style={{ marginTop: '10px' }}
               >
                 Menu
               </Text>
-              <DrawerCloseButton marginTop="15px" color="white" size="lg" />
+              <DrawerCloseButton marginTop="25px" color="white" size="lg" />
             </Grid>
           </DrawerHeader>
         </Box>

@@ -202,7 +202,7 @@ const OurGameProject = () => {
                 <Fade cascade delay={10}>
                   <Zoom>
                     <Box
-                      key={uuidv4()}
+                      // key={uuidv4()}
                       justifySelf="center"
                       height="auto"
                       width="auto"
