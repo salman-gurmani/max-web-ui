@@ -3,7 +3,7 @@
 const nextConfig = {
   images: {
     domains: ['localhost', 'res.cloudinary.com'],
-    //unoptimized: true,
+    // unoptimized: true,
   },
   reactStrictMode: false,
   webpack(config, { isServer }) {
