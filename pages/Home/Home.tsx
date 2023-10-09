@@ -9,7 +9,7 @@ import { CompanyStats } from '@components/CompanyStats'
 import React from 'react'
 import { ContactUs } from '@components/ContactUs'
 import { OurGameProject } from '@components/OurGamesProject'
-const Home = () => {
+export const Home = () => {
   return (
     <PrimaryLayout>
       <Banner />

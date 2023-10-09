@@ -84,7 +84,7 @@ const Slider = ({ slides }: SliderProps) => {
   const router = useRouter()
 
   const handleClick = (id: string) => {
-    router.push(`/projects/${id}`)
+    router.push(`/projects/${id}.html`)
   }
   return (
     <Box position="relative" width="100%" overflow="hidden" padding="25px">
