@@ -24,14 +24,46 @@ import { BackToHomeNavBar } from '@components/BackToHomeNavBar'
 import { CldImage } from 'next-cloudinary'
 import { Fade, Slide, Zoom } from 'react-awesome-reveal'
 
+import { storeConfig } from 'store/index'
+
+import { Pages } from '@store/base/types'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { createOvermindSSR } from 'overmind'
+
+export const getStaticProps: GetStaticProps = async () => {
+  const overmind = createOvermindSSR(storeConfig)
+  overmind.state.page = Pages.index
+  return {
+    props: {
+      mutations: overmind.hydrate(),
+    },
+  }
+}
+
+export const getStaticPaths: GetStaticPaths<{
+  projectId: string
+}> = async () => {
+  // Assuming you have a list of project IDs somewhere (e.g., projectIds)
+
+  // Generate an array of paths based on the project IDs
+  const paths = map(webDetails, (project) => ({
+    params: { projectId: project.key },
+  }))
+
+  return {
+    paths,
+    fallback: 'blocking',
+  }
+}
 const WebsiteDetail = () => {
   const router = useRouter()
-  const { projectId } = router.query
+
+  const projectId = router?.query?.projectId
   const webData: ProjectDetailTypes = find(webDetails, {
     key: projectId,
   }) as ProjectDetailTypes
 
-  if (webData)
+  if (webData && projectId)
     return (
       <Box>
         <BackToHomeNavBar />
