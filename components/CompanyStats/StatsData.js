@@ -10,8 +10,8 @@ const StatsData = [
     icon: 'v1694585529/Icons/stats/clients_bb0jxc.svg',
   },
   {
-    title: '20+',
-    subTitle: 'Products',
+    title: '180+',
+    subTitle: 'Projects',
     icon: 'v1694585529/Icons/stats/products_kj9tcm.svg',
   },
   {

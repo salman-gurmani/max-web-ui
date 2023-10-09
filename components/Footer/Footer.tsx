@@ -73,7 +73,7 @@ const Footer = () => {
                   pointerEvents="none"
                 />
 
-                <Box height="100%">
+                <Box height="100%" width="90%">
                   <Heading
                     color="white"
                     fontFamily="roboto"
@@ -81,18 +81,22 @@ const Footer = () => {
                     marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
                     width="100%"
                   >
-                    Phone Number{' '}
+                    Phone Numbers{' '}
                   </Heading>
-                  <Text
-                    fontFamily="roboto"
-                    marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                    width="90%"
-                    marginTop="10px"
-                    color="white"
-                    fontSize={['10px', '11px', '12px']}
-                  >
-                    +4917634649431{' '}
-                  </Text>
+                  <VStack justifyContent="center">
+                    <Text
+                      fontFamily="roboto"
+                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="90%"
+                      marginTop="10px"
+                      color="white"
+                      fontSize={['10px', '11px', '12px']}
+                    >
+                      Netherlands Office: +31-6-1097-2269
+                      <br />
+                      International Number: +49-176-87862632
+                    </Text>
+                  </VStack>
                 </Box>
               </HStack>
             </Box>
