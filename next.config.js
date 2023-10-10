@@ -5,7 +5,6 @@ const nextConfig = {
     domains: ['localhost', 'res.cloudinary.com'],
 
     unoptimized: true,
-
   },
   reactStrictMode: false,
 

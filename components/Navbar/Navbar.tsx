@@ -25,6 +25,7 @@ import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { v4 as uuidv4 } from 'uuid'
 import logo from '../../public/Icons/Logo.svg'
+import { CldImage } from 'next-cloudinary'
 interface DesktopNavProps {
   selectedSection: string
   onSelect: (sectionId: string) => void
@@ -177,7 +178,13 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <Box backgroundColor="black">
           <DrawerHeader>
             <Grid templateColumns={'1fr 1fr 1fr'} paddingY="10px">
-              <Image src={logo.src} width={250} height={50} alt="Logo" />
+              <CldImage
+                src="v1694585522/Icons/Maxovation_Logo_V.2-ai_kfmabd.svg"
+                style={{ marginTop: '5px' }}
+                width={40}
+                height={40}
+                alt="Logo"
+              />
               <Text
                 color="white"
                 textAlign="center"

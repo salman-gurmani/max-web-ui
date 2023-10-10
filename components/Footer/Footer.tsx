@@ -38,8 +38,13 @@ const Footer = () => {
       bg=" #111215"
       width="100%"
     >
-      <Box width="100%" height="100%">
-        <Grid templateColumns={gridTemplateColumns} gap={gridGap}>
+      <Box width="100%" height="100%" justifyContent="center">
+        <Grid
+          templateColumns={gridTemplateColumns}
+          gap={gridGap}
+          justifyContent="center"
+          paddingLeft="20px"
+        >
           <Zoom cascade>
             <Box
               justifySelf="center"
@@ -48,6 +53,7 @@ const Footer = () => {
               paddingY={{ base: 30, md: 35, lg: 45 }}
               paddingX={2}
               marginRight={marginPx}
+              marginLeft={marginPx}
             >
               <HStack
                 alignItems="center"
@@ -83,11 +89,11 @@ const Footer = () => {
                   >
                     Phone Numbers{' '}
                   </Heading>
-                  <VStack justifyContent="center">
+                  <VStack marginLeft={{ base: '20px', md: '15px', lg: '20px' }}>
                     <Text
                       fontFamily="roboto"
-                      marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
-                      width="90%"
+                      //  marginLeft={{ base: '20px', md: '15px', lg: '20px' }}
+                      width="100%"
                       marginTop="10px"
                       color="white"
                       fontSize={['10px', '11px', '12px']}
@@ -163,7 +169,6 @@ const Footer = () => {
               width="80%"
               paddingY={{ base: 30, md: 35, lg: 45 }}
               paddingX={2}
-              marginLeft={marginPx}
             >
               <HStack
                 alignItems="center"
