@@ -47,7 +47,7 @@ const Slider = ({ slides }: SliderProps) => {
   })
 
   const gapSize = useBreakpointValue({
-    base: 2,
+    base: 20,
     sm: 40,
     md: 10,
     lg: 10,
